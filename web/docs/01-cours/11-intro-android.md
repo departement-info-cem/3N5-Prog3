@@ -19,6 +19,8 @@ hide_table_of_contents: true
 
 <Video url="https://youtu.be/5rBZ4P06usU" />
 
+Code après la video [ici](https://github.com/jorisdeguet/tapeLeLapinKotlin24/tree/main). 
+
 
 Note :  la video suivante est très ancienne mais toutes les explications s'appliquent exactement pareil.
 
