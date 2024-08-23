@@ -28,13 +28,13 @@ hide_table_of_contents: true
 ## En cours avec le prof (démos)
 
 1. Utilisation du script d'installation
-2. Ouvrir l'IDE pour Kotlin (Intellij IDEA)
-3. Premier projet, première classe Kotlin
-4. Point d'arrêt et débogueur
-5. Configuration d'exécution et .idea
-6. Ajouter une librairie avec gradle
-7. Définir une fonction en Kotlin
-8. Créer un fork du repo du cours privé pour mettre vos exercices 3N5-NomDeFamille-Prenom
+2. Créer un repo GitHub privé 3N5-NomDeFamille-Prenom pour mettre vos exercices
+3. Ouvrir l'IDE pour Kotlin (Intellij IDEA)
+4. Premier projet, première classe Kotlin
+5. Point d'arrêt et débogueur
+6. Configuration d'exécution et .idea
+7. Ajouter une librairie avec gradle
+8. Définir une fonction en Kotlin
 
 </Column>
 
