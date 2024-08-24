@@ -33,11 +33,7 @@ hide_table_of_contents: true
 
 :::tip Vidéos
 
-<Video url="https://youtu.be/PSnfqJ8pW2k"/>
-
-<Video url="https://youtu.be/kpBcxKXacZM"/>
-
-<Video url="https://youtu.be/BzFx1dszk4I"/>
+<Video url="https://youtu.be/o_avNxctpVI"/>
 
 :::
 
@@ -95,16 +91,23 @@ Ce programme doit prendre en argument de ligne de commande (paramètre de la mé
 
 ### Exercice Pyramide
 
-Crée un programme (nouveau projet ou nouveau fichier exécutable) qui reproduit un triangle en obtenant sa hauteur par un argument de ligne de commande.
+Crée un programme (nouveau projet ou nouveau fichier exécutable).
 
-Par exemple, pour un argument de 3, le programme doit afficher :
+Ce programme doit :
+- recevoir des hauteurs en arguments de ligne de commande;
+- appeler une fonction qui affiche une pyramide d'une hauteur donnée, pour chacune des hauteurs reçues en ligne de commande.
+
+Par exemple, pour les arguments reçus "4 2", le programme doit afficher :
 ```
-  *
- ***
-*****
+   *
+  ***
+ *****
+*******
+ *
+***
 ```
 
-Teste ton code sur les hauteurs suivantes : 1, 2, 3, 10, 1000.
+Teste ton code sur les hauteurs suivantes passées en ligne de commande : "1 2 3 10 1000".
 
 ### Exercice Moyenne
 
