@@ -15,25 +15,16 @@ hide_table_of_contents: true
 - Regarder les vidéos de la semaine.
 - Lisez la documentation standard d'**[Android](https://developer.android.com/index.html)** (max 20 minutes).
 
-<Row>
 
-<Column>
 
 <Video url="https://youtu.be/5rBZ4P06usU" />
 
-</Column>
+Code après la video [ici](https://github.com/jorisdeguet/tapeLeLapinKotlin24/tree/main). 
 
-<Column>
+
+Note :  la video suivante est très ancienne mais toutes les explications s'appliquent exactement pareil.
 
 <Video url="https://youtu.be/x-dQ5Sa0Ns0" />
-
-</Column>
-
-</Row>
-
-Video :
-
-- refaire mise en page en kotlin
 
 :::
 
