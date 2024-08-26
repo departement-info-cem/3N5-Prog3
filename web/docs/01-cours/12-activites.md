@@ -12,30 +12,9 @@ hide_table_of_contents: true
 
 :::danger Avant la séance (2h)
 
-- Regarder les vidéos de la semaine.
 - Regarder rapidement la recette pour afficher une [barre d'application](../03-recettes/app-bar.mdx).
 - Regarder la recette pour la [navigation](../03-recettes/navigation.mdx).
 - Commencer les exercices . Arrête quand tu as complété tes 2 heures.
-
-<Row>
-
-<Column>
-
-<Video url="https://youtu.be/MOF0kb0ampc" />
-
-<Video url="https://youtu.be/t4jYehSpR1A" />
-
-</Column>
-
-<Column>
-
-<Video url="https://youtu.be/qvty1jwEj-4" />
-
-<Video url="https://youtu.be/Zu2pd6vOxMM" />
-
-</Column>
-
-</Row>
 
 :::
 
