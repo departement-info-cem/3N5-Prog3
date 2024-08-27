@@ -191,7 +191,8 @@ Valide que les valeurs que tu trouves sont les mêmes que celles que tu as écri
 
 Tu dois créer un projet Kotlin au format (*Build system*) gradle dont le nom est **DemoJSoup**.
 
-Tu dois inclure JSoup dans les dépendances de ton projet dans le build.gradle (*indice : regarde la page **Recettes** du site)*.
+Tu dois inclure JSoup dans les dépendances de ton projet dans le build.gradle (*indice : regarde la **[Recette](recettes/ajout-librairie)** 
+ pour savoir comment faire)*.
 
 Tu dois créer un fichier exécutable appelé **SuperDuperDemo.kt**. 
 
