@@ -48,7 +48,6 @@ hide_table_of_contents: true
 
 Video de création d'un projet, avec point d'arrêt et arguments
 
-<!-- <Video url="https://youtu.be/dMN2_NlYBpU"/> -->
 <Video url="https://youtu.be/uiPQ1FFjla8"/>
 
 [Recette](../03-recettes/ajout-librairie.mdx) pour ajouter une librairie Java dans un projet Kotlin en gradle.

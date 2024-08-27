@@ -190,7 +190,7 @@ Après mûre réflexion, on décide d'utiliser comme structure de données un **
 2. Crée une autre fonction qui reçoit une *map* et qui parcourt ses paires (note, etudiant) pour les afficher dans la console, une par ligne.\
    Appelle ta fonction dans la *main*.\
    Le résultat doit ressembler à ceci :
-```text {2,4,6}
+```
 NOTES
 Sanchez a eu 92%.
 Tremblay a eu 68%.
