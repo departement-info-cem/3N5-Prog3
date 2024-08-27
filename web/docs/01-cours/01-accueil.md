@@ -42,7 +42,6 @@ hide_table_of_contents: true
 
 <Row>
 
-
 <Column>
 
 :::tip Contenu pour cette semaine
@@ -55,8 +54,6 @@ Video de création d'un projet, avec point d'arrêt et arguments
 [Recette](../03-recettes/ajout-librairie.mdx) pour ajouter une librairie Java dans un projet Kotlin en gradle.
 
 :::
-
-
 
 </Column>
 
@@ -78,9 +75,9 @@ Video de création d'un projet, avec point d'arrêt et arguments
 
 ### Exercice Bonjour Kotlin
 
-Tu dois créer un projet Kotlin nommé **BonjourKotlin** au format (*Build system*) gradle dont le nom de package de base (*GroupId*) est **org.nomdefamille** en changeant le nom de famille pour le tien.
+Tu dois créer un projet Kotlin nommé **BonjourKotlin** au format (_Build system_) gradle dont le nom de package de base (_GroupId_) est **org.nomdefamille** en changeant le nom de famille pour le tien.
 
-Crée 2 fichiers Kotlin exécutables (avec un *main* qui suit la convention Kotlin).\
+Crée 2 fichiers Kotlin exécutables (avec un _main_ qui suit la convention Kotlin).\
 Le premier s'appelle **NomDeFamille.kt** et affiche "Bonjour [Nom de famille]" à l'exécution.\
 Le deuxième s'appelle **PrenomDuProf.kt** et affiche "Salut [Prénom du prof]" à l'exécution.
 
@@ -174,6 +171,7 @@ fun main() {
     }
 }
 ```
+
 Dans un fichier appelé **TraceManuelle.md**, tu dois écrire à quoi va ressembler la
 console à la fin de l'exécution de ce code (sans le rouler).
 
@@ -182,6 +180,7 @@ Finalement, écris ce que vaut **`b / k.length`** à chaque itération.
 ### Exercice TraceDebugger
 
 Refaire le même exercice que précédemment, mais en roulant le code et en utilisant le débogueur. Tu dois :
+
 - placer un point d'arrêt
 - évaluer une expression sur un point d'arrêt pour savoir combien vaut **`b / k.length`** à chaque itération
 
@@ -189,14 +188,15 @@ Valide que les valeurs que tu trouves sont les mêmes que celles que tu as écri
 
 ### Exercice librairie JSOUP
 
-Tu dois créer un projet Kotlin au format (*Build system*) gradle dont le nom est **DemoJSoup**.
+Tu dois créer un projet Kotlin au format (_Build system_) gradle dont le nom est **DemoJSoup**.
 
-Tu dois inclure JSoup dans les dépendances de ton projet dans le build.gradle (*indice : regarde la **[Recette](recettes/ajout-librairie)** 
- pour savoir comment faire)*.
+Tu dois inclure JSoup dans les dépendances de ton projet dans le build.gradle (_indice : regarde la **[Recette](../03-recettes/ajout-librairie.mdx)**
+pour savoir comment faire)_.
 
-Tu dois créer un fichier exécutable appelé **SuperDuperDemo.kt**. 
+Tu dois créer un fichier exécutable appelé **SuperDuperDemo.kt**.
 
 Dans le main, copie un des exemples que tu trouves sur la page de JSOUP [https://jsoup.org/](https://jsoup.org/):
+
 - les exemples sont en Java
 - tu peux essayer de les traduire en Kotlin
 - tu peux demander à ChatGPT de traduire l'exemple en Kotlin
