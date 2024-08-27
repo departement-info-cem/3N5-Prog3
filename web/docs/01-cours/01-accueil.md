@@ -142,15 +142,20 @@ N'OUBLIE PAS DE FAIRE UN COMMIT DANS TON REPO AVEC L'EXERCICE PUIS DE FAIRE UN P
 ### Exercice Triangles
 
 Dans un fichier exécutable **Triangles.kt**, tu dois produire 5 triangles de suite en utilisant une fonction Kotlin qui:
+
 - prend la hauteur en paramètre
-- renvoie une **String** avec le triangle
+- renvoie une **String** qui contient le triangle
+
+- **Indice** : Part de l'exercice précédent
+- **Indice 2** : Puisque le triangle devrait se retrouver dans la String qui est retournée par la fonction, il ne devrait y avoir aucuns `print` dans la fonction.
 
 ```kotlin
 fun triangle(hauteur : Int) : String {
     return "TODO"
 }
 ```
-Utilise des appels à cette fonction dans le main pour afficher 5 triangles de suite de taille 4, 8, 10 et 100.
+
+Utilise des appels à cette fonction dans le main pour afficher 5 triangles de suite. Fait des tests avec des triangles de taille 4, 8, 10 et 100.
 
 N'OUBLIE PAS DE FAIRE UN COMMIT DANS TON REPO AVEC L'EXERCICE PUIS DE FAIRE UN PUSH.
 
