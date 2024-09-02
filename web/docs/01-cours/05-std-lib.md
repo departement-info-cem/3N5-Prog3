@@ -6,70 +6,38 @@ hide_table_of_contents: true
 
 # Kotlin, librairie standard
 
-## Contenu
-
-TODO on oublie hashcode et equals\
-TODO on parle de collection mutable / pas mutable\
-TODO on parle de set et list  Thème collection\
-TODO on parle de fichiers écriture et lecture fichiers texte
-
 <Row>
 
 <Column>
 
 :::danger Avant la séance (2h)
 
-Explication en profondeur mutalibilité et immutabilité.
+1. Lire la documentation de la librairie standard de Kotlin sur les ***[Collections](https://kotlinlang.org/docs/collections-overview.html)***, les ***[List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/)***, les ***[Set](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/)*** et les ***[Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/)*** (max 20 minutes).
+2. Regarder les vidéos de théorie.
+3. Commencer les exercices de la semaine.
+4. Arrêter après 2 heures de travail.
 
-Kotlin peut utiliser :
-- les librairies Java incluant tout le contenu de la librairie standard (exemple : java.util.List)
-- la **[librairie standard de Kotlin](https://kotlinlang.org/api/latest/jvm/stdlib/)**, qui est une surcouche de la librairie Java.
+:::
 
-Une liste mutable peut faire tout ce que peut faire une liste immuable, alors :
-- pourquoi la immuable existe?
-- pourquoi on recommande d'utiliser le plus possible des collection immuables?
+:::info À faire pendant la séance
 
-Sources:
-- **[Risques de la mutabilité](https://web.mit.edu/6.005/www/fa15/classes/09-immutability/#:~:text=The%20answer%20is%20that%20immutable,much%20harder%20to%20enforce%20contracts)**
-- **[Limiter la mutabilité](https://kt.academy/article/ek-mutability)**
-
-1. La source la plus importante de documentation sur la librairie standard est le javadoc.\
-Parcourir une ou deux pages en partant de **[javadoc](https://docs.oracle.com/javase/7/docs/api/)** (max 20 minutes).
-2. Lire le javadoc de la classe **[Set](https://docs.oracle.com/javase/7/docs/api/java/util/Set.html)** (max 10 minutes).
-3. Regarder les vidéos de théorie
-4. Commencer les exercices de la semaine.
-5. Arrêter après 2 heures de travail
+- Compléter les exercices de la semaine.
+- Continuer le **[travail pratique](../tp/tp1)** (à remettre bientôt!).
 
 :::
 
 </Column>
-
-</Row>
-
-<Row>
 
 <Column>
 
 :::tip Vidéos
 
-<Video url="https://youtu.be/KhK604sQik8" />
+<Video url="https://youtu.be/vV_nT5Sj7J4"/>
+<!-- <Video url=""/> -->
+<!-- <Video url=""/> -->
+<!-- <Video url=""/> -->
 
-<Video url="https://youtu.be/YxLB9Hc9GLI" />
 
-<Video url="https://youtu.be/0nIQGQ6D6xw" />
-
-<Video url="https://youtu.be/v4HM5iTfSoE" />
-
-:::
-
-</Column>
-
-<Column>
-
-:::info À faire pendant la séance
-
-- Compléter les exercices de la semaine
-- Continuer le **[travail pratique](../tp/tp1)** (à remettre bientôt!)
 
 :::
 
