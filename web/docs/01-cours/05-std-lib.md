@@ -19,13 +19,6 @@ hide_table_of_contents: true
 
 :::
 
-:::info À faire pendant la séance
-
-- Compléter les exercices de la semaine.
-- Continuer le **[travail pratique](../tp/tp1)** (à remettre bientôt!).
-
-:::
-
 </Column>
 
 <Column>
@@ -39,9 +32,48 @@ hide_table_of_contents: true
 
 (autres vidéos à venir)
 
-
+<!-- <Video url="https://youtu.be/KhK604sQik8" />
+<Video url="https://youtu.be/YxLB9Hc9GLI" />
+<Video url="https://youtu.be/0nIQGQ6D6xw" />
+<Video url="https://youtu.be/v4HM5iTfSoE" /> -->
 
 :::
+
+</Column>
+
+<Column>
+
+:::info À faire pendant la séance
+
+- Compléter les exercices de la semaine.
+- Continuer le **[travail pratique](../tp/tp1)** (à remettre bientôt!).
+
+:::
+
+
+<!-- -TODO on oublie hashcode et equals\
+-TODO on parle de collection mutable / pas mutable\
+-TODO on parle de set et list  Thème collection\
+-TODO on parle de fichiers écriture et lecture fichiers texte
+
+:::info Notions
+
+Explication en profondeur mutalibilité et immutabilité.
+
+Kotlin peut utiliser :
+- les librairies Java incluant tout le contenu de la librairie standard (exemple : java.util.List)
+- la **[librairie standard de Kotlin](https://kotlinlang.org/api/latest/jvm/stdlib/)**, qui est une surcouche de la librairie Java.
+
+Une liste mutable peut faire tout ce que peut faire une liste immuable, alors :
+- pourquoi la immuable existe?
+- pourquoi on recommande d'utiliser le plus possible des collection immuables?
+
+Sources:
+- **[Risques de la mutabilité](https://web.mit.edu/6.005/www/fa15/classes/09-immutability/#:~:text=The%20answer%20is%20that%20immutable,much%20harder%20to%20enforce%20contracts)**
+- **[Limiter la mutabilité](https://kt.academy/article/ek-mutability)**
+
+::: -->
+
 
 </Column>
 
