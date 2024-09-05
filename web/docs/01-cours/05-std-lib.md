@@ -26,7 +26,7 @@ hide_table_of_contents: true
 :::tip Vidéos
 
 <Video url="https://youtu.be/vV_nT5Sj7J4"/>
-<!-- <Video url=""/> -->
+<Video url="https://youtu.be/VB1uKiTiqiw"/>
 <!-- <Video url=""/> -->
 <!-- <Video url=""/> -->
 
@@ -220,7 +220,7 @@ on me voit on me voit plus on me voit plus on me voit
 
 ta *Map* devrait contenir :
 
-```
+```kotlin
 {on=4, me=4, voit=4, plus=2}
 ```
 
