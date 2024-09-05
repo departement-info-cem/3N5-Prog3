@@ -94,6 +94,20 @@ Sources:
 
 Crée-toi un nouveau projet dans lequel tu pourras créer différents fichiers exécutables pour les exercices.
 
+### Exercice EntrezUnNombre.kt
+
+En utilisant la fonction ***readln()***, crée un programme qui demande à l'utilisateur de taper un mot jusqu'à ce que ce soit un nombre entier (dans la console) :
+
+```text {2,4,6}
+Veuillez entrer un nombre :
+pipo
+Ceci n’est pas un nombre, veuillez entrer un nombre :
+popi
+Ceci n’est pas un nombre, veuillez entrer un nombre :
+123
+Merci, votre nombre est 123.
+```
+
 ### Exercice EcrireFichier.kt
 
 En utilisant la librairie standard, ton programme doit :
@@ -174,18 +188,40 @@ Dans un fichier **Trucs.md** à la racine du projet, réponds à ces questions :
 
 Dans le doute, demande à ton prof.
 
-### Exercice EntrezUnNombre.kt
+### Exercice Ensemble.kt
 
-En utilisant la fonction ***readln()***, crée un programme qui demande à l'utilisateur de taper un mot jusqu'à ce que ce soit un nombre entier (dans la console) :
+Crée un programme pour gérer une liste de mots reçue en ligne de commande.\
+Tu dois t'assurer qu’il n’y a pas de doublons (utilise un ***Set***).\
+Affiche ensuite les mots triés par ordre alphabétique dans la console.
 
-```text {2,4,6}
-Veuillez entrer un nombre :
-pipo
-Ceci n’est pas un nombre, veuillez entrer un nombre :
-popi
-Ceci n’est pas un nombre, veuillez entrer un nombre :
-123
-Merci, votre nombre est 123.
+Par exemple, si ces mots sont passés en ligne commande :
+
+```
+on me voit on me voit plus on me voit plus on me voit
+```
+
+la console devrait afficher :
+
+```
+me
+on
+plus
+voit
+```
+
+### Exercice Compteur.kt
+
+En utilisant une ***Map***, crée un programme qui compte les occurences de chacun des mots reçus en ligne de commande.\
+Par exemple, si ces mots sont passés en ligne commande :
+
+```
+on me voit on me voit plus on me voit plus on me voit
+```
+
+ta *Map* devrait contenir :
+
+```
+{on=4, me=4, voit=4, plus=2}
 ```
 
 ### Exercice Dictionnaire.kt (optionnel)
@@ -217,22 +253,6 @@ Richard a eu 73%.
 - Pourquoi?
 - A-t-on bien choisi la paire (clé, valeur) de notre *map*?
 - Que proposes-tu?
-
-
-### Exercice Compteur.kt (optionnel)
-
-En utilisant une ***Map***, crée un programme qui compte les occurences de chacun des mots reçus en ligne de commande.\
-Par exemple, si ces mots sont passés en ligne commande :
-
-```
-on me voit on me voit plus on me voit plus on me voit
-```
-
-ta *Map* devrait contenir :
-
-```
-{on=4, me=4, voit=4, plus=2}
-```
 
 
 
