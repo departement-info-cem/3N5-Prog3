@@ -26,9 +26,9 @@ hide_table_of_contents: true
 :::tip Vidéos
 
 <Video url="https://youtu.be/vV_nT5Sj7J4"/>
+<Video url="https://youtu.be/5PhJMt4Qwhk"/>
+<!-- <Video url=""/> -->
 <Video url="https://youtu.be/VB1uKiTiqiw"/>
-<!-- <Video url=""/> -->
-<!-- <Video url=""/> -->
 
 (autres vidéos à venir)
 
