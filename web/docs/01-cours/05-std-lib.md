@@ -77,8 +77,8 @@ Sources:
 - **[Risques de la mutabilité](https://web.mit.edu/6.005/www/fa15/classes/09-immutability/#:~:text=The%20answer%20is%20that%20immutable,much%20harder%20to%20enforce%20contracts)**
 - **[Limiter la mutabilité](https://kt.academy/article/ek-mutability)**
 
-:::
- -->
+::: -->
+
 
 
 
@@ -221,15 +221,14 @@ Richard a eu 73%.
 
 ### Exercice Compteur.kt (optionnel)
 
-En utilisant un ***Set***, crée un programme qui compte les occurences de chacun des mots reçus en ligne de commande.
-
+En utilisant une ***Map***, crée un programme qui compte les occurences de chacun des mots reçus en ligne de commande.\
 Par exemple, si ces mots sont passés en ligne commande :
 
 ```
 on me voit on me voit plus on me voit plus on me voit
 ```
 
-ton *Set* devrait contenir :
+ta *Map* devrait contenir :
 
 ```
 {on=4, me=4, voit=4, plus=2}
