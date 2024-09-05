@@ -51,6 +51,11 @@ hide_table_of_contents: true
 :::
 
 
+
+
+
+
+
 <!-- -TODO on oublie hashcode et equals\
 -TODO on parle de collection mutable / pas mutable\
 -TODO on parle de set et list  Thème collection\
@@ -72,7 +77,12 @@ Sources:
 - **[Risques de la mutabilité](https://web.mit.edu/6.005/www/fa15/classes/09-immutability/#:~:text=The%20answer%20is%20that%20immutable,much%20harder%20to%20enforce%20contracts)**
 - **[Limiter la mutabilité](https://kt.academy/article/ek-mutability)**
 
-::: -->
+:::
+ -->
+
+
+
+
 
 
 </Column>
@@ -207,5 +217,24 @@ Richard a eu 73%.
 - Pourquoi?
 - A-t-on bien choisi la paire (clé, valeur) de notre *map*?
 - Que proposes-tu?
+
+
+### Exercice Compteur.kt (optionnel)
+
+En utilisant un ***Set***, crée un programme qui compte les occurences de chacun des mots reçus en ligne de commande.
+
+Par exemple, si ces mots sont passés en ligne commande :
+
+```
+on me voit on me voit plus on me voit plus on me voit
+```
+
+ton *Set* devrait contenir :
+
+```
+{on=4, me=4, voit=4, plus=2}
+```
+
+
 
 :::
