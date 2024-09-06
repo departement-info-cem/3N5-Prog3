@@ -92,7 +92,7 @@ Par exemple, pour ***repete(4, 2)***, on doit obtenir **[1, 1, 2, 2, 3, 3, 4, 4]
 
 Ton programme doit contenir :
 1. une fonction ***triInverseALaMain(liste: List\<Double\>)*** qui renvoie la liste triée par ordre inverse.\
-Par exemple, si on passe **[0.1, 12.34, -0.1234, 3.1416]** on doit obtenir **[-0.1234, 0.1, 3.1416, 12.34]**.\
+Par exemple, si on passe **[0.1, 12.34, -0.1234, 3.1416]** on doit obtenir **[3.1416, -0.1234, 12.34, 0.1]**.\
 Tu dois utiliser une liste mutable et une boucle;
 2. une fonction ***triInverse(liste: List\<Double\>)*** qui fait la même chose, mais sans boucle et en utilisant une méthode de l'objet *List* reçu en paramètre;
 3. une fonction ***main*** qui teste les deux fonctions précédentes avec plusieurs listes.
