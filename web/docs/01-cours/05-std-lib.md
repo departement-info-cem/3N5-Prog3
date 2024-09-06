@@ -84,7 +84,7 @@ En utilisant la librairie standard, ton programme doit :
 ### Exercice ListeSimple.kt
 
 Ton programme doit contenir :
-- une fonction ***repete(n: Int, nombreFois: Int): List\<Int\>*** qui renvoie une liste d'entiers avec tous les nombres de 1 à *n* répétés *nombreFois*.\
+- une fonction ***repete(n: Int, nombreFois: Int)*** qui renvoie une liste d'entiers avec tous les nombres de 1 à *n* répétés *nombreFois*.\
 Par exemple, pour ***repete(4, 2)***, on doit obtenir **[1, 1, 2, 2, 3, 3, 4, 4]**;
 - une fonction ***main*** qui teste la fonction précédente avec plusieurs valeurs de paramètres, et affiche les listes retournées avec *println()*.
 
