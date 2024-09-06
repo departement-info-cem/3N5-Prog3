@@ -27,6 +27,7 @@ hide_table_of_contents: true
 
 <Video url="https://youtu.be/vV_nT5Sj7J4"/>
 <Video url="https://youtu.be/5PhJMt4Qwhk"/>
+<Video url="https://youtu.be/JEL8ord98nY"/>
 <!-- <Video url=""/> -->
 <Video url="https://youtu.be/VB1uKiTiqiw"/>
 
@@ -56,10 +57,8 @@ hide_table_of_contents: true
 
 
 
-<!-- -TODO on oublie hashcode et equals\
--TODO on parle de collection mutable / pas mutable\
+<!-- -TODO on parle de collection mutable / pas mutable\
 -TODO on parle de set et list  Thème collection\
--TODO on parle de fichiers écriture et lecture fichiers texte
 
 :::info Notions
 
