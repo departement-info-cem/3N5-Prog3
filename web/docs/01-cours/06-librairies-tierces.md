@@ -12,7 +12,7 @@ hide_table_of_contents: true
 
 :::danger Avant la séance (2h)
 
-Il existe des milliers de librairies Java pour faire presque tout qui fonctionnent généralement bien. De nombreuses compagnies tech comme [Google](https://github.com/search?q=topic%3Aandroid+org%3Agoogle+fork%3Atrue&type=repositories), [Twitter](https://github.com/Twitter) ou [Square](https://github.com/search?q=topic%3Aandroid+org%3Asquare+fork%3Atrue&type=repositories) partagent leur librairies.
+Il existe des milliers de librairies Java pour faire presque tout, qui fonctionnent généralement bien. De nombreuses compagnies tech comme [Google](https://github.com/search?q=topic%3Aandroid+org%3Agoogle+fork%3Atrue&type=repositories), [Twitter](https://github.com/Twitter) ou [Square](https://github.com/search?q=topic%3Aandroid+org%3Asquare+fork%3Atrue&type=repositories) partagent leur librairies.
 
 :::
 
@@ -28,7 +28,7 @@ Il existe des milliers de librairies Java pour faire presque tout qui fonctionne
 - Compléter les exercices de la semaine
 - **Continuer le [TP1](../tp/tp1)**
 
-**Attention** : une grande partie du travail de ces exercices consiste à faire vos propres recherches. Lorsqu'on commence à utiliser une nouvelle librairie, il est généralement recommendé de commencer en lisant la documentation et les exemples fournis par les développeurs de la librairie.
+**Attention** : une grande partie du travail de ces exercices consiste à faire vos propres recherches. Lorsqu'on commence à utiliser une nouvelle librairie, il est généralement recommandé de commencer en lisant la documentation et les exemples fournis par les développeurs de la librairie.
 
 :::
 
@@ -40,7 +40,7 @@ Il existe des milliers de librairies Java pour faire presque tout qui fonctionne
 
 ### Exercice Jsoup
 
-À l'aide de la librairie [Jsoup](https://jsoup.org/), vous devez écrire un petit programme qui prend une url en paramètre, qui télécharge la page web correspondant, puis qui extrait toutes les balises *a* de la page et affiche leur attribut href.
+À l'aide de la librairie [Jsoup](https://jsoup.org/), vous devez écrire un petit programme qui prend une url en paramètre, qui télécharge la page web correspondant, puis qui extrait toutes les balises *\<a\>* de la page et affiche leur attribut *href*.
 
 Par exemple, si la page contient
 
@@ -87,7 +87,7 @@ fun testeCetteListe(liste: MutableList<Int>) {
 }
 ```
 
-Le but est de voir quelle liste est la plus performante entre LinkedList, ArrayList et une dernière que vous trouverez dans la librairie suivante [GapList](http://www.magicwerk.org/page-collections-download.html).
+Le but est de voir quelle liste est la plus performante entre LinkedList, ArrayList et une dernière que vous trouverez dans la librairie suivante : [GapList](http://www.magicwerk.org/page-collections-download.html).
 
 Ainsi, avec un `main` qui appelle la méthode testeCetteListe pour une **LinkedList** puis une **ArrayList** puis une **GapList**, vous aurez une bonne idée des performances respectives.
 
