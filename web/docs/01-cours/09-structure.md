@@ -8,9 +8,9 @@ hide_table_of_contents: true
 
 ## Contenu
 
-On peut rapidement se perdre quand on a plus de 100 lignes de code, nous allons voir:
-- quand faire une méthode et pourquoi (nommer, réutiliser etc.)
-- quand faire une classe et pourquoi (nommer, regrouper etc.)
+On peut rapidement se perdre quand on a plus de 100 lignes de code. Nous allons voir :
+- quand faire une méthode et pourquoi (nommer, réutiliser, etc.)
+- quand faire une classe et pourquoi (nommer, regrouper, etc.)
 - les fonctions de refactor de l'environnement pour faire tout ça sans rien casser (parce qu'un travail qui marche c'est précieux)
 
 <Row>
@@ -41,7 +41,7 @@ Regarder la video refactoring d'un monstre en kotlin
 :::info À faire pendant la séance
 
 - Compléter les exercices de la semaine
-- Pensez sérieusement à quel refactor aurait du sens pour ton TP
+- Penser sérieusement à quel refactor aurait du sens pour ton TP
 - Continuer le **[premier travail](../tp/tp1)**
 
 :::
