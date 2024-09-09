@@ -108,6 +108,50 @@ Tu dois parcourir la liste avec une boucle;
 4. une fonction ***compte(element: Int, liste: List\<Int\>): Int*** qui fait la même chose, mais sans boucle et en utilisant une méthode de l'objet *List*;
 5. une fonction ***main*** qui teste les 4 fonctions sur plusieurs exemples.
 
+### Exercice Ensemble.kt
+
+Crée un programme pour gérer une liste de mots reçue en ligne de commande.\
+Tu dois t'assurer qu’il n’y a pas de doublons (utilise un ***Set***).\
+Affiche ensuite les mots triés par ordre alphabétique dans la console.
+
+Par exemple, si ces mots sont passés en ligne commande :
+
+```
+on me voit on me voit plus on me voit plus on me voit
+```
+
+la console devrait afficher :
+
+```
+me
+on
+plus
+voit
+```
+
+### Exercice Compteur.kt
+
+En utilisant une ***Map***, crée un programme qui compte les occurences de chacun des mots reçus en ligne de commande.\
+Par exemple, si ces mots sont passés en ligne commande :
+
+```
+on me voit on me voit plus on me voit plus on me voit
+```
+
+ta *Map* devrait contenir :
+
+```kotlin
+{on=4, me=4, voit=4, plus=2}
+```
+
+
+:::
+
+
+
+
+<!-- EXERCICES RETIRÉS :
+
 ### Exercice TriComparator.kt
 
 Ton programme doit contenir une fonction ***triComplexe(liste: List\<Int\>): List\<Int\>*** qui renvoie la liste, triée selon un ordre un peu complexe :
@@ -147,42 +191,6 @@ Dans un fichier **Trucs.md** à la racine du projet, réponds à ces questions :
 
 Dans le doute, demande à ton prof.
 
-### Exercice Ensemble.kt
-
-Crée un programme pour gérer une liste de mots reçue en ligne de commande.\
-Tu dois t'assurer qu’il n’y a pas de doublons (utilise un ***Set***).\
-Affiche ensuite les mots triés par ordre alphabétique dans la console.
-
-Par exemple, si ces mots sont passés en ligne commande :
-
-```
-on me voit on me voit plus on me voit plus on me voit
-```
-
-la console devrait afficher :
-
-```
-me
-on
-plus
-voit
-```
-
-### Exercice Compteur.kt
-
-En utilisant une ***Map***, crée un programme qui compte les occurences de chacun des mots reçus en ligne de commande.\
-Par exemple, si ces mots sont passés en ligne commande :
-
-```
-on me voit on me voit plus on me voit plus on me voit
-```
-
-ta *Map* devrait contenir :
-
-```kotlin
-{on=4, me=4, voit=4, plus=2}
-```
-
 ### Exercice Dictionnaire.kt (optionnel)
 
 On veut garder en mémoire les notes de nos étudiants.\
@@ -211,8 +219,5 @@ Richard a eu 73%.
 - Que s'est-il passé?
 - Pourquoi?
 - A-t-on bien choisi la paire (clé, valeur) de notre *map*?
-- Que proposes-tu?
+- Que proposes-tu? -->
 
-
-
-:::
