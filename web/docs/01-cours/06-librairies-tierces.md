@@ -81,7 +81,7 @@ fun testeCetteListe(liste: MutableList<Int>) {
     val b = System.currentTimeMillis()
     // ajouter 100 000 elements en première position liste.add(0, nombre);
     val c = System.currentTimeMillis()
-    // ajouter 100 000 elements position au hasard liste.add(random.nextInt(liste.size() + 1), nombre);
+    // ajouter 100 000 elements position au hasard liste.add(random.nextInt(liste.size + 1), nombre);
     val d = System.currentTimeMillis()
     // afficher b-a, c-b, d-c qui sont les durées d'exécution en millisecondes
 }
