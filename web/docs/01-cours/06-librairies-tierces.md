@@ -22,7 +22,7 @@ Il existe des milliers de librairies Java pour faire presque tout, qui fonctionn
 
 :::info À faire pendant la séance
 
-- Demo de MavenRepository: librairie, version et pom.xml
+- Demo de MavenRepository: librairie, version
 - Exemple de recherche de librairie : exemple de [https://square.github.io](https://square.github.io)
   - Interopérabilité des librairies Java et Kotlin
 - Compléter les exercices de la semaine
