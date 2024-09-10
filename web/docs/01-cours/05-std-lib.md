@@ -71,8 +71,8 @@ Merci, votre nombre est 123.
 
 En utilisant la librairie standard, ton programme doit :
 
-- écrire un fichier vide dans le dossier courant appelé vide.txt;
-- créer un fichier texte contenant ton nom et ton prénom dans le dossier parent du dossier courant.
+- Créer un fichier vide dans le dossier courant appelé vide.txt.
+- Créer un fichier texte contenant ton nom et ton prénom dans le dossier parent du dossier courant.
 
 ### Exercice LireFichier.kt
 
