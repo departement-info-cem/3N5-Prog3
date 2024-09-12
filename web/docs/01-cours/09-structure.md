@@ -63,26 +63,30 @@ Après chaque refactor :
 
 Jimmy et Johnny se chicanent depuis 10 ans. Chacun a écrit une méthode afin de lire un fichier. Jimmy dit que les deux méthodes sont équivalentes alors que Johnny dit que le résultat n'est pas le même. Qui a raison et pourquoi?
 
-Teste le [code](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/Demo_Exceptions/src/main/java/sabourin/exercices) pour démontrer si les méthodes sont pareilles ou non.
+Teste le [code](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/JimJohn/) pour démontrer si les méthodes sont pareilles ou non.
 
 ```kotlin
 fun lireDesFichiersJimmy() {
     for (i in 0 until 10) {
         try {
             lireFichier(i)
+            println("fichier $i lu par Jimmy")
         } catch (e: FileNotFoundException) {
-            println("fichier n'existe pas")
+            println("fichier $i n'existe pas Jimmy")
         }
     }
 }
 
 fun lireDesFichiersJohnny() {
+    var cpt = 0
     try {
         for (i in 0 until 10) {
             lireFichier(i)
+            cpt = i
+            println("fichier $i lu par Johnny")
         }
     } catch (e: FileNotFoundException) {
-        println("fichier n'existe pas")
+        println("fichier $cpt n'existe pas Johnny")
     }
 }
 
