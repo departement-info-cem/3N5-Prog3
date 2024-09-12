@@ -18,7 +18,7 @@ On peut rapidement se perdre dans une fonction quand on a plus de 100 lignes de 
 
 :::warning Avant la séance (2h)
 
-Regarder la video sur le refactoring en kotlin dans IntelliJ IDEA.
+Regarder la vidéo sur le refactoring en kotlin dans IntelliJ IDEA.
 
 :::
 
@@ -52,12 +52,12 @@ Regarder la video sur le refactoring en kotlin dans IntelliJ IDEA.
 
 ### Exercice RefactorTonTP
 
-En utilisant les outils de refactor d'IntelliJ IDEA, améliorez la lisibilité de ton TP1.
+En utilisant les outils de refactor d'IntelliJ IDEA, améliore la lisibilité de ton TP1.
 
-Après chaque refactor:
+Après chaque refactor :
 - valide que le comportement de ton application n'a pas changé
 - fais un commit de refactor
-- pousse le sur ton repo
+- pousse-le sur ton repo
 
 [//]: # ()
 [//]: # (### Exercice Bon ✔️ ou Non ❌)
@@ -218,7 +218,7 @@ Après chaque refactor:
 
 Jimmy et Johnny se chicanent depuis 10 ans. Chacun a écrit une méthode afin de lire un fichier. Jimmy dit que les deux méthodes sont équivalentes alors que Johnny dit que le résultat n'est pas le même. Qui a raison et pourquoi?
 
-Testez le [code](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/Demo_Exceptions/src/main/java/sabourin/exercices) pour démontrer si les méthodes sont pareilles ou non.
+Teste le [code](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/Demo_Exceptions/src/main/java/sabourin/exercices) pour démontrer si les méthodes sont pareilles ou non.
 
 ```java
 public static void lireDesFichiersJimmy(){
