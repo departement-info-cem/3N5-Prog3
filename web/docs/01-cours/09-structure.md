@@ -65,26 +65,27 @@ Jimmy et Johnny se chicanent depuis 10 ans. Chacun a écrit une méthode afin de
 
 Testez le [code](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/Demo_Exceptions/src/main/java/sabourin/exercices) pour démontrer si les méthodes sont pareilles ou non.
 
-```java
-public static void lireDesFichiersJimmy(){
-    for (int i = 0 ; i < 10 ; i++ ){
+```kotlin
+fun lireDesFichiersJimmy() {
+    for (i in 0 until 10) {
         try {
-            lireFichier(i); 
-        } catch (FileNotFoundException e) {
-            System.out.println("fichier n'existe pas");
+            lireFichier(i)
+        } catch (e: FileNotFoundException) {
+            println("fichier n'existe pas")
         }
     }
 }
 
-public static void lireDesFichiersJohnny(){
+fun lireDesFichiersJohnny() {
     try {
-        for (int i = 0 ; i < 10 ; i++ ){
-            lireFichier(i); 
+        for (i in 0 until 10) {
+            lireFichier(i)
         }
-    } catch (FileNotFoundException e) {
-        System.out.println("fichier n'existe pas");
+    } catch (e: FileNotFoundException) {
+        println("fichier n'existe pas")
     }
-}	
+}
+
 ```
 
 :::
