@@ -8,9 +8,8 @@ hide_table_of_contents: true
 
 ## Contenu
 
-On peut rapidement se perdre quand on a plus de 100 lignes de code. Nous allons voir :
+On peut rapidement se perdre dans une fonction quand on a plus de 100 lignes de code. Nous allons voir :
 - quand faire une méthode et pourquoi (nommer, réutiliser, etc.)
-- quand faire une classe et pourquoi (nommer, regrouper, etc.)
 - les fonctions de refactor de l'environnement pour faire tout ça sans rien casser (parce qu'un travail qui marche c'est précieux)
 
 <Row>
@@ -19,8 +18,7 @@ On peut rapidement se perdre quand on a plus de 100 lignes de code. Nous allons 
 
 :::warning Avant la séance (2h)
 
-Regarder la video refactoring d'un monstre en kotlin
-
+Regarder la video sur le refactoring en kotlin dans IntelliJ IDEA.
 
 :::
 
@@ -30,7 +28,7 @@ Regarder la video refactoring d'un monstre en kotlin
 
 :::tip Vidéos
 
-<Video url="https://youtu.be/bJ4MXns-aqo" />
+<Video url="https://youtu.be/9Gd83g3elJQ" />
 
 :::
 
@@ -52,99 +50,169 @@ Regarder la video refactoring d'un monstre en kotlin
 
 :::note Exercices
 
-### Exercice TrouveLaValeur
+### Exercice RefactorTonTP
 
-Tu trouveras dans le repo du cours le projet XXX.
+En utilisant les outils de refactor d'IntelliJ IDEA, améliorez la lisibilité de ton TP1.
 
-C'est un peu le bordel, réorganise le code et parle avec ton prof pour voir si:
-- les méthodes ont de l'allure (le nom, ce qui rentre, ce qui sort)
--
+Après chaque refactor:
+- valide que le comportement de ton application n'a pas changé
+- fais un commit de refactor
+- pousse le sur ton repo
 
-### Exercice Bon ✔️ ou Non ❌
+[//]: # ()
+[//]: # (### Exercice Bon ✔️ ou Non ❌)
 
-Voici des situations. Dites si le code est bon, ou pas, et pourquoi en 1 ligne
+[//]: # ()
+[//]: # (Voici des situations. Dites si le code est bon, ou pas, et pourquoi en 1 ligne)
 
-#### Exemple 1
+[//]: # ()
+[//]: # (#### Exemple 1)
 
-```java
-public void uneFonction(){
-	try {
-		//du code…
-	} catch (Exception e){
-		System.out.println("Erreur : " + e);
-	} catch (ArrayOutOfBoundsException a){
-		System.out.println("Erreur : " + a);
-	}
-}
-```
+[//]: # ()
+[//]: # (```java)
 
-#### Exemple 2
+[//]: # (public void uneFonction&#40;&#41;{)
 
-```java
-public void calculerPoidsSupernova() {
-	try {
-		//calculs compliqués...
-	} catch (NumberFormatException e) {}
-}
-```
+[//]: # (	try {)
 
-### Exercice Attrape 🎣 ou Transmet 📡 ?
+[//]: # (		//du code…)
 
-Voici des situations. Dites si on devrait attraper (**catch**) ou transmettre (**throws**) et pourquoi
+[//]: # (	} catch &#40;Exception e&#41;{)
 
-#### Exemple 1
+[//]: # (		System.out.println&#40;"Erreur : " + e&#41;;)
 
-```java
-public static void main() {
-	try {
-		calcul();
-		lireFichier();
-	} catch (ArithmeticException a) {
-		println("Problème dans les valeurs du calcul");
-	} catch (IllegalArgumentException i ) {
-		println("Problème dans les paramètres du programme");		
-	} catch (InterruptedException t){
-		println("Problème avec le thread en cours");	
-	}
-}
+[//]: # (	} catch &#40;ArrayOutOfBoundsException a&#41;{)
 
-public static void lireFichier(){
-	// Code qui lit un fichier...
-    // highlight-next-line
-	// Q : Catch ou Throws?
-}
-```
+[//]: # (		System.out.println&#40;"Erreur : " + a&#41;;)
 
-#### Exemple 2
+[//]: # (	})
 
-```java
-public static void main( String[] args ){
-	List<Integer> myList = Arrays.asList(1, 2, 3, 4, 5);
-	List<List<Integer> > lists = Lists.partition(myList, -1);
-			
-	// Ce code utilise la librairie Guava.
-    // highlight-next-line
-	// Q : Catch ou Throws?
-}
-```
+[//]: # (})
 
-#### Exemple 3
+[//]: # (```)
 
-```java
-public void uneFonction(){
-	etape1();
-	etape2();
-	etape3();
-	etape4();
-	etape5();
-}
+[//]: # ()
+[//]: # (#### Exemple 2)
 
-public void etape3(){
-	//Code qui génère une exception
-    // highlight-next-line
-	// Q : Catch ou Throws?
-}
-```
+[//]: # ()
+[//]: # (```java)
+
+[//]: # (public void calculerPoidsSupernova&#40;&#41; {)
+
+[//]: # (	try {)
+
+[//]: # (		//calculs compliqués...)
+
+[//]: # (	} catch &#40;NumberFormatException e&#41; {})
+
+[//]: # (})
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (### Exercice Attrape 🎣 ou Transmet 📡 ?)
+
+[//]: # ()
+[//]: # (Voici des situations. Dites si on devrait attraper &#40;**catch**&#41; ou transmettre &#40;**throws**&#41; et pourquoi)
+
+[//]: # ()
+[//]: # (#### Exemple 1)
+
+[//]: # ()
+[//]: # (```java)
+
+[//]: # (public static void main&#40;&#41; {)
+
+[//]: # (	try {)
+
+[//]: # (		calcul&#40;&#41;;)
+
+[//]: # (		lireFichier&#40;&#41;;)
+
+[//]: # (	} catch &#40;ArithmeticException a&#41; {)
+
+[//]: # (		println&#40;"Problème dans les valeurs du calcul"&#41;;)
+
+[//]: # (	} catch &#40;IllegalArgumentException i &#41; {)
+
+[//]: # (		println&#40;"Problème dans les paramètres du programme"&#41;;		)
+
+[//]: # (	} catch &#40;InterruptedException t&#41;{)
+
+[//]: # (		println&#40;"Problème avec le thread en cours"&#41;;	)
+
+[//]: # (	})
+
+[//]: # (})
+
+[//]: # ()
+[//]: # (public static void lireFichier&#40;&#41;{)
+
+[//]: # (	// Code qui lit un fichier...)
+
+[//]: # (    // highlight-next-line)
+
+[//]: # (	// Q : Catch ou Throws?)
+
+[//]: # (})
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (#### Exemple 2)
+
+[//]: # ()
+[//]: # (```java)
+
+[//]: # (public static void main&#40; String[] args &#41;{)
+
+[//]: # (	List<Integer> myList = Arrays.asList&#40;1, 2, 3, 4, 5&#41;;)
+
+[//]: # (	List<List<Integer> > lists = Lists.partition&#40;myList, -1&#41;;)
+
+[//]: # (			)
+[//]: # (	// Ce code utilise la librairie Guava.)
+
+[//]: # (    // highlight-next-line)
+
+[//]: # (	// Q : Catch ou Throws?)
+
+[//]: # (})
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (#### Exemple 3)
+
+[//]: # ()
+[//]: # (```java)
+
+[//]: # (public void uneFonction&#40;&#41;{)
+
+[//]: # (	etape1&#40;&#41;;)
+
+[//]: # (	etape2&#40;&#41;;)
+
+[//]: # (	etape3&#40;&#41;;)
+
+[//]: # (	etape4&#40;&#41;;)
+
+[//]: # (	etape5&#40;&#41;;)
+
+[//]: # (})
+
+[//]: # ()
+[//]: # (public void etape3&#40;&#41;{)
+
+[//]: # (	//Code qui génère une exception)
+
+[//]: # (    // highlight-next-line)
+
+[//]: # (	// Q : Catch ou Throws?)
+
+[//]: # (})
+
+[//]: # (```)
 
 ### Exercice Jimmy et Johnny 👨‍🎤👨‍💼
 
