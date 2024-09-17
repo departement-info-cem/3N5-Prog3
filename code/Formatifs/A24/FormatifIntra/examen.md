@@ -2,7 +2,7 @@
 
 ## Durée de l'examen
 
-2 heures (2h30 au CSA)
+100 minutes (135 minutes au CSA)
 
 ## Instructions
 
@@ -12,6 +12,7 @@
 - Aucun écouteur n'est permis pendant l'examen
 - Si vous êtes pris à accéder à internet (en dehors des liens permis) ou à copier sur un voisin, vous aurez la note de 0.
 - L'enseignant ne peut t'aider seulement si tu as des problèmes avec ton environnement de développement.
+- Il est interdit d'utiliser toute assistance venant d'une intelligence artificielle sous peine de 0.
 
 ## Liens permis
 
