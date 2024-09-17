@@ -10,6 +10,10 @@ hide_table_of_contents: true
 
 Nous allons passer sur une stratégie de base pour passer vos examens: [Stratégie examen](revision)
 
+## Formatif pour automne 2024
+
+Disponible sur Github à l'adresse suivante : [https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/Formatifs/A24/FormatifIntra](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/Formatifs/A24/FormatifIntra)
+
 ## Examen de automne 2022 (attention Java)
 
 - [Énoncé : intra 2022](@site/static/file/intra2022/ExamenA22.docx)
