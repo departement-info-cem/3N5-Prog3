@@ -1,5 +1,5 @@
 # IGNORER CE FICHIER, PAS UTILE POUR L'EXAMEN
-https://info.cegepmontpetit.ca/3N5-Prog3/intraA24-2.html
+https://info.cegepmontpetit.ca/3N5-Prog3/intraA24.html
 https://kotlinlang.org/docs
 https://github.com/departement-info-cem/3N5-Prog3
 https://info.cegepmontpetit.ca/3N5-Prog3/
