@@ -18,5 +18,10 @@ fun allPropertyDeclarationsAreTyped(ast: Ast): Boolean {
 fun variableDeclarationIsTyped(astNode: AstNode): Boolean {
     val variableDeclarations: MutableList<AstNode> = mutableListOf()
     astDescriptionSearcher(astNode, "variableDeclaration", variableDeclarations)
-    return variableDeclarations[0].children.count() == 4
+    for(children in variableDeclarations[0].children) {
+        if(children.description == "type") {
+            return true
+        }
+    }
+    return false
 }
