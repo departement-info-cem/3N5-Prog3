@@ -21,6 +21,6 @@ fun lire() {
  * (1 point) Le fichier aura comme contenu le texte contenu dans le 2ème élément qui est dans le paramètre args.
  * Si tout s'est bien passé, on retourne la valeur 1.
  */
-fun ecrire(args: List<String>): Int {
+fun ecrire(args: Array<String>): Int {
     return 1
 }
