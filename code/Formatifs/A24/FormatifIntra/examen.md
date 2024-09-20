@@ -6,7 +6,7 @@
 
 ## Instructions
 
-- Plusieurs functions sont fournies dans `src/main/kotlin`. Tu dois lire les commentaires et remplir les fonctions selon ce qui est demandé.
+- Plusieurs fonctions sont fournies dans `src/main/kotlin`. Tu dois lire les commentaires et remplir les fonctions selon ce qui est demandé.
 - Tu dois remplacer la chaine de caractères "Ton nom à toi" qui est dans `src/main/kotlin/TonNom.kt` par ton nom et ton prénom.
 - Toute documentation hors ligne permise (aucun accès internet).
 - Aucun écouteur n'est permis pendant l'examen
