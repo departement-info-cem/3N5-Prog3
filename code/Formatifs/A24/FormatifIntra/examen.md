@@ -17,7 +17,7 @@
 ## Liens permis
 
 - https://info.cegepmontpetit.ca/3N5-Prog3/intraA24-2.html
-- https://docs.oracle.com/javase/7/docs/api/
+- https://kotlinlang.org/docs
 - https://github.com/departement-info-cem/3N5-Prog3
 - https://info.cegepmontpetit.ca/3N5-Prog3/
 
