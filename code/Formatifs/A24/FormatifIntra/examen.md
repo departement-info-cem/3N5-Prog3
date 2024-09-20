@@ -2,7 +2,7 @@
 
 ## Durée de l'examen
 
-100 minutes (135 minutes au CSA)
+100 minutes (135 minutes si CSA)
 
 ## Instructions
 
