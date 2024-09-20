@@ -67,7 +67,7 @@ class FichierTest {
             pointsRetiresSiEchoue = 0,
             explicationSiEchoue = "La valeur retournée n'est pas -1 et/ou aucun message d'erreur n'a été affiché dans la console.",
             test = {
-                val ret: Int = ecrire(listOf())
+                val ret: Int = ecrire(arrayOf())
                 assertEquals(-1, ret)
                 assertTrue(output.all.count() > 1)
             })
@@ -87,7 +87,7 @@ class FichierTest {
             pointsRetiresSiEchoue = 0,
             explicationSiEchoue = "Le fichier ne contient pas le contenu demandé.",
             test = {
-                ecrire(listOf(nomFichierAEcrire, contenuFichierAEcrire))
+                ecrire(arrayOf(nomFichierAEcrire, contenuFichierAEcrire))
 
                 val fichierEcrit: File = File(nomFichierAEcrire)
                 if (fichierEcrit.exists()) {
@@ -115,7 +115,7 @@ class FichierTest {
             pointsRetiresSiEchoue = 0,
             explicationSiEchoue = "Aucun fichier portant le nom de $nomFichierAEcrire n'a été créé.",
             test = {
-                ecrire(listOf(nomFichierAEcrire, contenuFichierAEcrire))
+                ecrire(arrayOf(nomFichierAEcrire, contenuFichierAEcrire))
 
                 val fichier: File = File(nomFichierAEcrire)
                 assertTrue(fichier.exists())
