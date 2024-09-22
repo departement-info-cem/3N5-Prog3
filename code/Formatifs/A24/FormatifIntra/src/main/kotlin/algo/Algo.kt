@@ -10,7 +10,7 @@ fun main() {
  * (3 points) Tu dois traduire le pseudo-code fourni pour programmer la fonction racineCarre.
  * (1 point) Tu dois inclure toutes les annotations de type sur les variables.
  */
-fun racineCarre(x: Double): Double {
+fun racineCarre(x: Float): Float {
     /*
         racineCarre(x qui est un nombre en virgule flottante)
           resultat est initialisé à 0,0
@@ -29,5 +29,5 @@ fun racineCarre(x: Double): Double {
           fin du pour sur les fraction
           renvoyer resultat
      */
-    return 0.0
+    return 0f
 }
