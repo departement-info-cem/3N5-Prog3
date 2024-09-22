@@ -34,7 +34,7 @@ class Correcteur(private val titre: String) {
                     fichier.appendText("- (${point.pointsObtenus}/${point.ponderation}) ${point.question} ${ls()}${ls()}")
 
                     for(explication in point.explications) {
-                        fichier.appendText("  - **Erreur** $explication ${ls()}")
+                        fichier.appendText("  - **Erreur** $explication ${ls()}\n")
                     }
                 }
             }
@@ -51,7 +51,7 @@ class Correcteur(private val titre: String) {
         private var instance: Correcteur = Correcteur("${nomExamen()} - ${tonNom()}")
 
         fun get(): Correcteur {
-            return instance;
+            return instance
         }
     }
 }
