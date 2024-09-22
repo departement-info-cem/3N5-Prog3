@@ -1,6 +1,6 @@
 package correcteur
 
-data class Point(
+class Point(
     val question: String,
     val ponderation: Int,
     var pointsObtenus: Int = 0,

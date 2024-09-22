@@ -1,4 +1,3 @@
-
 import correcteur.Correcteur
 import correcteur.Point
 import correcteur.testeur
@@ -26,22 +25,24 @@ class JsoupTest {
             "Le contenu de la page html modifiée doit être imprimée dans la console.", 1
         )
 
-        point = testeur(point = point,
-            pointsAjoutesSiReussi = 1,
-            pointsRetiresSiEchoue = 0,
-            explicationSiEchoue = "Le document n'a pas été ajouté dans la console.",
-            test = {
-                val document: Document? = jsoup(mots)
-                if (document != null) {
-                    for(ligne in document.html().split("\n")) {
-                        assertContains(output.all, ligne)
+        try {
+            testeur(point = point,
+                pointsAjoutesSiReussi = 1,
+                pointsRetiresSiEchoue = 0,
+                explicationSiEchoue = "Le document n'a pas été ajouté dans la console.",
+                test = {
+                    val document: Document? = jsoup(mots)
+                    if (document != null) {
+                        for (ligne in document.html().split("\n")) {
+                            assertContains(output.all, ligne)
+                        }
+                    } else {
+                        assertFails { }
                     }
-                } else {
-                    assertFails {  }
-                }
-            })
-
-        Correcteur.get().categories["Jsoup"]!!["Mots"]?.add(point)
+                })
+        } finally {
+            Correcteur.get().categories["Jsoup"]!!["Mots"]?.add(point)
+        }
     }
 
     @Test
@@ -50,25 +51,27 @@ class JsoupTest {
             "Chaque élément demandé est présent dans le document retourné.", 3
         )
 
-        point = testeur(point = point,
-            pointsAjoutesSiReussi = 3,
-            pointsRetiresSiEchoue = 0,
-            explicationSiEchoue = "Le document retourné ne contient pas les éléments demandés.",
-            test = {
-                val document: Document? = jsoup(mots)
-                if (document != null) {
-                    val body: Element = document.select("body").first()
-                    assertEquals(mots.count(), body.children().count())
-                    for (element in body.children()) {
-                        assertEquals("div", element.tag().toString())
-                        assertContains(mots, element.text())
+        try {
+            testeur(point = point,
+                pointsAjoutesSiReussi = 3,
+                pointsRetiresSiEchoue = 0,
+                explicationSiEchoue = "Le document retourné ne contient pas les éléments demandés.",
+                test = {
+                    val document: Document? = jsoup(mots)
+                    if (document != null) {
+                        val body: Element = document.select("body").first()
+                        assertEquals(mots.count(), body.children().count())
+                        for (element in body.children()) {
+                            assertEquals("div", element.tag().toString())
+                            assertContains(mots, element.text())
+                        }
+                    } else {
+                        assertFails { }
                     }
-                } else {
-                    assertFails {  }
-                }
-            })
-
-        Correcteur.get().categories["Jsoup"]!!["Mots"]?.add(point)
+                })
+        } finally {
+            Correcteur.get().categories["Jsoup"]!!["Mots"]?.add(point)
+        }
     }
 
 }

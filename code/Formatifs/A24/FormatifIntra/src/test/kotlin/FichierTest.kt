@@ -40,19 +40,21 @@ class FichierTest {
             ponderation = 1
         )
 
-        point = testeur(point = point,
-            pointsAjoutesSiReussi = 1,
-            pointsRetiresSiEchoue = 0,
-            explicationSiEchoue = "Le contenu du fichier n'est pas affiché dans la console.",
-            test = {
-                lire()
-                val fichierALire: File = File("message.txt")
-                for (ligne in fichierALire.readLines()) {
-                    assertContains(output.all, ligne)
-                }
-            })
-
-        Correcteur.get().categories["Fichier"]!!["Lire"]?.add(point)
+        try {
+            testeur(point = point,
+                pointsAjoutesSiReussi = 1,
+                pointsRetiresSiEchoue = 0,
+                explicationSiEchoue = "Le contenu du fichier n'est pas affiché dans la console.",
+                test = {
+                    lire()
+                    val fichierALire: File = File("message.txt")
+                    for (ligne in fichierALire.readLines()) {
+                        assertContains(output.all, ligne)
+                    }
+                })
+        } finally {
+            Correcteur.get().categories["Fichier"]!!["Lire"]?.add(point)
+        }
     }
 
     @Test
@@ -62,17 +64,19 @@ class FichierTest {
             ponderation = 1
         )
 
-        point = testeur(point = point,
-            pointsAjoutesSiReussi = 1,
-            pointsRetiresSiEchoue = 0,
-            explicationSiEchoue = "La valeur retournée n'est pas -1 et/ou aucun message d'erreur n'a été affiché dans la console.",
-            test = {
-                val ret: Int = ecrire(arrayOf())
-                assertEquals(-1, ret)
-                assertTrue(output.all.count() > 1)
-            })
-
-        Correcteur.get().categories["Fichier"]!!["Écrire"]?.add(point)
+        try {
+            testeur(point = point,
+                pointsAjoutesSiReussi = 1,
+                pointsRetiresSiEchoue = 0,
+                explicationSiEchoue = "La valeur retournée n'est pas -1 et/ou aucun message d'erreur n'a été affiché dans la console.",
+                test = {
+                    val ret: Int = ecrire(arrayOf())
+                    assertEquals(-1, ret)
+                    assertTrue(output.all.count() > 1)
+                })
+        } finally {
+            Correcteur.get().categories["Fichier"]!!["Écrire"]?.add(point)
+        }
     }
 
     @Test
@@ -82,25 +86,27 @@ class FichierTest {
             ponderation = 1
         )
 
-        point = testeur(point = point,
-            pointsAjoutesSiReussi = 1,
-            pointsRetiresSiEchoue = 0,
-            explicationSiEchoue = "Le fichier ne contient pas le contenu demandé.",
-            test = {
-                ecrire(arrayOf(nomFichierAEcrire, contenuFichierAEcrire))
+        try {
+            testeur(point = point,
+                pointsAjoutesSiReussi = 1,
+                pointsRetiresSiEchoue = 0,
+                explicationSiEchoue = "Le fichier ne contient pas le contenu demandé.",
+                test = {
+                    ecrire(arrayOf(nomFichierAEcrire, contenuFichierAEcrire))
 
-                val fichierEcrit: File = File(nomFichierAEcrire)
-                if (fichierEcrit.exists()) {
-                    val contenuFichierEcrit: String = fichierEcrit.readText()
-                    for (ligne in contenuFichierAEcrire.split("\n")) {
-                        assertContains(contenuFichierEcrit, ligne)
+                    val fichierEcrit: File = File(nomFichierAEcrire)
+                    if (fichierEcrit.exists()) {
+                        val contenuFichierEcrit: String = fichierEcrit.readText()
+                        for (ligne in contenuFichierAEcrire.split("\n")) {
+                            assertContains(contenuFichierEcrit, ligne)
+                        }
+                    } else {
+                        assertFails { }
                     }
-                } else {
-                    assertFails {  }
-                }
-            })
-
-        Correcteur.get().categories["Fichier"]!!["Écrire"]?.add(point)
+                })
+        } finally {
+            Correcteur.get().categories["Fichier"]!!["Écrire"]?.add(point)
+        }
     }
 
     @Test
@@ -110,18 +116,20 @@ class FichierTest {
             ponderation = 1
         )
 
-        point = testeur(point = point,
-            pointsAjoutesSiReussi = 1,
-            pointsRetiresSiEchoue = 0,
-            explicationSiEchoue = "Aucun fichier portant le nom de $nomFichierAEcrire n'a été créé.",
-            test = {
-                ecrire(arrayOf(nomFichierAEcrire, contenuFichierAEcrire))
+        try {
+            testeur(point = point,
+                pointsAjoutesSiReussi = 1,
+                pointsRetiresSiEchoue = 0,
+                explicationSiEchoue = "Aucun fichier portant le nom de $nomFichierAEcrire n'a été créé.",
+                test = {
+                    ecrire(arrayOf(nomFichierAEcrire, contenuFichierAEcrire))
 
-                val fichier: File = File(nomFichierAEcrire)
-                assertTrue(fichier.exists())
-            })
-
-        Correcteur.get().categories["Fichier"]!!["Écrire"]?.add(point)
+                    val fichier: File = File(nomFichierAEcrire)
+                    assertTrue(fichier.exists())
+                })
+        } finally {
+            Correcteur.get().categories["Fichier"]!!["Écrire"]?.add(point)
+        }
     }
 }
 

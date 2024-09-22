@@ -1,4 +1,3 @@
-
 import algo.racineCarre
 import correcteur.Correcteur
 import correcteur.Point
@@ -12,6 +11,7 @@ import org.junit.jupiter.api.extension.ExtensionContext
 import org.springframework.boot.test.system.OutputCaptureExtension
 import utils.ast.allPropertyDeclarationsAreTyped
 import kotlin.test.assertEquals
+import kotlin.test.assertFails
 import kotlin.test.assertTrue
 
 @ExtendWith(BeforeAlgoTest::class, OutputCaptureExtension::class)
@@ -23,20 +23,23 @@ class AlgoTest {
     @Test
     fun testAlgoRacineCarreeFonctionnement() {
         var point: Point = Point(
-            question = "Tu dois traduire le pseudo-code fourni pour programmer la fonction racine carré.", ponderation = 3
+            question = "Tu dois traduire le pseudo-code fourni pour programmer la fonction racine carré.",
+            ponderation = 3
         )
 
-        point = testeur(point = point,
-            pointsAjoutesSiReussi = 3,
-            pointsRetiresSiEchoue = 0,
-            explicationSiEchoue = "L'algorithme ne donne pas la bonne réponse.",
-            test = {
-                for (testValue in testValues) {
-                    assertEquals(testValue.second, racineCarre(testValue.first))
-                }
-            })
-
-        Correcteur.get().categories["Algo"]!!["Racine Carrée"]?.add(point)
+        try {
+            testeur(point = point,
+                pointsAjoutesSiReussi = 3,
+                pointsRetiresSiEchoue = 0,
+                explicationSiEchoue = "L'algorithme ne donne pas la bonne réponse.",
+                test = {
+                    for (testValue in testValues) {
+                        assertEquals(testValue.second, racineCarre(testValue.first))
+                    }
+                })
+        } finally {
+            Correcteur.get().categories["Algo"]!!["Racine Carrée"]?.add(point)
+        }
     }
 
     @Test
@@ -45,20 +48,26 @@ class AlgoTest {
             question = "Annotations de type", ponderation = 1
         )
 
-        point = testeur(point = point,
-            pointsAjoutesSiReussi = 1,
-            pointsRetiresSiEchoue = 0,
-            explicationSiEchoue = "Certaines variables ne sont pas typées.",
-            test = {
-                val source = AstSource.File(
-                    "src/main/kotlin/algo/Algo.kt"
-                )
-                val ast = KotlinGrammarAntlrKotlinParser.parseKotlinFile(source)
-                assertTrue(allPropertyDeclarationsAreTyped(ast))
+        if (Correcteur.get().categories["Algo"]!!["Racine Carrée"]!![0].pointsObtenus > 0) {
+            try {
+                testeur(point = point,
+                    pointsAjoutesSiReussi = 1,
+                    pointsRetiresSiEchoue = 0,
+                    explicationSiEchoue = "Certaines variables ne sont pas typées.",
+                    test = {
+                        val source = AstSource.File(
+                            "src/main/kotlin/algo/Algo.kt"
+                        )
+                        val ast = KotlinGrammarAntlrKotlinParser.parseKotlinFile(source)
+                        assertTrue(allPropertyDeclarationsAreTyped(ast))
 
-            })
-
-        Correcteur.get().categories["Algo"]!!["Racine Carrée"]?.add(point)
+                    })
+            } finally {
+                Correcteur.get().categories["Algo"]!!["Racine Carrée"]?.add(point)
+            }
+        } else {
+            assertFails {  }
+        }
     }
 }
 
