@@ -11,7 +11,7 @@ Le code de cette recette est disponible [ici](https://github.com/departement-inf
 <Tabs queryString="recette-string">
   <TabItem value="build.gradle.kts" label="build.gradle.kts">
 
-    Nous allons utiliser le [ViewBinding](https://developer.android.com/topic/libraries/view-binding#kts) pour la suite des choses. Assurez vous qu'il est activé dans votre fichier `build.gradle.kts`.
+    Nous allons utiliser le [ViewBinding](https://developer.android.com/topic/libraries/view-binding#kts) pour la suite des choses. Assurez-vous qu'il est activé dans votre fichier `build.gradle.kts`.
 
     ```kotlin
     android {
@@ -61,8 +61,8 @@ Le code de cette recette est disponible [ici](https://github.com/departement-inf
   </TabItem>
   <TabItem value="MonAdapter.kt" label="MonAdapter.kt">
 
-    Vous allez créer une classe qui est responsable de la gestion de **TOUT** les éléments de la liste et de leur mise à jour.
-    En Android, ce type est classe est appelée un **[Adapter](https://developer.android.com/reference/kotlin/android/widget/Adapter)**.
+    Vous allez créer une classe qui est responsable de la gestion de **TOUS** les éléments de la liste et de leur mise à jour.
+    En Android, ce type de classe est appelé un **[Adapter](https://developer.android.com/reference/kotlin/android/widget/Adapter)**.
 
     Créez une nouvelle classe `MonAdapter.kt` dans un package `adapters` que vous devez aussi créer dans votre projet.
 
@@ -114,10 +114,10 @@ Le code de cette recette est disponible [ici](https://github.com/departement-inf
       endLine="10"
      />
 
-      À ce point ci, votre environnement de développement devrait vous indiquer des erreurs.
+      À ce point-ci, votre environnement de développement devrait vous indiquer des erreurs.
       C'est normal, car vous n'avez pas encore implémenté les méthodes requises par la classe ListAdapter.
 
-      Pour corriger cette erreur, vous pouvez placer votre curseur sur l'erreur, et cliquer sur "Implement members", qui va générer les méthodes.
+      Pour corriger une erreur, vous pouvez placer votre curseur sur l'erreur, et cliquer sur "Implement members", ce qui va générer les méthodes.
       Dans la prochaine étape, nous allons remplir ces méthodes.
 
       ![Implementer ListAdapter](_recycler-view-01-string/implementer_listadapter.png)

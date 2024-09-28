@@ -6,15 +6,15 @@ hide_table_of_contents: true
 
 En Android, une activité raprésente généralement un "écran" à afficher à un utilisateur.
 
-Pour passer d'une activité à une autre, nous allons utiliser des [Intent](https://developer.android.com/reference/android/content/Intent),
+Pour passer d'une activité à une autre, nous allons utiliser un [Intent](https://developer.android.com/reference/android/content/Intent),
 qui peut se traduire comme une "intention" de lancer une nouvelle activité.
 
 ## Démarrer une activité
 
-Le cas typique pour démarrer une activité est en réagissant à l'appuie sur un bouton.
+Le cas typique pour démarrer une activité est en réagissant à l'appui sur un bouton.
 
-- Nous sommes dans une activité quelconque
-- On désire démarrer l'activité nommée `AutreActivity`
+- Nous sommes dans une activité quelconque.
+- On désire démarrer l'activité nommée `AutreActivity`.
 
 ```kotlin
 // On réagit au clic sur un bouton
@@ -31,9 +31,9 @@ binding.btnMonBouton.setOnClickListener {
 
 ## Démarrer une activité en lui passant de l'information
 
-- Un champ texte permet d'entrer son animal préféré
-- À l'appuie d'un bouton on souhaite démarrer l'activité `AutreActivity`
-- Le nom de l'animal préféré qui provient de `MainActivity` doit apparaître sur un `TextView` dans `AutreActivity`
+- Un champ texte permet d'entrer son animal préféré.
+- À l'appui d'un bouton, on souhaite démarrer l'activité `AutreActivity`.
+- Le nom de l'animal préféré qui provient de `MainActivity` doit apparaître sur un `TextView` dans `AutreActivity`.
 
 ### `MainActivity`
 

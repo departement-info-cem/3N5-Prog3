@@ -4,7 +4,7 @@ hide_table_of_contents: true
 
 # RecyclerView - Activité
 
-Dans cette recette, nous allons voir comment 
+Dans cette recette, nous allons voir comment :
 
 - Réagir à un clic sur un élément d'une liste dans un `RecyclerView`.
 - Démarrer une nouvelle activité à partir d'un `ListAdapter`.
@@ -44,7 +44,7 @@ Le code de cette recette est disponible [ici](https://github.com/departement-inf
     <Row>
 
         <Column size="8">
-            La méthode `startActivity` nécessite un `Context` pour être capable de démarrer une nouvelle activité. Alors pourquoi est-ce quand on utilise `startActivity` dans la classe `Activity`, on a pas besoin de spécifier `binding.root.context`?
+            La méthode `startActivity` nécessite un `Context` pour être capable de démarrer une nouvelle activité. Alors pourquoi est-ce que, quand on utilise `startActivity` dans la classe `Activity`, on n'a pas besoin de spécifier `binding.root.context`?
 
             C'est parce que la classe `Activity` hérite de la classe `Context`. C'est pour ça qu'on peut utiliser `startActivity` directement dans une `Activity`.
 
