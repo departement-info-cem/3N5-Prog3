@@ -52,11 +52,14 @@ class MovieAdapter : ListAdapter<Movie, MovieAdapter.MovieItemViewHolder>(MovieI
 }
 
 object MovieItemDiffCallback : DiffUtil.ItemCallback<Movie>() {
-    override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-        return oldItem.id == newItem.id
+    override fun areItemsTheSame(avant: Movie, apres: Movie): Boolean {
+        return avant.id == apres.id
     }
 
-    override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-        return oldItem.name == newItem.name && oldItem.year == newItem.year && oldItem.director == newItem.director && oldItem.vu == newItem.vu
+    override fun areContentsTheSame(avant: Movie, apres: Movie): Boolean {
+        return avant.name == apres.name
+            && avant.year == apres.year
+            && avant.director == apres.director
+            && avant.vu == apres.vu
     }
 }
