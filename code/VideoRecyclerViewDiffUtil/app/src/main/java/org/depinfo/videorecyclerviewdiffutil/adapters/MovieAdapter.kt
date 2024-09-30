@@ -16,26 +16,27 @@ class MovieAdapter : ListAdapter<Movie, MovieAdapter.MovieItemViewHolder>(MovieI
             binding.tvName.text = movie.name
             binding.tvYear.text = movie.year.toString()
             binding.tvDirector.text = movie.director
+            binding.cbVu.isChecked = movie.vu
 
             // Quand on clique pour cocher ou décocher si on a vu un film
             binding.cbVu.setOnCheckedChangeListener { _, isChecked ->
                 // Copier la liste de films
-                val currentList = currentList.toMutableList()
+                val newList = currentList.toMutableList().map { it.copy() }.toMutableList()
 
                 // Trouver l'index du film sur lequel on a cliqué
-                val currentMovieIndex = currentList.indexOfFirst { it.id == movie.id }
+                val currentMovieIndex = newList.indexOfFirst { it.id == movie.id }
 
                 // Trouver le film à partir de l'index utilisé
-                val currentMovie = currentList[currentMovieIndex]
+                val currentMovie = newList[currentMovieIndex]
 
                 // Inverser l'état de vu de l'objet film sur lequel on a cliqué
-                currentMovie?.vu = isChecked
+                currentMovie.vu = isChecked
 
                 // Mettre à jour la liste copiée
-                currentList[currentMovieIndex] = currentMovie
+                newList[currentMovieIndex] = currentMovie
 
                 // Envoyer la liste à l'adapteur pour être affichée
-                submitList(currentList)
+                submitList(newList)
             }
         }
     }
