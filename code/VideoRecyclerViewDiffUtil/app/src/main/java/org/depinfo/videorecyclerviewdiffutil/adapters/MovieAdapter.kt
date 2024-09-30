@@ -57,7 +57,8 @@ object MovieItemDiffCallback : DiffUtil.ItemCallback<Movie>() {
     }
 
     override fun areContentsTheSame(avant: Movie, apres: Movie): Boolean {
-        return avant.name == apres.name
+        return avant.id == apres.id
+            && avant.name == apres.name
             && avant.year == apres.year
             && avant.director == apres.director
             && avant.vu == apres.vu
