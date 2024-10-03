@@ -47,7 +47,7 @@ Pour utiliser le ViewBinding, vous devez suivre les étapes suivantes:
 private lateinit var binding: MainActivityBinding
 ```
 
-2. Dans la méthode `onCreate`, initialiser le binding :
+2. Dans la méthode `onCreate`, initialiser le binding et adaptez le `setContentView` pour utiliser le binding :
 
 ```kotlin
 binding = MainActivityBinding.inflate(layoutInflater)
