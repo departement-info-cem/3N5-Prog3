@@ -2,12 +2,60 @@
 hide_table_of_contents: true
 ---
 
-# Navigation
+# Activité et Navigation
 
 En Android, une activité représente généralement un "écran" à afficher à un utilisateur.
 
 Pour passer d'une activité à une autre, nous allons utiliser un [Intent](https://developer.android.com/reference/android/content/Intent),
 qui peut se traduire comme une "intention" de lancer une nouvelle activité.
+
+## Créer une nouvelle activité
+
+<Row>
+
+<Column>
+
+Pour créer une nouvelle activité, vous pouvez effectuer un clic droit sur le package de votre application, et utiliser le menu `New` > `Activity` > `Empty Views Activity`.
+
+</Column>
+
+<Column>
+
+![Créer une activité](./_activite-navigation/creer_activite.png)
+
+</Column>
+
+</Row>
+
+
+<Row>
+
+<Column>
+
+Sur l'écran de création, vous avez certains choix à faire :
+
+- **Activity Name** : Le nom de la classe de l'activité. La convention pour les nouvelles activités est de suffixer le nom de l'activité avec `Activity`.
+- **Generate Layout File** : Cochez cette case pour générer un fichier de layout associé à l'activité. Généralement, on laisse cette case cochée.
+- **Layout Name** : Le nom du fichier de layout associé à l'activité. La convention est de préfixer le nom du layout avec `activity_`.
+- **Launcher Activty** : Cochez cette case si vous voulez que l'activité soit la première à être lancée lors du démarrage de l'application. Généralement on laisse cette case décochée.
+- **Package name** : Le package où l'activité va être ajoutée. Généralement, on laisse le package par défaut, ou on spécifie un package où toutes les activitées vont être.
+- **Source Language** : Le langage de programmation à utiliser pour l'activité. Pour le cours de programmation mobile, on utilise Kotlin.
+
+</Column>
+
+<Column>
+
+![Écran de création d'une activité](./_activite-navigation/creer_activite_2.png)
+
+</Column>
+
+</Row>
+
+:::info Le saviez vous?
+
+Il est possible d'avoir des fichiers java et kotlin dans un même projet. Vous pouvez demander à votre enseignant de vous expliquer pourquoi!
+
+:::
 
 ## Démarrer une activité
 
