@@ -13,7 +13,7 @@ hide_table_of_contents: true
 :::danger Avant la séance (2h)
 
 - Regarder rapidement la recette pour afficher une [barre d'application](../03-recettes/app-bar.mdx).
-- Regarder la recette pour la [navigation](../03-recettes/navigation.mdx).
+- Regarder la recette pour la [navigation](../03-recettes/activite-navigation.mdx).
 - Commencer les exercices . Arrête quand tu as complété tes 2 heures.
 
 :::
