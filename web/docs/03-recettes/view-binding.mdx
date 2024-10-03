@@ -6,20 +6,20 @@ hide_table_of_contents: true
 
 Dans les exemples du cours, nous intéragissons avec les éléments de l'interface graphique en utilisant le View Binding.
 
-Nous allons voir comment activer le ViewBinding dans un projet Android.
+Nous allons voir comment activer le View Binding dans un projet Android.
 
 :::tip View Binding vs Data Binding
 
-Bien que nous utilisons le View Binding dans les exemples, il existe une autre méthode pour intéragir avec les éléments de l'interface graphique: le Data Binding.
-Le Data Binding est plus complexe que le ViewBinding, mais il permet aussi de lier les données de l'application avec l'interface graphique.
+Bien que nous utilisons le View Binding dans les exemples, il existe une autre méthode pour intéragir avec les éléments de l'interface graphique : le Data Binding.
+Le Data Binding est plus complexe que le View Binding, mais il permet aussi de lier les données de l'application avec l'interface graphique.
 
-Nous vous encourageons lire la comparaison entre les deux méthodes [ici](https://developer.android.com/topic/libraries/view-binding?hl=fr#data-binding).
+Nous vous encourageons à lire la comparaison entre les deux méthodes [ici](https://developer.android.com/topic/libraries/view-binding?hl=fr#data-binding).
 
 :::
 
-## Activer le ViewBinding
+## Activer le View Binding
 
-Pour activer le ViewBinding dans un projet Android, il faut ajouter la ligne suivante dans le fichier `build.gradle` du module `app`:
+Pour activer le View Binding dans un projet Android, il faut ajouter la ligne suivante dans le fichier `build.gradle` du module `app`:
 
 ```gradle
 android {
@@ -30,15 +30,15 @@ android {
 }
 ```
 
-Une fois le ViewBinding activé, vous devez synchroniser le projet.
+Une fois le View Binding activé, vous devez synchroniser le projet.
 
 ![Synchroniser le projet](./_view-binding/sync.png)
 
 Cela va générer les classes de binding que nous allons utiliser pour intéragir avec les éléments de l'interface graphique.
 
-## Utiliser le ViewBinding
+## Utiliser le View Binding
 
-Pour utiliser le ViewBinding, vous devez suivre les étapes suivantes:
+Pour utiliser le View Binding, vous devez suivre les étapes suivantes :
 
 1. Avant la méthode `onCreate`, récupérer le binding de l'activité :
 
@@ -47,14 +47,14 @@ Pour utiliser le ViewBinding, vous devez suivre les étapes suivantes:
 private lateinit var binding: ActivityMainBinding
 ```
 
-2. Dans la méthode `onCreate`, initialiser le binding et adaptez le `setContentView` pour utiliser le binding :
+2. Dans la méthode `onCreate`, initialiser le binding et adapter le `setContentView` pour utiliser le binding :
 
 ```kotlin
 binding = ActivityMainBinding.inflate(layoutInflater)
 setContentView(binding.root)
 ```
 
-3. Exemple d'utilisation du binding pour intéragir avec les éléments de l'interface graphique:
+3. Exemple d'utilisation du binding pour intéragir avec les éléments de l'interface graphique :
 
 
 ```kotlin
@@ -64,7 +64,7 @@ binding.textView.text = "Hello, World!"
 
 :::caution Attention
 
-Cette étape est à refaire dans chaque activité où vous voulez utiliser le ViewBinding.
+Cette étape est à refaire dans chaque activité où vous voulez utiliser le View Binding.
 
 Si votre fichier xml se nomme `activity_bonjour.xml`, le binding sera `ActivityBonjourBinding`.
 
