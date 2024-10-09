@@ -15,8 +15,5 @@ class SecondActivity : AppCompatActivity() {
 
         val monExtra = intent.getStringExtra("monExtra")
         binding.tvMonExtra.text = monExtra
-
-        val i = Intent(this, MainActivity::class.java)
-        startActivity(i)
     }
 }
