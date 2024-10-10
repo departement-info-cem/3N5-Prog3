@@ -70,10 +70,10 @@ binding.btnMonBouton.setOnClickListener {
     // On crée l'intent, qui a besoin :
     // 1. Du contexte actuel
     // 2. De la classe d'activité à démarrer. 
-    val intent = Intent(this, AutreActivity::class.java)
+    val monIntent = Intent(this, AutreActivity::class.java)
 
     // On démarre l'activité en lui passant l'intent qu'on vient de créer.
-    startActivity(intent)
+    startActivity(monIntent)
 }
 ```
 
@@ -87,9 +87,9 @@ binding.btnMonBouton.setOnClickListener {
 
 ```kotlin
 binding.btnMonBouton.setOnClickListener {
-    val intent = Intent(this, AutreActivity::class.java)
-    intent.putExtra("ANIMAL", binding.monChampTexte.text.toString())
-    startActivity(intent)
+    val monIntent = Intent(this, AutreActivity::class.java)
+    monIntent.putExtra("ANIMAL", binding.monChampTexte.text.toString())
+    startActivity(monIntent)
 }
 ```
 
