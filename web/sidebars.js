@@ -133,6 +133,11 @@ const sidebars = {
     },
     {
       type: "doc",
+      label: "13.2 - Retour sur refactor def de methode",
+      id: "cours/integration-3",
+    },
+    {
+      type: "doc",
       label: "14.1 - Librairies Android",
       id: "cours/librairies-android",
     },
