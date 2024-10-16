@@ -89,6 +89,11 @@ const config = {
             href: `https://raw.githubusercontent.com/departement-info-cem/scripts-mobile/main/installation-mobile.ps1`,
             position: "right",
           },
+          {
+            label: "Scripts Installation 🆕",
+            href: `https://github.com/departement-info-cem/scripts-mobile/releases/download/Script/ScriptSharp.exe`,
+            position: "right",
+          },
         ],
       },
       footer: {
