@@ -12,7 +12,6 @@ hide_table_of_contents: true
 
 :::danger Avant la séance (2h)
 
-- Vous devez regarder la recette pour un menu [ici](../03-recettes/menu.mdx).
 - Vous devez regarder la recette pour un graphique [ici](../03-recettes/graphique.mdx).
 
 :::
@@ -23,9 +22,8 @@ hide_table_of_contents: true
 
 :::info Pendant la séance
 
-- Démo d'un menu.
 - Démo d'un graphique.
-- Intégrer le menu et le graphique dans ton tp.
+- Intégrer le graphique dans votre tp.
 
 :::
 
