@@ -90,7 +90,7 @@ const config = {
             position: "right",
           },
           {
-            label: "Scripts Installation 🆕",
+            label: "Installator 🆕",
             href: `https://github.com/departement-info-cem/scripts-mobile/releases/download/Script/ScriptSharp.exe`,
             position: "right",
           },
