@@ -5,7 +5,6 @@ import androidx.room.PrimaryKey
 
 @Entity
 class Personne {
-    @kotlin.jvm.JvmField
     @PrimaryKey
     var idPersonne: Long? = null
 
