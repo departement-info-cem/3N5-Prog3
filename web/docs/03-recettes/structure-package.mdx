@@ -1,0 +1,69 @@
+---
+hide_table_of_contents: true
+---
+
+# Structurer en packages
+
+## Hiérarchie des fichiers
+
+Il existe 2 grandes approches pour organiser les fichiers / classes:
+1. par fonctionnalité
+2. par type d'objet
+
+Pour prendre un exemple, pour une application avec les classes suivantes:
+- ConnexionActivity
+- InscriptionActivity
+- ListeDesTachesActivity : donne la liste des tâches reliées à un compte
+- TacheActivity : donne les détails d'une tâche et la liste des modifications
+- TachesAdapter : adapteur de l'activité ListeDesTachesActivity
+- ModifAdapter : adapteur de l'activité TacheActivity
+- Tache : classe qui représente une tâche
+- Modif : classe qui représente une modification
+
+L'approche est souvent décidée avec l'ensemble de l'équipe de développement et fera partie
+des standards de développement qu'on doit respecter.
+
+Pour un projet personnel, on peut choisir l'approche qui nous semble la plus naturelle.
+
+<Row>
+
+<Column>
+
+### Approche fonctionnalité
+
+- package com.monapp
+  - com.monapp.connexion
+    - ConnexionActivity
+  - com.monapp.inscription
+    - InscriptionActivity
+  - com.monapp.taches
+    - ListeDesTachesActivity
+    - TachesAdapter
+    - Tache
+  - com.monapp.detail
+    - TacheActivity
+    - ModifAdapter
+    - Modif
+</Column>
+<Column>
+
+### Appproche par type d'objet
+
+- package com.monapp
+  - com.monapp.activity
+    - ConnexionActivity
+    - InscriptionActivity
+    - ListeDesTachesActivity
+    - TacheActivity
+  - com.monapp.adapter
+    - TachesAdapter
+    - ModifAdapter
+  - com.monapp.model
+    - Tache
+    - Modif
+</Column>
+</Row>
+
+### En pratique
+
+On peut simplement utiliser le refactoring d'Android Studio pour déplacer les fichiers.
