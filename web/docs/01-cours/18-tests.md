@@ -23,10 +23,10 @@ Nous reviendrons sur l'exercice Note, son service et le rôle des tests unitaire
 :::warning Avant la séance (2h)
 
 1. Lire la page Wikipedia sur les [tests](https://fr.wikipedia.org/wiki/Test_unitaire) (max 20 min).
-
 2. Regarder les vidéos de théorie
-
 3. Commencer les exercices de la semaine. Arrêter après 2 heures de travail
+
+
 
 :::
 
@@ -41,6 +41,8 @@ Nous reviendrons sur l'exercice Note, son service et le rôle des tests unitaire
 <Video url="https://youtu.be/odT2vpyqVN8" />
 
 <Video url="https://youtu.be/IOpGBezfUww" />
+
+PARLER DE TESTER AVEC UNE BD
 
 :::
 
@@ -77,45 +79,33 @@ Jimmy Jo, un étudiant de 3N5, a écrit le code [suivant](https://github.com/dep
 
 Programmer la méthode suivante qui indique si un code postal canadien est valide.
 
-```java
-boolean isValidZipCode(String zippy);
+```kotlin
+fun isValidZipCode(zippy: String): Boolean {
+    return true
+}
 ```
 
-Écrire des tests pour valider cette méthode.
-
+Écrire les tests pour valider cette méthode.
 - on accepte les minuscules et majuscules
 - les 2 blocs peuvent être séparés par 0 1 ou 2 espaces ou un tiret
 - Ok : "H1Y1E1", "H1Y 1E1", "h3Y 1E8"
 - Ko : "H1Y &#8203; &#8203; &#8203; 1E1", "H1Y_1E1", "h3Y 1TO"
 
-### Exercice Chasse aux bogues
+### Exercice ChatGPT (ou copilot) fait mes tests
 
-Partir du code fourni [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/TestsExercice2) et compléter les TODOs. On vous demande, autant que possible, de trouver les bogues uniquement en écrivant des tests (et non en regardant le code). Documenter ensuite le résultat du test et pourquoi il échoue.
+En prenant ton service du TP3, demande à ChatGPT ou à copilot de générer les tests unitaires qui y correspondent.
 
-Méthodes à tester
+En prenant les tests fournis, regarde si les critères suivants sont respectés:
+- les tests ne passent pas si le code de mon application n'est pas encore fait (si tu l'as déjà fait remplace par du code qui renvoie une constante etc.)
+- les tests couvrent 90% et plus des méthodes de service
+- les tests passent quand ton code fonctionne
+- les tests couvrent les différents cas d'exception
 
-- comparerDix
-- rochePapierGnocchi
-- calculate
+### (Optionnel) Exercice retour sur le TP1
 
-### (Optionnel) Exercice Retour en arrière
+En partant de ton code du TP1, crée des tests unitaires pour les différents méthodes. Tu peux utiliser un assistant IA
+pour t'aider à produire tes tests.
 
-Partir de votre code du TP1 WebBot et créer des tests unitaires pour les différents cas d'erreurs possibles.
-
-Pour vour aider, formattez d'abord votre code pour suivre les signatures des méthodes ici
-
-```java					
-//Ces 4 méthodes vont throw des exceptions
-void validerNbArguments(String[] args);
-void validerProfondeur(String profondeur);
-void validerURL(String url);
-void validerRepertoire(String repertoire);
-
-//Utiliser les variables retournées pour valider le fonctionnement
-String obtenirHTML(String url);
-List<String> collecterCourriels(String html);
-List<String> trierCourriels(List<String> courriels);
-String remplacerCourriels(String html);
-```
+Cela n'est possible que si tu avais découpé ton code en méthodes.
 
 :::
