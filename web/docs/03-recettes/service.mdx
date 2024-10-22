@@ -42,13 +42,15 @@ La vidéo est en Java mais la méthode s'applique sans problème en kotlin.
 <Column>
 ## Approche service
 
-Voici le schéma d'une approche service où on sépare l'interface graphique, d'un service et d'un objet d'accès aux données
+Voici le schéma d'une approche service où on sépare l'interface graphique, le service et l'accès aux données :
 
 ```mermaid
 graph TD
-    A[Interface graphique] --> B(Service)
-    B --> C(DAO)
+    A(Interface graphique) --> B(Service)
+    B --> A & C(DAO)
+    C --> B
 ```
+
 </Column>
 <Column>
 ## Avantages
