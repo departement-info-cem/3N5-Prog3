@@ -35,7 +35,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "04.1 - Structurer son code",
+      label: "4.1 - Structurer son code",
       id: "cours/4.1-structure",
     },
     {
