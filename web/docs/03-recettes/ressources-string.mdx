@@ -1,0 +1,47 @@
+---
+hide_table_of_contents: true
+---
+
+# Ressources String
+
+Il est possible d'ajouter des ressources de type `String` dans un fichier XML. 
+Cela permet de centraliser les chaînes de caractères utilisées dans l'application, et ainsi d'éviter de les répéter dans le code.
+
+Il est aussi parfois requis d'utiliser ces ressources string pour certaines fonctionnalités, comme le multilingue, et le tiroire de navigation.
+
+## Ajout d'une entrée dans le fichier `strings.xml`
+
+Pour ajouter une nouvelle entrée dans le fichier `strings.xml`, il suffit d'ajouter une nouvelle balise `<string>` dans la section `<resources>`.
+
+```xml
+<resources>
+    <string name="app_name">Mon application</string>
+    <string name="nom_de_la_ressource">Bonjour le monde!</string>
+</resources>
+```
+
+## Utilisation dans le code Kotlin
+
+Utiliser la méthode `getString()` de la classe `Resources`.
+
+```kotlin
+val appName = resources.getString(R.string.nom_de_la_ressource)
+```
+
+## Utilisation dans le code XML
+
+Utiliser la syntaxe `@string/nom_de_la_ressource`.
+
+```xml
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/hello_world" />
+```
+
+## Extraire une string dans un fichier XML ou Kotlin dans Android Studio
+
+1. `Alt + Enter` sur la string à extraire
+2. Sélectionner `Extract string resource`
+
+![Extract string resource](./_resources-string/extract.png)
