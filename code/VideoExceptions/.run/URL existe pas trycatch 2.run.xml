@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="URL existe pas trycatch 2" type="JetRunConfigurationType" folderName="Try catch 2">
+    <option name="MAIN_CLASS_NAME" value="org.example.TryCatch2Kt" />
+    <module name="VideoExceptions.main" />
+    <option name="PROGRAM_PARAMETERS" value="https://une-url-qui-existe-pas.com" />
+    <shortenClasspath name="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
