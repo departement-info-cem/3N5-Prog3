@@ -40,7 +40,7 @@ Pendant les séances en classe ...
 
 :::info Installation
 
-Pour l'installation au collège, nous ferons une démo du [script](https://github.com/departement-info-cem/scripts-mobile/blob/main/installation-mobile.ps1)
+Pour l'installation au collège, nous ferons une démo du [script](https://github.com/departement-info-cem/scripts-mobile/releases/download/Script/ScriptSharp.exe)
 
 Pour l'installation à la maison:
 
