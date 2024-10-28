@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="URL malformé trycatch 2" type="JetRunConfigurationType" folderName="Try catch 2">
-    <option name="MAIN_CLASS_NAME" value="org.example.TryCatch2Kt" />
+  <configuration default="false" name="3. URL malformé" type="JetRunConfigurationType">
+    <option name="MAIN_CLASS_NAME" value="trycatch.MainKt" />
     <module name="VideoExceptions.main" />
     <option name="PROGRAM_PARAMETERS" value="Pas une url" />
     <shortenClasspath name="NONE" />
