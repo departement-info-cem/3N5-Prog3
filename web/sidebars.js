@@ -87,8 +87,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "9.1 - Graphique et menu 📈",
-      id: "cours/9.1-menu-graphique",
+      label: "9.1 - Graphique 📈",
+      id: "cours/9.1-graphique",
     },
     {
       type: "doc",

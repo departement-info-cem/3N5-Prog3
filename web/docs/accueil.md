@@ -73,7 +73,7 @@ Pour l'installation à la maison:
 | [7.2 →](cours/7.1-recycler)                 | RecyclerView 2                         | 40%                               |
 | [8.1 →](cours/7.1-recycler)                 | RecyclerView 3                         | 60%                               |
 | [8.2 →](cours/7.1-recycler)                 | RecyclerView 4                         | 80%                               |
-| [9.1 →](cours/9.1-menu-graphique)           | Graphique et Menu                      | 90%                               |
+| [9.1 →](cours/9.1-graphique)                | Graphique                              | 90%                               |
 | [9.2 →](cours/9.2-integration-2)            | Intégration                            | 100% remise                       |
 | [10.1 →](cours/10.1-pile-appels-exceptions) | Pile d'appels et exceptions            | [TP3 : BD, tests erreurs](tp/tp3) |
 | [10.2 →](cours/10.2-structure-android)      | Structurer son code, Android edition   | 30%                               |
