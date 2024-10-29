@@ -129,19 +129,6 @@ fun lireFichier(){
 #### Exemple 2
 
 ```kotlin
-fun main(args: Array<String>){
-	val maList: List<Integer>  = Arrays.asList(1, 2, 3, 4, 5)
-	val lists: List<List<Int> >  = Lists.partition(maList, -1)
-			
-	// Ce code utilise la librairie Guava.
-    // highlight-next-line
-	// Question : Catch on laisse l'erreur se propager?
-}
-```
-
-#### Exemple 3
-
-```kotlin
 fun uneFonction(){
 	etape1()
 	etape2()
@@ -166,23 +153,23 @@ Sans exécuter, selon toi est-ce que les 2 méthodes suivantes donnent le même 
 Crée toi un projet pour valider ta réponse si les méthodes sont pareilles ou non.
 
 ```kotlin
-fun lireDesFichiersForTry(){
-    for (int i = 0 ; i < 10 ; i++ ){
+fun lireDesFichiersForTry() {
+    for (i in 1 until 10) {
         try {
-            lireFichier(i); 
-        } catch (FileNotFoundException e) {
-            System.out.println("fichier n'existe pas");
+            lireFichier("$i.txt")
+        } catch (e: FileNotFoundException) {
+            println("fichier n'existe pas")
         }
     }
 }
 
-fun lireDesFichiersTryFor(){
+fun lireDesFichiersTryFor() {
     try {
-        for (int i = 0 ; i < 10 ; i++ ){
-            lireFichier(i); 
+        for (i in 1 until 10) {
+            lireFichier("$i.txt")
         }
-    } catch (FileNotFoundException e) {
-        System.out.println("fichier n'existe pas");
+    } catch (e: FileNotFoundException) {
+        println("fichier n'existe pas")
     }
 }	
 ```
