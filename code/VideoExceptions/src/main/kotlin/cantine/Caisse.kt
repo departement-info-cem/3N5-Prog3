@@ -1,10 +1,16 @@
 package cantine
 
-import java.lang.IllegalArgumentException
-
 fun main() {
     println("Bienvenu à la cantine du département d'informatique!")
-    obtenirPrix("Bonbon")
+    try {
+        obtenirPrix("Bonbon")
+    }
+    catch(e: Exception) {
+        println(e.message)
+    }
+    catch(e: MauvaisChoixCantineException) {
+        println(e.message)
+    }
     println("Ka-ching!")
 }
 
@@ -22,7 +28,7 @@ fun calculerChoix(choix: String): Float {
         "Frite" -> 3f
         "Cola" -> 1.50f
         else -> {
-            throw IllegalArgumentException()
+            throw MauvaisChoixCantineException()
         }
     }
 }
