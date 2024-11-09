@@ -103,7 +103,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "10.2 - Structurer son code - Android",
+      label: "10.2 - Structurer son code - service",
       id: "cours/10.2-structure-android",
     },
     {
