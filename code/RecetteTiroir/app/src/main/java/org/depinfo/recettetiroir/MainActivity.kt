@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         // Lier le tiroir de navigation à l'activité
         // R.string.ouvert et R.string.ferme sont des strings de ressource.
-        // Référez vous à la recette pour les strings de ressource pour voir comment les ajouter : 
+        // Référez-vous à la recette pour les strings de ressource pour voir comment les ajouter : 
         // https://info.cegepmontpetit.ca/3N5-Prog3/recettes/ressources-string 
         // highlight-next-line
         actionBarDrawerToggle = ActionBarDrawerToggle(this, binding.dlTiroir, R.string.ouvert, R.string.ferme)
