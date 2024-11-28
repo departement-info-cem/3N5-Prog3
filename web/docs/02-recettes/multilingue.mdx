@@ -1,0 +1,117 @@
+---
+hide_table_of_contents: true
+---
+
+# Multilingue
+
+Rendre une application multiligue vous permet de rejoindre un plus grand bassin d'utilisateurs.
+
+## Ajouter un langage supporté
+
+:::danger Attention!
+
+Vous devez consulter la recette sur les **[Ressources String](./ressources-string.mdx)** avant de commencer à consulter cette recette. Les notions vues dans les Ressources de string sont réutilisées ici.
+
+:::
+
+
+
+1. Clic droit sur `res > values`, naviguer dans `New` et sélectionner **Values Resource File**.
+
+![Values resource file](_multilingue/ajout-strings.png)
+
+2. Nommez le fichier exactement `strings`
+3. Sélectionner Locale, et appuer sur les flèches `>>`
+4. Sélectionnez la langue qui vous intéresse, ainsi que sa variante régionale, si nécessaire.
+5. Sélectionner **OK**
+
+![Ajout strings 2](_multilingue/ajout-strings-2.png)
+
+:::tip
+
+La région spécifique est optionelle. Si on sélectionne **Any Region**. la traduction va s'appliquer pour toutes les variantes de la langue.
+
+:::
+
+
+6. Le fichier devrait être créé
+
+![Ajout strings 3](_multilingue/ajout-strings-3.png)
+
+7. Vous pouvez ajouter des chaines de caractères comme montré dans la recette sur les **[Ressource String](./ressources-string.mdx)**. Dans l'exemple donné, si le périphérique est en français québécois, le fichier `strings.xml (fr-rCA)` sera utilisé.
+
+
+:::caution
+
+Le fichier `strings.xml` (sans rien après) est le fichier qui sera utilisé si Android ne trouve pas une string dans un fichier de traduction.
+Assurez vous que chaque référence à une string utilisée dans votre code se retrouve dans le fichier `strings.xml`
+
+:::
+
+## Tester le multilingue
+
+<Row>
+
+<Column>
+
+1. Ouvrir les paramètres.
+
+![multilingue](_multilingue/settings.png)
+
+</Column>
+
+<Column>
+
+2. Dans les options, rechercher "language", et sélectionner "Languages System".
+
+![settings language](_multilingue/settings-language.png)
+
+</Column>
+
+</Row>
+
+<Row>
+
+<Column>
+
+3. Sélectionner "Languages".
+
+![settings language 2](_multilingue/settings-language-2.png)
+
+</Column>
+
+<Column>
+
+4. Sélectionner "System Languages".
+
+![settings language 3](_multilingue/settings-language-3.png)
+
+</Column>
+
+</Row>
+
+<Row>
+
+<Column>
+
+5. Sélectionner "Add a language".
+
+![settings language 4](_multilingue/settings-language-4.png)
+
+</Column>
+
+<Column>
+
+6. Choisissez la langue que vous désirez.
+
+7. Réordonnez les langues. La plus haute sera celle ayant la plus haute priorité.
+
+Dans l'exemple ci-dessous, le canadien français aura toujours préséance sur l'anglais américain, lorsque possible.
+
+![settings language 5](_multilingue/settings-language-5.png)
+
+Si une application offre uniquement les traductions en anglais américain, ce seront celles-ci qui seront utilisées, d'où la notion d'ordre de préférence des langues.
+
+</Column>
+
+</Row>
