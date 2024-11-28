@@ -75,20 +75,15 @@ const config = {
           {
             type: "docSidebar",
             position: "left",
-            sidebarId: "tp",
-            label: "Travaux Pratiques ✏️",
+            sidebarId: "recettes",
+            label: "Recettes 📖",
           },
           {
             type: "docSidebar",
             position: "left",
-            sidebarId: "recettes",
-            label: "Recettes 📖",
+            sidebarId: "tp",
+            label: "Travaux Pratiques ✏️",
           },
-          // {
-          //   label: "Scripts Installation",
-          //   href: `https://raw.githubusercontent.com/departement-info-cem/scripts-mobile/main/installation-mobile.ps1`,
-          //   position: "right",
-          // },
           {
             label: "Installator",
             href: `https://github.com/departement-info-cem/scripts-mobile/releases/download/Script/ScriptSharp.exe`,
