@@ -5,37 +5,37 @@ const sidebars = {
   docs: [
     {
       type: "doc",
-      label: "1.1 - Accueil",
+      label: "1.1 - Accueil 🏠",
       id: "cours/1.1-accueil",
     },
     {
       type: "doc",
-      label: "1.2 - Présentation TP1",
+      label: "1.2 - Présentation TP1 🗣️",
       id: "cours/1.1-accueil",
     },
     {
       type: "doc",
-      label: "2.1 - Impératif",
+      label: "2.1 - Impératif ✊",
       id: "cours/2.1-imperatif",
     },
     {
       type: "doc",
-      label: "2.2 - Impératif",
+      label: "2.2 - Impératif ✊",
       id: "cours/2.1-imperatif",
     },
     {
       type: "doc",
-      label: "3.1 - Librairie standard",
+      label: "3.1 - Librairie standard 📘",
       id: "cours/3.1-std-lib",
     },
     {
       type: "doc",
-      label: "3.2 - Librairies tierces",
+      label: "3.2 - Librairies tierces 📖",
       id: "cours/3.2-librairies-tierces",
     },
     {
       type: "doc",
-      label: "4.1 - Structurer son code",
+      label: "4.1 - Structurer son code 🧱",
       id: "cours/4.1-structure",
     },
     {
@@ -98,12 +98,12 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "10.1 - Pile d'appels et exceptions",
+      label: "10.1 - Exceptions ⚠️",
       id: "cours/10.1-pile-appels-exceptions",
     },
     {
       type: "doc",
-      label: "10.2 - Structurer son code - service",
+      label: "10.2 - Structurer service 🧱",
       id: "cours/10.2-structure-android",
     },
     {
@@ -123,18 +123,18 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "12.2 - Tests",
+      label: "12.2 - Tests 🧪",
       id: "cours/12.2-tests",
     },
     {
       type: "doc",
-      label: "13.1 - Tests",
+      label: "13.1 - Tests 🧪",
       id: "cours/12.2-tests",
     },
     {
       type: "doc",
-      label: "13.2 - Retour sur refactor def de methode",
-      id: "cours/13.2-retour-refactor",
+      label: "13.2 - Multilingue 🌐",
+      id: "cours/13.2-multilingue",
     },
     {
       type: "doc",

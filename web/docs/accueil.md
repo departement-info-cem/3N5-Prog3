@@ -82,7 +82,7 @@ Pour l'installation à la maison:
 | [12.1 →](cours/11.1-tiroir)                 | Tiroir de navigation 3                   | 60%                               |
 | [12.2 →](cours/12.2-tests)                  | Tests                                    | 70%                               |
 | [13.1 →](cours/12.2-tests)                  | Tests                                    | 80%                               |
-| [13.2 →](cours/13.2-retour-refactor)        | Retour sur refactor def de methode       | 90%                               |
+| [13.2 →](cours/13.2-multilingue)            | Traduire une application                 | 90%                               |
 | [14.1 →](cours/14.1-integration-3)          | Intégration (supprimé si absence prof)   | 99%                               |
 | [14.2 →](cours/14.1-integration-3)          | Intégration / correction TP3             | 100% remise                       |
 | [15.1 →](cours/15.1-formatif-final)         | Formatif final                           |                                   |
