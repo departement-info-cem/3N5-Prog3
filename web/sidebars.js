@@ -42,7 +42,7 @@ const sidebars = {
       type: "doc",
       label: "4.2 - Intégration 🔨",
       id: "cours/4.2-integration-1",
-      className: "04.2-remise-tp1",
+      className: "remise-tp1",
     },
     {
       type: "doc",
