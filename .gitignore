@@ -5,3 +5,5 @@
 **/.gradle
 **/target
 **/bin
+.vscode
+**/.vscode
