@@ -2,111 +2,78 @@
 hide_table_of_contents: true
 ---
 
-# Activités et Navigation
+# Navigation avec JetPack Compose
 
-En Android, une activité représente généralement un "écran" à afficher à un utilisateur.
-
-Pour passer d'une activité à une autre, nous allons utiliser un [Intent](https://developer.android.com/reference/android/content/Intent),
-qui peut se traduire comme une "intention" de lancer une nouvelle activité.
-
-## Créer une nouvelle activité
-
-<Row>
-
-<Column>
-
-Pour créer une nouvelle activité, vous pouvez effectuer un clic droit sur le package de votre application, et utiliser le menu `New` > `Activity` > `Empty Views Activity`.
-
-</Column>
-
-<Column>
-
-![Créer une activité](./_activite-navigation/creer_activite.png)
-
-</Column>
-
-</Row>
+On va voir comment définir plusieurs écrans et naviguer entre eux.
 
 
-<Row>
 
-<Column>
+Le code de cette recette est disponible [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeNavigation).
 
-Sur l'écran de création, vous avez certains choix à faire :
+<Tabs queryString="recette-navigation-compose">
+  <TabItem value="build.gradle.kts" label="build.gradle.kts">
 
-- **Activity Name** : Le nom de la classe de l'activité. La convention pour les nouvelles activités est de suffixer le nom de l'activité avec `Activity`.
-- **Generate Layout File** : Cochez cette case pour générer un fichier de layout associé à l'activité. Généralement, on laisse cette case cochée.
-- **Layout Name** : Le nom du fichier de layout associé à l'activité. La convention est de préfixer le nom du layout avec `activity_`.
-- **Launcher Activty** : Cochez cette case si vous voulez que l'activité soit la première à être lancée lors du démarrage de l'application. Généralement on laisse cette case décochée.
-- **Package name** : Le package où l'activité va être ajoutée. Généralement, on laisse le package par défaut, ou on spécifie un package où toutes les activitées vont être.
-- **Source Language** : Le langage de programmation à utiliser pour l'activité. Pour le cours de programmation mobile, on utilise Kotlin.
+    Dans le fichier `build.gradle.kts` de votre module, vous devez ajouter la dépendance pour la navigation Compose.
 
-</Column>
+    <GHCode
+          repo="3N5-Prog3"
+          filePath="code/ComposeNavigation/app/build.gradle.kts"
+            startLine="42"
+            endLine="60"
+         />
 
-<Column>
+  </TabItem>
+  <TabItem value="def_routes" label="Définition des routes">
+    Pour naviguer il faut utiliser la fonction composable `NavHost` qui permet de définir les routes de l'application.
+    <ul>
 
-![Écran de création d'une activité](./_activite-navigation/creer_activite_2.png)
+        <li>chaque route est définie par un appel à la fonction `composable` qui prend en paramètre un nom de route et une fonction composable qui sera appelée lorsque l'utilisateur naviguera vers cette route.</li>
+        <li>on peut aussi définir des routes avec des paramètres en utilisant la syntaxe `{parametre}` dans le nom de la route.</li>
+        <li>le navController est passé en paramètre à la fonction composable pour permettre la navigation entre les routes.</li>
+    </ul>
+    <GHCode
+      repo="3N5-Prog3"
+      filePath="code/ComposeNavigation/app/src/main/java/ca/cem/composenavigation/MainActivity.kt"
+        startLine="76"
+        endLine="94"
+     />
 
-</Column>
+  </TabItem>
+  <TabItem value="utiliser_routes" label="Utilisation des routes">
+      Pour utiliser les routes qu'on vient de définir, on va simplement
+      appeler la fonction compsable qu'on vient de définir soit Navigation
+      dans le `setContent` de l'activité.
 
-</Row>
+      <GHCode
+            repo="3N5-Prog3"
+            filePath="code/ComposeNavigation/app/src/main/java/ca/cem/composenavigation/MainActivity.kt"
+              startLine="64"
+              endLine="74"
+           />
+  </TabItem>
 
-:::info Le saviez vous?
+  <TabItem value="nav_ecran" label="Naviguer entre écran">
+        La navigation va se faire en utilisant le `navController` qu'on a passé:
+        <ul>
+            <li>on peut naviguer vers une route en utilisant la fonction `navController.navigate("ecranA")`</li>
+            <li>on peut aussi passer des paramètres à la route en utilisant la syntaxe `navController.navigate("ecranC/20")` comme à la ligne 145</li>
+            <li>on peut revenir en arrière en utilisant la fonction `navController.popBackStack()`</li>
+        </ul>
 
-Il est possible d'avoir des fichiers java et kotlin dans un même projet. Vous pouvez demander à votre enseignant de vous expliquer pourquoi!
+        <GHCode
+              repo="3N5-Prog3"
+              filePath="code/ComposeNavigation/app/src/main/java/ca/cem/composenavigation/MainActivity.kt"
+                startLine="128"
+                endLine="153"
+             />
+    </TabItem>
+    <TabItem value="explorer" label="Explorer le code">
 
-:::
+        On t'encourage à explorer le code de l'application pour voir comment les écrans sont définis et comment la navigation est implémentée.
 
-## Démarrer une activité
+        Ajoute des points d'arrêt dans le code pour voir comment la navigation fonctionne en temps réel.
 
-Le cas typique pour démarrer une activité est en réagissant à l'appui sur un bouton.
+        Le code de cette recette est disponible [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeNavigation).
 
-- Nous sommes dans une activité quelconque.
-- On désire démarrer l'activité nommée `AutreActivity`.
-
-```kotlin
-// On réagit au clic sur un bouton
-binding.btnMonBouton.setOnClickListener {
-    // On crée l'intent, qui a besoin :
-    // 1. Du contexte actuel
-    // 2. De la classe d'activité à démarrer. 
-    val monIntent = Intent(this, AutreActivity::class.java)
-
-    // On démarre l'activité en lui passant l'intent qu'on vient de créer.
-    startActivity(monIntent)
-}
-```
-
-## Démarrer une activité en lui passant de l'information
-
-- Un champ texte permet d'entrer son animal préféré.
-- À l'appui d'un bouton, on souhaite démarrer l'activité `AutreActivity`.
-- Le nom de l'animal préféré qui provient de `MainActivity` doit apparaître sur un `TextView` dans `AutreActivity`.
-
-### `MainActivity`
-
-```kotlin
-binding.btnMonBouton.setOnClickListener {
-    val monIntent = Intent(this, AutreActivity::class.java)
-    monIntent.putExtra("ANIMAL", binding.monChampTexte.text.toString())
-    startActivity(monIntent)
-}
-```
-
-### `AutreActivity`
-
-```kotlin
-// On vérifie toujours si un extra a été fourni par l'activité précédente. 
-if(intent.hasExtra("ANIMAL")) {
-    // Si l'extra "ANIMAL" a été fourni, on l'obtient, et on le met dans le TextView tvMonAnimal.
-    binding.tvMonAnimal.text = intent.getStringExtra("ANIMAL")
-}
-```
-
-## Démarrer une activité à partir d'un RecyclerView
-
-Vous pouvez vous référer à cette [recette](recycler-view-03-activite.mdx) pour apprendre à démarrer une activité à partir d'un élément d'un `RecyclerView`.
-
-## Références
-
-- [Documentation Android](https://developer.android.com/reference/android/content/Intent)
+      </TabItem>
+</Tabs>
