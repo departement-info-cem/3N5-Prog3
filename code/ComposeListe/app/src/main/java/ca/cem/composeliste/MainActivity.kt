@@ -35,12 +35,12 @@ class MainActivity : ComponentActivity() {
                             Machin(name = "Item #$index", modifier = Modifier.padding(8.dp))
                         }
                         // Choix 2 on crée une liste d'items
-                        val items = listOf<String>("a", "b", "c", "d", "e", "f", "g", "h", "i", "j")
+                        val patentes = listOf<String>("a", "b", "c", "d", "e", "f", "g", "h", "i", "j")
                         // qu'on parcourt avec une boucle
-                        for (item in items) {
+                        for (patente in patentes) {
                             // on ajoute un item à la liste
                             item {
-                                Machin(name = item, modifier = Modifier.padding(8.dp).height(150.dp))
+                                Machin(name = patente, modifier = Modifier.padding(8.dp).height(150.dp))
                             }
                         }
                         // Choix 3 on crée des items pour chaque élément d'une liste

@@ -2,14 +2,14 @@
 hide_table_of_contents: true
 ---
 
-# RecyclerView - String
+# Liste simple
 
-Étapes de mise en place d'un `RecyclerView` qui gère une liste de `String` sur un projet existant.
+Cette recette va indiquer comment afficher une liste avec Compose.
 
-Le code de cette recette est disponible [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/RecetteRecyclerViewString).
+Le code de cette recette est disponible [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeListe).
 
-<Tabs queryString="recette-string">
-  <TabItem value="build.gradle.kts" label="build.gradle.kts">
+<Tabs queryString="Liste-string">
+  <TabItem value="LazyColumn" label="LazyColumn">
 
     Nous allons utiliser le [ViewBinding](https://developer.android.com/topic/libraries/view-binding#kts) pour la suite des choses. Assurez-vous qu'il est activé dans votre fichier `build.gradle.kts`.
 
@@ -23,42 +23,46 @@ Le code de cette recette est disponible [ici](https://github.com/departement-inf
     ```
 
   </TabItem>
-  <TabItem value="mon_item.xml" label="mon_item.xml">
-    L'interface graphique de chaque item à afficher dans la liste est définie dans un fichier `xml`, comme c'est le cas pour les fichiers `xml` qui sont utilisés pour définir l'interface graphique.
-
-    <Row>
-
-    <Column size="7" >
-
-    Dans l'explorateur de projet, créez un nouveau fichier `Layout Resource File` dans le dossier `res/layout`.
-
-    ![Create item xml](_recycler-view-01-string/create_item_xml.png)
-
-    </Column>
-
-    <Column size="5" >
-
-    Nommez le fichier `mon_item.xml`. Dans `Root element`, choisissez `LinearLayout`.
-
-    ![Create item xml 2](_recycler-view-01-string/create_item_xml2.png)
-
-    </Column>
-
-    </Row>
-
-    Il faudra personnaliser votre fichier en fonction de ce que vous voulez afficher sur chaque élément de liste.
-
-    - Assignez des `id` aux éléments avec lesquels vous allez interagir.
-    - Attention à la hauteur de chaque élément. Ils doivent tous avoir une hauteur fixe ou une hauteur définie en fonction de leur contenu (`wrap_content`).
-
-    Voici un exemple de fichier `mon_item.xml` si on souhaite afficher une `String` dans un `TextView` :
+  <TabItem value="items" label="items">
+    Une fois notre LazyColumn en place, la façon la plus simple de la remplir est d'utiliser la fonction `items`
+    - items prend en paramètre une liste d'éléments à afficher.
+    - on lui fournit une lambda pour transformer chaque élément en appel à un composable 
 
     <GHCode
       repo="3N5-Prog3"
-      filePath="code/RecetteRecyclerViewString/app/src/main/res/layout/mon_item.xml"
-     />
+      filePath="code/ComposeListe/app/src/main/java/ca/cem/composeliste/MainActivity.kt"
+      startLine="40"
+      endLine="45"
+    />
+            <GHCode
+            repo="3N5-Prog3"
+            filePath="code/ComposeListe/app/src/main/java/ca/cem/composeliste/MainActivity.kt"
+            startLine="47"
+            endLine="51"
+            />
+
 
   </TabItem>
+    <TabItem value="item" label="item">
+      Une fois notre LazyColumn en place, nous allons avoir 2 fonctions importantes à comprendre.
+      - `items`: Cette fonction permet de créer une liste d'éléments à afficher dans la LazyColumn.
+      - `item`: Cette fonction permet de créer un élément unique à afficher dans la LazyColumn.
+
+      <GHCode
+        repo="3N5-Prog3"
+        filePath="code/ComposeListe/app/src/main/java/ca/cem/composeliste/MainActivity.kt"
+        startLine="40"
+        endLine="45"
+      />
+              <GHCode
+              repo="3N5-Prog3"
+              filePath="code/ComposeListe/app/src/main/java/ca/cem/composeliste/MainActivity.kt"
+              startLine="47"
+              endLine="51"
+              />
+
+
+    </TabItem>
   <TabItem value="MonAdapter.kt" label="MonAdapter.kt">
 
     Vous allez créer une classe qui est responsable de la gestion de **TOUS** les éléments de la liste et de leur mise à jour.
