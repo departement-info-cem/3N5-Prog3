@@ -4,87 +4,38 @@ hide_table_of_contents: true
 
 # Multilingue et String
 
-Rendre une application multilingue vous permet de rejoindre un plus grand bassin d'utilisateurs.
+Pour rendre une application Android multilingue, on va ajouter un niveau d'indirection dans notre code:
+- au lieu d'écrire `Text("Bonjour")`
+- on va écrire `Text(stringResource(R.string.hello))`
+- l'appareil va alors chercher la chaine pour l'id `R.string.hello` dans le fichier `strings.xml` qui correspond à la locale de l'appareil.
 
-## Ajouter un langage supporté
+Tu trouveras ici les étapes ainsi que le code de la demo de la recette [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeMultilingue).
 
+## Ajouter un langage supporté (fichiers et dossiers)
 
-1. Clic droit sur `res > values`, naviguer dans `New` et sélectionner **Values Resource File**.
+- Il va exister plusieurs fichiers `strings.xml` dans le projet, un pour chaque langue supportée.
+- Le fichier `strings.xml` sans suffixe de langue est le fichier par défaut, utilisé si aucune traduction n'est trouvée pour la locale de l'appareil.
+- Pour ajouter un fichier de traduction, il faut créer un nouveau fichier `strings.xml` dans un dossier spécifique à la langue.
+- Le dossier values-fr serait pour une traduction en français, values-es pour l'espagnol, etc.
+- values-fr-rCA permet de spécifier une variante régionale, ici le français du Canada.
 
-[![Values resource file](_multilingue/ajout-strings.png)](_multilingue/ajout-strings.png)
+## Gérer dans Android Studio avec le `Translations Editor`
 
-2. Nommez le fichier exactement `strings`
-3. Sélectionner Locale, et appuer sur les flèches `>>`
-4. Sélectionnez la langue qui vous intéresse, ainsi que sa variante régionale, si nécessaire.
-5. Sélectionner **OK**
+- en double-cliquant sur le fichier `strings.xml`, on ouvre l'éditeur de traduction.
+- il y a plusieurs options pour ajouter une string ou une locale
 
-[![Ajout strings 2](_multilingue/ajout-strings-2.png)](_multilingue/ajout-strings-2.png)
+L'editor ne fait que modifier les fichiers `strings.xml` depuis Android Studio.
+- https://developer.android.com/studio/write/translations-editor
 
-:::tip
+## Utiliser une string dans le code
 
-La région spécifique est optionelle. Si on sélectionne **Any Region**. la traduction va s'appliquer pour toutes les variantes de la langue.
-
-:::
-
-
-6. Le fichier devrait être créé
-
-[![Ajout strings 3](_multilingue/ajout-strings-3.png)](_multilingue/ajout-strings-3.png)
-
-7. Vous pouvez ajouter des chaines de caractères comme montré dans la recette sur les **[Ressource String](./multilingue.mdx)**. Dans l'exemple donné, si le périphérique est en français québécois, le fichier `strings.xml (fr-rCA)` sera utilisé.
-
-8. Cherchez en ligne comment changer la langue de votre appareil pour tester vos changements.
-
-
-:::caution
-
-Le fichier `strings.xml` (sans rien après) est le fichier qui sera utilisé si Android ne trouve pas une string dans un fichier de traduction.
-Assurez vous que chaque référence à une string utilisée dans votre code se retrouve dans le fichier `strings.xml`
-
-:::
+<GHCode
+    repo="3N5-Prog3"
+    filePath="code/ComposeMultilingue/app/src/main/java/ca/cem/composemultilingue/MainActivity.kt"
+    startLine="45"
+    endLine="50"
+    />
 
 
-# Ressources String
 
-Il est possible d'ajouter des ressources de type `String` dans un fichier XML.
-Cela permet de centraliser les chaînes de caractères utilisées dans l'application, et ainsi d'éviter de les répéter dans le code.
-
-Il est aussi parfois requis d'utiliser ces ressources string pour certaines fonctionnalités, comme le **[multilingue](./multilingue.mdx)**, et le **[tiroire de navigation](./tiroir.mdx)**.
-
-## Ajout d'une entrée dans le fichier `strings.xml`
-
-Pour ajouter une nouvelle entrée dans le fichier `strings.xml`, il suffit d'ajouter une nouvelle balise `<string>` dans la section `<resources>`.
-
-```xml
-<resources>
-    <string name="app_name">Mon application</string>
-    <string name="nom_de_la_ressource">Bonjour le monde!</string>
-</resources>
-```
-
-## Utilisation dans le code Kotlin
-
-Utiliser la méthode `getString()` de la classe `Resources`.
-
-```kotlin
-val appName = resources.getString(R.string.nom_de_la_ressource)
-```
-
-## Utilisation dans le code XML
-
-Utiliser la syntaxe `@string/nom_de_la_ressource`.
-
-```xml
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/hello_world" />
-```
-
-## Extraire une string dans un fichier XML ou Kotlin dans Android Studio
-
-1. `Alt + Enter` sur la string à extraire
-2. Sélectionner `Extract string resource`
-
-[![Extract string resource](./_resources-string/extract.png)](_resources-string/extract.png)
 
