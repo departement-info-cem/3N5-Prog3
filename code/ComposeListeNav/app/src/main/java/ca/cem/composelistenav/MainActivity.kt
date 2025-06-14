@@ -10,22 +10,16 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
@@ -45,7 +39,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 
 @Composable
 fun Navigation(
@@ -77,11 +70,6 @@ fun Liste(
         topBar = {
             TopAppBar(
                 title = { Text("Liste") },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Filled.Menu, contentDescription = "Menu")
-                    }
-                }
             )
         }
     ) { padding ->
@@ -92,7 +80,7 @@ fun Liste(
         ) {
             items(donnees()) { truc ->
                 BoitePourElement(
-                    modifier = Modifier.padding(8.dp).height(150.dp),
+                    modifier = Modifier.padding(8.dp), //.height(150.dp),
                     navController = navController,
                     truc = truc,
                 )
@@ -111,7 +99,7 @@ fun BoitePourElement(
         modifier = modifier.fillMaxWidth().padding(8.dp),
     ){
         Text(
-            text = "Nom ${truc.nom}!",
+            text = truc.nom,
             modifier = modifier.weight(1f).padding(8.dp)
         )
         Button(
@@ -119,7 +107,7 @@ fun BoitePourElement(
                 print("detail/" + truc.id)
                 navController.navigate("detail/" + truc.id)
             }) {
-            Text("Vers Écran C")
+            Text("détail")
         }
     }
 }
@@ -134,11 +122,6 @@ fun Detail(
         topBar = {
             TopAppBar(
                 title = { Text("Détail") },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Filled.Menu, contentDescription = "Menu")
-                    }
-                }
             )
         }
     ) { padding ->
@@ -153,7 +136,7 @@ fun Detail(
                 modifier = Modifier.padding(20.dp),
             )
             Text(
-                text = "Nom " + donnee.nom,
+                text = donnee.nom,
                 modifier = Modifier.padding(20.dp),
             )
         }
