@@ -55,38 +55,40 @@ Pour l'installation à la maison:
 
 <Column>
 
-| Semaine                                     | Séquence des cours                       | Travaux pratiques                 |
-| ------------------------------------------- |------------------------------------------| --------------------------------- |
-| [1.1 →](cours/1.1-accueil)                  | Plan de cours, premiers projets kotlin   | --                                |
-| [1.2 →](cours/1.1-accueil)                  | Suite et présentation TP1                | [Projet créé TP1](tp/tp1)         |
-| [2.1 →](cours/2.1-imperatif)                | Impératif                                | 10%                               |
-| [2.2 →](cours/2.1-imperatif)                | Impératif                                | 20%                               |
-| [3.1 →](cours/3.1-std-lib)                  | Librairie standard / Collections         | 40%                               |
-| [3.2 →](cours/3.2-librairies-tierces)       | Librairies tierces                       | 60%                               |
-| [4.1 →](cours/4.1-structure)                | Structurer son code                      | 80%                               |
-| [4.2 →](cours/4.2-integration-1)            | Intégration                              | 100% remise                       |
-| [5.1 →](cours/5.1-formatif-intra)           | Formatif                                 | --                                |
-| [5.2 →](cours/5.2-examen-intra)             | **Examen Intra**                         | --                                |
-| [6.1 →](cours/6.1-intro-android)            | Intro Android                            | [TP2 création](tp/tp2)            |
-| [6.2 →](cours/6.2-activites)                | Activités et navigation                  | 20%                               |
-| [7.1 →](cours/7.1-recycler)                 | RecyclerView 1                           | 30%                               |
-| [7.2 →](cours/7.1-recycler)                 | RecyclerView 2                           | 40%                               |
-| [8.1 →](cours/7.1-recycler)                 | RecyclerView 3                           | 60%                               |
-| [8.2 →](cours/7.1-recycler)                 | RecyclerView 4                           | 80%                               |
-| [9.1 →](cours/9.1-graphique)                | Graphique                                | 90%                               |
-| [9.2 →](cours/9.2-integration-2)            | Intégration                              | 100% remise                       |
-| [10.1 →](cours/10.1-pile-appels-exceptions) | Pile d'appels et exceptions              | [TP3 : BD, tests erreurs](tp/tp3) |
-| [10.2 →](cours/10.2-structure-android)      | Structurer son code, service et packages | 30%                               |
-| [11.1 →](cours/11.1-tiroir)                 | Tiroir de navigation 1                   | 40%                               |
-| [11.2 →](cours/11.1-tiroir)                 | Tiroir de navigation 2                   | 50%                               |
-| [12.1 →](cours/11.1-tiroir)                 | Tiroir de navigation 3                   | 60%                               |
-| [12.2 →](cours/12.2-tests)                  | Tests                                    | 70%                               |
-| [13.1 →](cours/12.2-tests)                  | Tests                                    | 80%                               |
-| [13.2 →](cours/13.2-multilingue)            | Traduire une application                 | 90%                               |
-| [14.1 →](cours/14.1-integration-3)          | Intégration (supprimé si absence prof)   | 99%                               |
-| [14.2 →](cours/14.1-integration-3)          | Intégration / correction TP3             | 100% remise                       |
-| [15.1 →](cours/15.1-formatif-final)         | Formatif final                           |                                   |
-| [15.2 →](cours/15.2-examen-final)           | **Examen final**                         |                                   |
+Automne 24 (vieux, à jeter)
+
+| Semaine                | Séquence des cours                       | Travaux pratiques                 |
+| ---------------------- |------------------------------------------| --------------------------------- |
+| 1.1 →  | Plan de cours, premiers projets kotlin   | --                                |
+| 1.2 → | Présentation TP1                         | [Projet créé TP1](tp/tp1)         |
+| 2.1 → | Impératif                                | 10%                               |
+| 2.2 → | Impératif                                | 20%                               |
+| 3.1 → | Librairie standard / Collections         | 40%                               |
+| 3.2 → | Librairies tierces                       | 60%                               |
+| 4.1 → | Structurer son code                      | 80%                               |
+| 4.2 → | Intégration                              | 100% remise                       |
+| 5.1 → | Formatif                                 | --                                |
+| 5.2 → | **Examen Intra**                         | --                                |
+| 6.1 → | Intro Android                            | [TP2 création](tp/tp2)            |
+| 6.2 → | Activités et navigation                  | 20%                               |
+| 7.1 → | RecyclerView 1                           | 30%                               |
+| 7.2 → | RecyclerView 2                           | 40%                               |
+| 8.1 → | RecyclerView 3                           | 60%                               |
+| 8.2 → | RecyclerView 4                           | 80%                               |
+| 9.1 → | Graphique                                | 90%                               |
+| 9.2 → | Intégration                              | 100% remise                       |
+| 10.1 → | Pile d'appels et exceptions              | [TP3 : BD, tests erreurs](tp/tp3) |
+| 10.2 → | Structurer son code, service et packages | 30%                               |
+| 11.1 → | Tiroir de navigation 1                   | 40%                               |
+| 11.2 → | Tiroir de navigation 2                   | 50%                               |
+| 12.1 → | Tiroir de navigation 3                   | 60%                               |
+| 12.2 → | Tests                                    | 70%                               |
+| 13.1 → | Tests                                    | 80%                               |
+| 13.2 → | Traduire une application                 | 90%                               |
+| 14.1 → | Intégration (supprimé si absence prof)   | 99%                               |
+| 14.2 → | Intégration / correction TP3             | 100% remise                       |
+| 15.1 → | Formatif final                           |                                   |
+| 15.2 → | **Examen final**                         |                                   |
 
 </Column>
 
@@ -95,39 +97,38 @@ Pour l'installation à la maison:
 
 Automne 25
 
-| Semaine                                   | Séquence des cours                       | Travaux pratiques                 |
-|-------------------------------------------|------------------------------------------| --------------------------------- |
-| [1 →](cours/1.1-accueil)                  | Plan de cours, premiers projets kotlin   | --                                |
-| [2 →](cours/1.1-accueil)                  | Suite et présentation TP1                | [Projet créé TP1](tp/tp1)         |
-| [3 (2.1) →](cours/2.1-imperatif)          | Impératif                                | 10%                               |
-| [4 →](cours/2.1-imperatif)                | Impératif                                | 20%                               |
-| [5 (3.1) →](cours/3.1-std-lib)            | Librairie standard / Collections         | 40%                               |
-| [6 →](cours/3.2-librairies-tierces)       | Librairies tierces                       | 60%                               |
-| [7 →](cours/4.1-structure)                | Structurer son code                      | 80%                               |
-| [8 →](cours/4.2-integration-1)            | Intégration                              | 100% remise                       |
-| [9 →](cours/5.1-formatif-intra)           | Formatif                                 | --                                |
-| [10 →](cours/5.2-examen-intra)            | **Examen Intra**                         | --                                |
-| [11 →](cours/6.1-intro-android)           | Intro Android                            | [TP2 création](tp/tp2)            |
-| [12 →](cours/6.2-activites)               | Activités et navigation                  | 20%                               |
-| [13 →](cours/7.1-recycler)                | RecyclerView 1                           | 30%                               |
-| [14 →](cours/7.1-recycler)                | RecyclerView 2                           | 40%                               |
-| [15 →](cours/7.1-recycler)                | RecyclerView 3                           | 60%                               |
-| [16 →](cours/9.1-graphique)               | Graphique                                | 90%                               |
-| [17 →](cours/9.2-integration-2)           | Intégration                              | 100% remise                       |
-| [18 →](cours/10.1-pile-appels-exceptions) | Pile d'appels et exceptions              | [TP3 : BD, tests erreurs](tp/tp3) |
-| [19 →](cours/7.1-recycler)                | Composable et syntaxe                    | 80%                               |
-| [20 →](cours/10.2-structure-android)      | Structurer son code, service et packages | 30%                               |
-| [21 →](cours/12.2-tests)                  | Tests                                    | 70%                               |
-| [22 →](cours/12.2-tests)                  | Tests                                    | 80%                               |
-| [23 →](cours/11.1-tiroir)                 | Tiroir de navigation 1                   | 40%                               |
-| [24 →](cours/11.1-tiroir)                 | Tiroir de navigation 2                   | 50%                               |
-| [25 →](cours/11.1-tiroir)                 | Copilot et moi                           | 60%                               |
-| [26 →](cours/13.2-multilingue)            | Traduire une application                 | 90%                               |
-| [27 →](cours/14.1-integration-3)          | Intégration (supprimé si absence prof)   | 99%                               |
-| [28 →](cours/14.1-integration-3)          | Intégration / correction TP3             | 100% remise                       |
-| [29 →](cours/15.1-formatif-final)         | Formatif final                           |                                   |
-| [30 →](cours/15.2-examen-final)           | **Examen final**                         |                                   |
+| Séance | Cours                                                                    | Travaux pratiques |
+|---------|--------------------------------------------------------------------------|-------------------|
+| 1 | [Plan de cours, premiers projets kotlin](cours/1.1-accueil)              | -- |
+| 2 | [Présentation TP1](cours/1.1-accueil)                                    | [Projet créé TP1](tp/tp1) |
+| 3 (2.1) | [Impératif](cours/2.1-imperatif)                                         | 10% |
+| 4 | [Impératif](cours/2.1-imperatif)                                         | 20% |
+| 5 (3.1) | [Librairie standard / Collections](cours/3.1-std-lib)                    | 40% |
+| 6 | [Librairies tierces](cours/3.2-librairies-tierces)                       | 60% |
+| 7 | [Structurer son code](cours/4.1-structure)                               | 80% |
+| 8 | [Intégration](cours/4.2-integration-1)                                   | 100% remise |
+| 9 | [Formatif](cours/5.1-formatif-intra)                                     | -- |
+| 10 | [**Examen Intra**](cours/5.2-examen-intra)                               | -- |
+| 11 | [Intro Android](cours/6.1-intro-android)                                 | [TP2 création](tp/tp2) |
+| 12 | [Activités et navigation](cours/6.2-activites)                           | 20% |
+| 13 | [Listes](cours/7.1-listes)                                               | 30% |
+| 14 | [Listes](cours/7.1-listes)                                               | 40% |
+| 15 | [Listes](cours/7.1-listes)                                               | 60% |
+| 16 | [Traduire une application](cours/13.2-multilingue)                       | 70% |
+| 17 | [Graphique](cours/9.1-graphique)                                         | 90% |
+| 18 | [Intégration](cours/9.2-integration-2)                                   | 100% remise |
+| 19 | [Pile d'appels et exceptions](cours/10.1-pile-appels-exceptions)         | [TP3 : BD, tests erreurs](tp/tp3) |
+| 20 | [Composable et syntaxe](cours/7.1-listes)                                | 10% |
+| 21 | [Structurer son code, service et packages](cours/10.2-structure-android) | 30% |
+| 22 | [Tests](cours/12.2-tests)                                                | 70% |
+| 23 | [Tests](cours/12.2-tests)                                                | 80% |
+| 24 | [Tiroir de navigation](cours/11.1-tiroir)                                | 40% |
+| 25 | [Tiroir de navigation](cours/11.1-tiroir)                                | 50% |
+| 26 | [Copilot et moi](cours/11.1-tiroir)                                      | 60% |
+| 27 | [Intégration (supprimé si absence prof)](cours/14.1-integration-3)       | 99% |
+| 28 | [Intégration / correction TP3](cours/14.1-integration-3)                 | 100% remise |
+| 29 | [Formatif final](cours/15.1-formatif-final)                              | |
+| 30 | [**Examen final**](cours/15.2-examen-final)                              | |
 
 </Column>
-
 </Row>

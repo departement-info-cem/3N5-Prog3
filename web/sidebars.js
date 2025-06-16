@@ -67,23 +67,23 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "7.1 - RecyclerView ♻️",
-      id: "cours/7.1-recycler",
+      label: "7.1 - Listes ☰",
+      id: "cours/7.1-listes",
     },
     {
       type: "doc",
-      label: "7.2 - RecyclerView ♻️",
-      id: "cours/7.1-recycler",
+      label: "7.2 - Listes ☰",
+      id: "cours/7.1-listes",
     },
     {
       type: "doc",
-      label: "8.1 - RecyclerView ♻️",
-      id: "cours/7.1-recycler",
+      label: "8.1 - Listes ☰",
+      id: "cours/7.1-listes",
     },
     {
       type: "doc",
-      label: "8.2 - RecyclerView ♻️",
-      id: "cours/7.1-recycler",
+      label: "8.2 - RecyclerView ☰",
+      id: "cours/7.1-listes",
     },
     {
       type: "doc",
