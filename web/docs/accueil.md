@@ -90,4 +90,44 @@ Pour l'installation à la maison:
 
 </Column>
 
+
+<Column>
+
+Automne 25
+
+| Semaine                                   | Séquence des cours                       | Travaux pratiques                 |
+|-------------------------------------------|------------------------------------------| --------------------------------- |
+| [1 →](cours/1.1-accueil)                  | Plan de cours, premiers projets kotlin   | --                                |
+| [2 →](cours/1.1-accueil)                  | Suite et présentation TP1                | [Projet créé TP1](tp/tp1)         |
+| [3 (2.1) →](cours/2.1-imperatif)          | Impératif                                | 10%                               |
+| [4 →](cours/2.1-imperatif)                | Impératif                                | 20%                               |
+| [5 (3.1) →](cours/3.1-std-lib)            | Librairie standard / Collections         | 40%                               |
+| [6 →](cours/3.2-librairies-tierces)       | Librairies tierces                       | 60%                               |
+| [7 →](cours/4.1-structure)                | Structurer son code                      | 80%                               |
+| [8 →](cours/4.2-integration-1)            | Intégration                              | 100% remise                       |
+| [9 →](cours/5.1-formatif-intra)           | Formatif                                 | --                                |
+| [10 →](cours/5.2-examen-intra)            | **Examen Intra**                         | --                                |
+| [11 →](cours/6.1-intro-android)           | Intro Android                            | [TP2 création](tp/tp2)            |
+| [12 →](cours/6.2-activites)               | Activités et navigation                  | 20%                               |
+| [13 →](cours/7.1-recycler)                | RecyclerView 1                           | 30%                               |
+| [14 →](cours/7.1-recycler)                | RecyclerView 2                           | 40%                               |
+| [15 →](cours/7.1-recycler)                | RecyclerView 3                           | 60%                               |
+| [16 →](cours/9.1-graphique)               | Graphique                                | 90%                               |
+| [17 →](cours/9.2-integration-2)           | Intégration                              | 100% remise                       |
+| [18 →](cours/10.1-pile-appels-exceptions) | Pile d'appels et exceptions              | [TP3 : BD, tests erreurs](tp/tp3) |
+| [19 →](cours/7.1-recycler)                | Composable et syntaxe                    | 80%                               |
+| [20 →](cours/10.2-structure-android)      | Structurer son code, service et packages | 30%                               |
+| [21 →](cours/12.2-tests)                  | Tests                                    | 70%                               |
+| [22 →](cours/12.2-tests)                  | Tests                                    | 80%                               |
+| [23 →](cours/11.1-tiroir)                 | Tiroir de navigation 1                   | 40%                               |
+| [24 →](cours/11.1-tiroir)                 | Tiroir de navigation 2                   | 50%                               |
+| [25 →](cours/11.1-tiroir)                 | Copilot et moi                           | 60%                               |
+| [26 →](cours/13.2-multilingue)            | Traduire une application                 | 90%                               |
+| [27 →](cours/14.1-integration-3)          | Intégration (supprimé si absence prof)   | 99%                               |
+| [28 →](cours/14.1-integration-3)          | Intégration / correction TP3             | 100% remise                       |
+| [29 →](cours/15.1-formatif-final)         | Formatif final                           |                                   |
+| [30 →](cours/15.2-examen-final)           | **Examen final**                         |                                   |
+
+</Column>
+
 </Row>
