@@ -1,0 +1,56 @@
+---
+hide_table_of_contents: true
+---
+
+# Mise en page avec Jetpack Compose
+
+Le code de cette recette est disponible [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeMiseEnPage).
+
+<Tabs queryString="recette-mise-en-page-compose">
+  <TabItem value="principe" label="Principe">
+
+    Quand on vous demande de faire une mise en page, on va suivre les étapes suivantes :
+    - on va utiliser les fonctions `Row` et `Column` pour décomposer l'interface en lignes et colonnes
+    - on commence par l'écran au complet puis on va décomposer
+      - on prend l'élément actuel et on regarde si on peut tracer des lignes horizontales qui séparent les sous-éléments sans les couper
+      - on prend l'élément actuel et on regarde si on peut tracer des lignes verticales qui séparent les sous-éléments sans les couper
+      - si on peut séparer avec des lignes horizontales, on utilise une `Column` sinon on utilise une `Row`
+      - DIMENSIONNEMENT : TODO modifier
+      - on applique la même logique pour les sous-éléments
+
+    L'exemple mep-simple donne un exemple. L'exemple mep-complexe donne un exemple plus complexe.
+
+  </TabItem>
+  <TabItem value="tester" label="Basculer entre les deux">
+    En cherchant les TODOs dans le code, trouve l'endroit où on bascule entre les deux mises en page.
+    Relance l'application et vérifie que tu peux basculer entre les deux mises en page.
+
+  </TabItem>
+  <TabItem value="deboguer" label="Déboguer une mise en page">
+      On va utiliser le `Layout Inspector` pour déboguer une mise en page.
+
+      1. Bascule le code vers `mep-brisée`
+      2. Lance l'application
+      3. Ouvre le `Layout Inspector` dans Android Studio
+      4. Trouve l'élément qui est mal positionné / dimensionné et corrige le problème dans le code
+
+      <GHCode
+            repo="3N5-Prog3"
+            filePath="code/ComposeNavigation/app/src/main/java/ca/cem/composenavigation/MainActivity.kt"
+              startLine="38"
+              endLine="46"
+           />
+  </TabItem>
+
+
+    <TabItem value="explorer" label="Explorer le code">
+
+        On t'encourage à explorer le code de l'application pour voir comment les écrans sont définis et comment la navigation est implémentée.
+
+        Ajoute des points d'arrêt dans le code pour voir comment la navigation fonctionne en temps réel.
+
+        Le code de cette recette est disponible [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeNavigation).
+
+      </TabItem>
+</Tabs>
+
