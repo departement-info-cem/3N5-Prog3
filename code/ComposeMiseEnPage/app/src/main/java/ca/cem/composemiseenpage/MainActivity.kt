@@ -38,8 +38,8 @@ class MainActivity : ComponentActivity() {
             ComposeMiseEnPageTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     // TODO décommenter une ligne, celle qu'on veut afficher
-                    //mep_simple(modifier = Modifier.padding(innerPadding))
-                    mep_complexe(modifier = Modifier.padding(innerPadding))
+                    mep_simple(modifier = Modifier.padding(innerPadding))
+                    //mep_complexe(modifier = Modifier.padding(innerPadding))
                     //mep_brisée(modifier = Modifier.padding(innerPadding))
                 }
             }
