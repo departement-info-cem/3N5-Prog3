@@ -1,0 +1,69 @@
+---
+hide_table_of_contents: true
+---
+
+# Composant Android classique dans Compose
+
+## Contexte
+
+- Android existe depuis 2008, l'environnement graphique est alors basé sur des **objets** graphiques qui héritent tous de View.
+- JetPack Compose (2020) utilise la composition de **fonctions** pour créer l'interface graphique
+- La librairie Compose fournit des champs texte, des boutons, etc. dans cette nouvelle approche
+- Par contre, plusieurs composants n'ont pas été refaits en Compose
+- Il y a aussi toutes les librairies tierces qui fournissent des composants graphiques dans l'approche classique
+- On va voir comment utiliser ces composants classiques dans Compose
+
+## L'exemple de la recette
+
+On va utiliser le composant classique `WebView` pour afficher une page web dans notre application Compose.
+
+<Tabs queryString="recette-classique">
+
+    <TabItem value="AndroidView" label="AndroidView">
+
+        AndroidView est la fonction composable qui permet d'intégrer un composant classique.endLine
+        On a ici la syntaxe de base pour l'utiliser.
+
+         <GHCode
+                        repo="3N5-Prog3"
+                        filePath="code/ComposeClassique/app/src/main/java/ca/cem/composeclassique/MainActivity.kt"
+                        startLine="67"
+                        endLine="86"
+                        ignore="71-79,84-84"
+                      />
+    </TabItem>
+
+    <TabItem value="factory" label="factory">
+
+        La fonction **factory**:
+        - fournit un object de type **Context** qui est toujours nécessaire pour le constructeur d'un objet graphique Android classique
+        - le corps de la fonction sert à construire l'objet graphique classique
+        - factory doit finalement retourner l'objet graphique créé
+
+        <GHCode
+                                repo="3N5-Prog3"
+                                filePath="code/ComposeClassique/app/src/main/java/ca/cem/composeclassique/MainActivity.kt"
+                                startLine="70"
+                                endLine="80"
+
+                              />
+
+    </TabItem>
+
+    <TabItem value="update" label="update">
+
+        La fonction **update** permet de rafraichir l'objet graphique classique
+        quand JetPack Compose déclenche un rafraichissement de l'interface graphique.
+
+        <GHCode
+                                        repo="3N5-Prog3"
+                                        filePath="code/ComposeClassique/app/src/main/java/ca/cem/composeclassique/MainActivity.kt"
+                                        startLine="83"
+                                        endLine="85"
+
+                                      />
+
+    </TabItem>
+
+
+</Tabs>
