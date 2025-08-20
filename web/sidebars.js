@@ -51,7 +51,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "5.2 - Examen Intra (20%)",
+      label: "5.2 - Examen Intra (30%)",
       id: "cours/5.2-examen-intra",
       className: "examen",
     },
@@ -82,8 +82,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "8.2 - RecyclerView ☰",
-      id: "cours/7.1-listes",
+      label: "8.2 - Traduire une application",
+      id: "cours/13.2-multilingue",
     },
     {
       type: "doc",
@@ -103,53 +103,53 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "10.2 - Structurer service 🧱",
+      label: "10.2 - Composables et syntaxe",
+      id: "cours/7.1-listes",
+    },
+    {
+      type: "doc",
+      label: "11.1 - Structurer son code, service et packages",
       id: "cours/10.2-structure-android",
     },
     {
       type: "doc",
-      label: "11.1 - Tiroir de navigation 🗄️",
-      id: "cours/11.1-tiroir",
-    },
-    {
-      type: "doc",
-      label: "11.2 - Tiroir de navigation 🗄️",
-      id: "cours/11.1-tiroir",
-    },
-    {
-      type: "doc",
-      label: "12.1 - Tiroir de navigation 🗄️",
-      id: "cours/11.1-tiroir",
-    },
-    {
-      type: "doc",
-      label: "12.2 - Tests 🧪",
+      label: "11.2 - Tests",
       id: "cours/12.2-tests",
     },
     {
       type: "doc",
-      label: "13.1 - Tests 🧪",
+      label: "12.1 - Tests",
       id: "cours/12.2-tests",
     },
     {
       type: "doc",
-      label: "13.2 - Multilingue 🌐",
-      id: "cours/13.2-multilingue",
+      label: "12.2 - Tiroirs de navigation",
+      id: "cours/11.1-tiroir",
     },
     {
       type: "doc",
-      label: "14.1 - Intégration 🔨",
+      label: "13.1 - Tirois de navigation",
+      id: "cours/11.1-tiroir",
+    },
+    {
+      type: "doc",
+      label: "13.2 - Copilot et moi",
+      id: "cours/11.1-tiroir",
+    },
+    {
+      type: "doc",
+      label: "14.1 - Intégration (supprimé si absence prof)",
       id: "cours/14.1-integration-3",
     },
     {
       type: "doc",
-      label: "14.2 - Intégration 🔨",
+      label: "14.2 - Intégration / correction TP3",
       id: "cours/14.1-integration-3",
       className: "remise-tp3",
     },
     {
       type: "doc",
-      label: "15.1 - Formatif",
+      label: "15.1 - Formatif final",
       id: "cours/15.1-formatif-final",
     },
     {
