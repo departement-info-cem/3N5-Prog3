@@ -55,46 +55,6 @@ Pour l'installation à la maison:
 
 <Column>
 
-Automne 24 (vieux, à jeter)
-
-| Semaine                | Séquence des cours                       | Travaux pratiques                 |
-| ---------------------- |------------------------------------------| --------------------------------- |
-| 1.1 →  | Plan de cours, premiers projets kotlin   | --                                |
-| 1.2 → | Présentation TP1                         | [Projet créé TP1](tp/tp1)         |
-| 2.1 → | Impératif                                | 10%                               |
-| 2.2 → | Impératif                                | 20%                               |
-| 3.1 → | Librairie standard / Collections         | 40%                               |
-| 3.2 → | Librairies tierces                       | 60%                               |
-| 4.1 → | Structurer son code                      | 80%                               |
-| 4.2 → | Intégration                              | 100% remise                       |
-| 5.1 → | Formatif                                 | --                                |
-| 5.2 → | **Examen Intra**                         | --                                |
-| 6.1 → | Intro Android                            | [TP2 création](tp/tp2)            |
-| 6.2 → | Activités et navigation                  | 20%                               |
-| 7.1 → | RecyclerView 1                           | 30%                               |
-| 7.2 → | RecyclerView 2                           | 40%                               |
-| 8.1 → | RecyclerView 3                           | 60%                               |
-| 8.2 → | RecyclerView 4                           | 80%                               |
-| 9.1 → | Graphique                                | 90%                               |
-| 9.2 → | Intégration                              | 100% remise                       |
-| 10.1 → | Pile d'appels et exceptions              | [TP3 : BD, tests erreurs](tp/tp3) |
-| 10.2 → | Structurer son code, service et packages | 30%                               |
-| 11.1 → | Tiroir de navigation 1                   | 40%                               |
-| 11.2 → | Tiroir de navigation 2                   | 50%                               |
-| 12.1 → | Tiroir de navigation 3                   | 60%                               |
-| 12.2 → | Tests                                    | 70%                               |
-| 13.1 → | Tests                                    | 80%                               |
-| 13.2 → | Traduire une application                 | 90%                               |
-| 14.1 → | Intégration (supprimé si absence prof)   | 99%                               |
-| 14.2 → | Intégration / correction TP3             | 100% remise                       |
-| 15.1 → | Formatif final                           |                                   |
-| 15.2 → | **Examen final**                         |                                   |
-
-</Column>
-
-
-<Column>
-
 Automne 25
 
 | Séance | Cours                                                                    | Travaux pratiques |
