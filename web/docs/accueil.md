@@ -84,7 +84,7 @@ Automne 25
 | 12.1 | [Tests](cours/12.2-tests)                                                | 40%                               |
 | 12.2 | [Tiroir de navigation](cours/11.1-tiroir)                                | 50%                               |
 | 13.1 | [Tiroir de navigation](cours/11.1-tiroir)                                | 60%                               |
-| 13.2 | [Copilot et moi](cours/11.1-tiroir)                                      | 70%                               |
+| 13.2 | [Copilot et moi](cours/13.2-iag)                                         | 70%                               |
 | 14.1 | [Intégration (supprimé si absence prof)](cours/14.1-integration-3)       | 99%                               |
 | 14.2 | [Intégration / correction TP3](cours/14.1-integration-3)                 | 100% remise                       |
 | 15.1 | [Formatif final](cours/15.1-formatif-final)                              |                                   |
