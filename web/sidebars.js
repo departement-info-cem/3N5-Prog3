@@ -134,7 +134,7 @@ const sidebars = {
     {
       type: "doc",
       label: "13.2 - Copilot et moi",
-      id: "cours/11.1-tiroir",
+      id: "cours/13.2-iag",
     },
     {
       type: "doc",
