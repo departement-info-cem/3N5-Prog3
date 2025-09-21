@@ -60,7 +60,7 @@ fun afficheTableau(tabEntiers: Array<Int>){
 
 ## Listes
 
-Dans le fichier ExoListe.java, vous devez programmer les méthodes :
+Dans le fichier ExoListe.kt, vous devez programmer les méthodes :
 - **2 points** joursParMois qui renvoie une liste contenant le nombre de jours par mois jusqu’à n mois. Par exemple :
   - pour n qui vaut 1 renvoie la liste [31]
   - pour n qui vaut 3 renvoie la liste [31, 28, 31]
