@@ -44,7 +44,7 @@ d valeur :                     type :
 
 ## Trace d'exécution de code kotlin
 
-Indique ce que fait le code suivant quand l'argument passé est "3"
+Indique ce que fait le code suivant.
 - 2 points : les instructions exécutées (uniquement) sont toutes présentes dans la trace dans le bon ordre
 - 2 points : les effets et la pile d'exécution sont correctement décrits
 
