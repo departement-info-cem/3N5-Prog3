@@ -18,6 +18,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -31,12 +33,19 @@ import androidx.compose.ui.unit.sp
 import ca.cem.composemiseenpage.ui.theme.ComposeMiseEnPageTheme
 
 class MainActivity : ComponentActivity() {
+    @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             ComposeMiseEnPageTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize(),
+                    topBar = {
+                        CenterAlignedTopAppBar(
+                            title = { Text("Mise en page") }
+                        )
+                    }
+                ) { innerPadding ->
                     // TODO décommenter une ligne, celle qu'on veut afficher
                     mep_simple(modifier = Modifier.padding(innerPadding))
                     //mep_complexe(modifier = Modifier.padding(innerPadding))
@@ -57,12 +66,12 @@ fun mep_simple(modifier: Modifier = Modifier) {
         // au niveau 2 on peut tracer un trait horizontal entre 2 sous-éléments donc c'est un Column
         Column(
             // on n'oublie pas de dimensionner les sous-éléments
-            modifier.weight(1f).fillMaxHeight()
+            Modifier.weight(1f).fillMaxHeight()
         ){
             // Si on ne dimensionne pas un texte, il prend la place minimal du texte
             Text("Yo on ne devrait jamais utiliser un poids pour la hauteur d'un élément avec du texte")
             // Un Spacer crée un espace vide, un poids indique une proportion de l'espace disponible
-            Spacer(modifier.weight(1f))
+            Spacer(Modifier.weight(1f))
             Button(
                 // on dimensionne le bouton, ici on veut prendre toute la largeur
                 modifier = Modifier.padding(10.dp).fillMaxWidth(),
@@ -76,7 +85,7 @@ fun mep_simple(modifier: Modifier = Modifier) {
         Box(
             // en lui donnant le même poids que le 1er, il prend la même place
             // 2 poids de 1f dans une Row, ça fait 50% chacun
-            modifier = modifier.weight(1f)
+            modifier = Modifier.weight(1f)
                 .fillMaxHeight()
                 .background(Color.Blue),
         ) {
@@ -93,39 +102,39 @@ fun mep_complexe(modifier: Modifier = Modifier) {
         modifier.fillMaxWidth(1f).padding(10.dp)
     ){
         Text("Le texte qui est en haut de la page, on peut tracer en dessous")
-        Spacer(modifier.weight(2f)) // crée un espace vide de 2f en fonction de la somme des poids
+        Spacer(Modifier.weight(2f)) // crée un espace vide de 2f en fonction de la somme des poids
         Button(
-            modifier = modifier.fillMaxWidth().padding(15.dp),
+            modifier = Modifier.fillMaxWidth().padding(15.dp),
             onClick = {}
         ) {
             Text(text = "Clique moi")
         }
-        Spacer(modifier.height(20.dp)) // crée un espace vide de 20dp
+        Spacer(Modifier.height(20.dp)) // crée un espace vide de 20dp
         Row(
-            modifier = modifier.fillMaxSize(),
+            modifier = Modifier.fillMaxSize(),
         ) {
             Column(
-                modifier.weight(1f),
+                Modifier.weight(1f),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 // la somme des weight se fait sur les enfants directs
             ){
                 Text("Le texte du haut de la colonne de gauche")
-                Spacer(modifier.weight(30f))
+                Spacer(Modifier.weight(30f))
                 Button(
                     onClick = {}
                 ) {
                     Text(text = "Bouton 2")
                 }
-                Spacer(modifier.weight(30f))
+                Spacer(Modifier.weight(30f))
                 OutlinedButton(
-                    modifier = modifier.padding(10.dp),
+                    modifier = Modifier.padding(10.dp),
                     onClick = { },
                 ) {
                     Text("Délimité")
                 }
             }
             Column(
-                modifier.width(240.dp),
+                Modifier.width(240.dp),
             ) {
                 Text(
                     modifier = Modifier
@@ -176,17 +185,19 @@ fun mep_complexe(modifier: Modifier = Modifier) {
 
 @Composable
 fun mep_brisée(modifier: Modifier = Modifier) {
-    Row(){
+    Row(
+        modifier = modifier
+    ){
         Column(){
             Text("Les 2 problèmes, on ne voit pas la colonne de droite, et le texte trop petit ne s'affiche pas")
-            Spacer(modifier.weight(30f))
+            Spacer(Modifier.weight(30f))
             Button(
                 onClick = {}
             ) {
                 Text(text = "Clique moi")
             }
-            Spacer(modifier.weight(30f))
-            Box(modifier
+            Spacer(Modifier.weight(30f))
+            Box(Modifier
                 .weight(30f)
                 .fillMaxWidth()
                 .background(Color.Red)) {
@@ -194,27 +205,30 @@ fun mep_brisée(modifier: Modifier = Modifier) {
             }
             OutlinedButton(
                 onClick = { },
-                modifier = modifier.weight(10f)
+                modifier = Modifier.weight(10f)
             ) {
                 Text(
                     "trop petit"
                 )
             }
-            Spacer(modifier.weight(30f))
+            Spacer(Modifier.weight(30f))
         }
         Column(
-            modifier.weight(1f),
+            Modifier.weight(1f),
             horizontalAlignment = Alignment.CenterHorizontally,
         ){
-            Text("Yo on ne devrait jamais utiliser un poids pour la hauteur d'un élément avec du texte")
-            Spacer(modifier.weight(30f))
+            Text(
+                "Yo on ne devrait jamais utiliser un poids pour la hauteur d'un élément avec du texte",
+                modifier = Modifier.weight(1f)
+            )
+            Spacer(Modifier.weight(30f))
             Button(
                 onClick = {}
             ) {
                 Text(text = "Clique moi")
             }
-            Spacer(modifier.weight(30f))
-            Box(modifier
+            Spacer(Modifier.weight(30f))
+            Box(Modifier
                 .weight(30f)
                 .fillMaxWidth()
                 .background(Color.Red)) {
@@ -227,7 +241,7 @@ fun mep_brisée(modifier: Modifier = Modifier) {
                     "trop petit"
                 )
             }
-            Spacer(modifier.weight(30f))
+            Spacer(Modifier.weight(30f))
         }
     }
 }
