@@ -44,7 +44,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     Column {
         Text(
             text = stringResource(R.string.hello_world) + " " + name,
-            modifier = modifier
+            modifier = Modifier
         )
         Text(text = pluralStringResource(R.plurals.you_have_messages, 1, 1))
         Text(text = pluralStringResource(R.plurals.you_have_messages, 10, 10))

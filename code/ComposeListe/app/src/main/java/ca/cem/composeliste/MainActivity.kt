@@ -61,6 +61,6 @@ class MainActivity : ComponentActivity() {
 fun Machin(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Salut $name!",
-        modifier = modifier
+        modifier = Modifier
     )
 }

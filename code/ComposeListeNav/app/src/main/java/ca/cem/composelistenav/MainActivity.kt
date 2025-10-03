@@ -96,11 +96,11 @@ fun BoitePourElement(
     modifier: Modifier = Modifier,
 ) {
     Row(
-        modifier = modifier.fillMaxWidth().padding(8.dp),
+        modifier = Modifier.fillMaxWidth().padding(8.dp),
     ){
         Text(
             text = truc.nom,
-            modifier = modifier.weight(1f).padding(8.dp)
+            modifier = Modifier.weight(1f).padding(8.dp)
         )
         Button(
             onClick = {
@@ -118,7 +118,7 @@ fun Detail(
     modifier: Modifier = Modifier,
     id: Int?) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize(),
         topBar = {
             TopAppBar(
                 title = { Text("Détail") },
