@@ -5,15 +5,23 @@ TODO ajouter \AppData\Local\Android\Sdk\platform-tools au PATH
 Une collecte de raccourcis et procédures pour coder dans 3N5
 
 **alt + 1** explorateur du projet (comme explorateur de solution)
+
+
 **alt + 6** Problems toutes les erreurs de compilation si tu fais enter sur le problème il te mène sur la ligne
+
 Maj + F10 partir le projet
+
 Alt + v puis t amène au menu des tool Windows
 
 
 Logcat
+
 Powershell "adb logcat System.out:V *:S" filtre tous les print println
+
 si on souhaite mettre dans un fichier 
+
 Pwershell "adb logcat -b all -c" efface logcat 
+
 adb logcat System.out:V *:S > logcat_output.txt    permet de récupérer le logcat dans un fichier pour naviguer ensuite dedans
 
 ## exécuter application Android depuis powershell
