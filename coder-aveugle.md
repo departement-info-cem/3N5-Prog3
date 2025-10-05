@@ -12,7 +12,9 @@ Alt + v puis t amène au menu des tool Windows
 
 Logcat
 Powershell "adb logcat System.out:V *:S" filtre tous les print println
-
+si on souhaite mettre dans un fichier 
+Pwershell "adb logcat -b all -c" efface logcat 
+adb logcat System.out:V *:S > logcat_output.txt    permet de récupérer le logcat dans un fichier pour naviguer ensuite dedans
 
 ## exécuter application Android depuis powershell
 
