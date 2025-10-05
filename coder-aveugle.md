@@ -1,6 +1,11 @@
+TODO installer command line tools sur machine
+
 Une collecte de raccourcis et procédures pour coder dans 3N5
 
-Possibilité 1: **alt + 1**
+**alt + 1** explorateur du projet (comme explorateur de solution)
+**alt + 6** Problems toutes les erreurs de compilation si tu fais enter sur le problème il te mène sur la ligne
+Maj + F10 partir le projet
+Alt + v puis t amène au menu des tool Windows
 
 ## exécuter application Android depuis powershell
 
