@@ -35,6 +35,7 @@ import ca.cem.composemiseenpage.ui.theme.ComposeMiseEnPageTheme
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
+        println("Entrée dans onCreate")
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
@@ -53,12 +54,13 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        println("Sortir de onCreate")
     }
 }
 
 @Composable
 fun mep_simple(modifier: Modifier = Modifier) {
-    // au niveau 1 on peut tracer un trait vertical entre 2 sous-éléments donc c'est un Row
+    println("Entrée dans mep_simple")
     Row(
         // comme c'est le plus haut niveau, on veut prendre tout l'espace disponible
         modifier = modifier.fillMaxWidth()
@@ -92,10 +94,12 @@ fun mep_simple(modifier: Modifier = Modifier) {
             Text("Yo mama")
         }
     }
+    println("Sortir de mep_simple")
 }
 
 @Composable
 fun mep_complexe(modifier: Modifier = Modifier) {
+    println("Entrée dans mep_complexe")
     // au niveau 1 on peut tracer un trait horizontal entre 2 sous-éléments Column
     Column(
         // si je mets un padding ici il entoure toute la colonne
@@ -181,10 +185,12 @@ fun mep_complexe(modifier: Modifier = Modifier) {
             }
         }
     }
+    println("Sortir de mep_complexe")
 }
 
 @Composable
 fun mep_brisée(modifier: Modifier = Modifier) {
+    println("Entrée dans mep_brisée")
     Row(
         modifier = modifier
     ){
@@ -244,4 +250,5 @@ fun mep_brisée(modifier: Modifier = Modifier) {
             Spacer(Modifier.weight(30f))
         }
     }
+    println("Sortir de mep_brisée")
 }

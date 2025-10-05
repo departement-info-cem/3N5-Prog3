@@ -36,6 +36,7 @@ import kotlin.random.Random
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
+        println("Entrée dans onCreate")
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
@@ -58,15 +59,15 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        println("Sortir de onCreate")
     }
 }
 
 @Composable
 fun EcranPrincipal(modifier: Modifier = Modifier) {
-
+    println("Entrée dans EcranPrincipal")
     var nbPafs  by remember{mutableIntStateOf(0)}
     var nbFlops by remember{mutableIntStateOf(0)}
-
     Column(
         modifier = modifier.fillMaxSize()
     ){
@@ -84,12 +85,14 @@ fun EcranPrincipal(modifier: Modifier = Modifier) {
             modifier = Modifier.fillMaxSize().weight(5f)
         )
     }
+    println("Sortir de EcranPrincipal")
 }
 
 @Composable
 private fun TitreApplication(
     modifier : Modifier = Modifier
 ) {
+    println("Entrée dans TitreApplication")
     Box(
         modifier = modifier,
         contentAlignment = Alignment.Center
@@ -100,7 +103,7 @@ private fun TitreApplication(
             fontWeight = FontWeight.Bold
         )
     }
-
+    println("Sortir de TitreApplication")
 }
 
 @Composable

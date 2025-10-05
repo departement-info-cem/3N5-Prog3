@@ -36,6 +36,7 @@ import ca.cem.composenavigation.ui.theme.ComposeNavigationTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        println("Entrée dans onCreate")
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
@@ -43,6 +44,7 @@ class MainActivity : ComponentActivity() {
                 Navigation()
             }
         }
+        println("Sortir de onCreate")
     }
 }
 
@@ -51,6 +53,7 @@ fun Navigation(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController()
 ) {
+    println("Entrée dans Navigation")
     NavHost(
         navController = navController,
         startDestination = "ecranA",
@@ -64,6 +67,7 @@ fun Navigation(
             EcranC(navController, modifier, id)
         }
     }
+    println("Sortir de Navigation")
 }
 
 @Composable

@@ -24,6 +24,7 @@ import ca.cem.composemultilingue.ui.theme.ComposeMultilingueTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        println("Entrée dans onCreate")
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
@@ -36,11 +37,13 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        println("Sortir de onCreate")
     }
 }
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
+    println("Entrée dans Greeting")
     Column {
         Text(
             text = stringResource(R.string.hello_world) + " " + name,
@@ -49,4 +52,5 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         Text(text = pluralStringResource(R.plurals.you_have_messages, 1, 1))
         Text(text = pluralStringResource(R.plurals.you_have_messages, 10, 10))
     }
+    println("Sortir de Greeting")
 }
