@@ -9,6 +9,11 @@ Une collecte de raccourcis et procédures pour coder dans 3N5
 Maj + F10 partir le projet
 Alt + v puis t amène au menu des tool Windows
 
+
+Logcat
+Powershell "adb logcat System.out:V *:S" filtre tous les print println
+
+
 ## exécuter application Android depuis powershell
 
 ## accéder au logcat depuis powershell
