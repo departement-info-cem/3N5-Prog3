@@ -1,4 +1,6 @@
 TODO installer command line tools sur machine
+TODO ajouter AppData\Local\Android\Sdk\cmdline-tools\latest\bin au PATH
+TODO ajouter \AppData\Local\Android\Sdk\platform-tools au PATH
 
 Une collecte de raccourcis et procédures pour coder dans 3N5
 
