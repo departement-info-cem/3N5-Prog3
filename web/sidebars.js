@@ -82,8 +82,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "8.2 - Traduire une application",
-      id: "cours/13.2-multilingue",
+      label: "8.2 - État i18n",
+      id: "cours/13.2-etat-multilingue",
     },
     {
       type: "doc",

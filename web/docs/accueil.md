@@ -74,7 +74,7 @@ Automne 25
 | 7.1 | [Listes](cours/7.1-listes)                                               | 30%                               |
 | 7.2 | [Listes](cours/7.1-listes)                                               | 40%                               |
 | 8.1 | [Listes](cours/7.1-listes)                                               | 60%                               |
-| 8.2 | [Traduire une application](cours/13.2-multilingue)                       | 70%                               |
+| 8.2 | [Etat i18n](cours/13.2-multilingue)                                      | 70%                               |
 | 9.1 | [Graphique](cours/9.1-graphique)                                         | 90%                               |
 | 9.2 | [Intégration](cours/9.2-integration-2)                                   | 100% remise                       |
 | 10.1 | [Pile d'appels et exceptions](cours/10.1-pile-appels-exceptions)         | [TP3 : BD, tests erreurs](tp/tp3) |
