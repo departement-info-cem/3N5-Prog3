@@ -104,7 +104,7 @@ const sidebars = {
     {
       type: "doc",
       label: "10.2 - Composables et syntaxe",
-      id: "cours/7.1-listes",
+      id: "cours/10.2-compose-syntaxe",
     },
     {
       type: "doc",

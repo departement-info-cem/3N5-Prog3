@@ -78,7 +78,7 @@ Automne 25
 | 9.1 | [Graphique](cours/9.1-graphique)                                         | 90%                               |
 | 9.2 | [Intégration](cours/9.2-integration-2)                                   | 100% remise                       |
 | 10.1 | [Pile d'appels et exceptions](cours/10.1-pile-appels-exceptions)         | [TP3 : BD, tests erreurs](tp/tp3) |
-| 10.2 | [Composable et syntaxe](cours/7.1-listes)                                | 10%                               |
+| 10.2 | [Composable et syntaxe](cours/10.2-compose-syntaxe)                      | 10%                               |
 | 11.1 | [Structurer son code, service et packages](cours/10.2-structure-android) | 20%                               |
 | 11.2 | [Tests](cours/12.2-tests)                                                | 30%                               |
 | 12.1 | [Tests](cours/12.2-tests)                                                | 40%                               |
