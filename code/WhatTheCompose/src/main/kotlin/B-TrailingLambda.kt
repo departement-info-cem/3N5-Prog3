@@ -6,9 +6,19 @@ package org.example
  * un bloc de code à exécuter
  */
 
+// Démo de définition d'une fonction avec un trailing lambda
+fun faireQuelqueChose(message: String, action: () -> Unit) {
+    println("Avant l'action : $message")
+    action()
+    println("Après l'action")
+}
 
-// TODO démo de définition d'une fonction avec un trailing lambda
+fun main() {
+    // Démo d'un appel avec le paramètre nommé
+    faireQuelqueChose(message = "Appel avec paramètre nommé", action = { println("Action exécutée (paramètre nommé)") })
 
-// TODO démo d'un appel avec le paramètre nommé
-
-// TODO démo d'un appel avec le bloc en {}
+    // Démo d'un appel avec le bloc en {}
+    faireQuelqueChose("Appel avec trailing lambda") {
+        println("Action exécutée (trailing lambda)")
+    }
+}
