@@ -66,6 +66,7 @@ fun EcranPrincipal(
         Button(
             onClick = {
                 // dès que la valeur de la liste change, tout ce qui l'utilise est recomposé
+                // TODO placer un point d'arrêt sur la ligne suivante
                 println("Entrée dans onClick pour liste")
                 listeMemoire.add(listeMemoire.size * 2)
                 println("Sortie de onClick pour liste" + listeMemoire.joinToString(", "))
@@ -76,8 +77,8 @@ fun EcranPrincipal(
         // On peut isoler les comportements / objets dans des sous fonctions
         AfficherCompteur(compteur = compteur)
         BoutonPourIncrementer(
-            // TODO placer un point d'arrêt sur la ligne suivante
             quandOnCliqueSurIncrementer = {
+                // TODO placer un point d'arrêt sur la ligne suivante
                 println("Entrée dans onClick pour compteur")
                 compteur++
                 println("Sortie de onClick pour compteur " + compteur)
