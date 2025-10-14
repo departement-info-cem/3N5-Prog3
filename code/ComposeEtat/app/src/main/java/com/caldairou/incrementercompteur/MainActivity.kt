@@ -29,6 +29,7 @@ import com.caldairou.incrementercompteur.ui.theme.IncrementerCompteurTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        println("Entrée dans onCreate")
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
@@ -43,6 +44,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        println("Sortie de onCreate")
     }
 }
 
@@ -50,6 +52,7 @@ class MainActivity : ComponentActivity() {
 fun EcranPrincipal(
     modifier : Modifier = Modifier
 ){
+    println("Entrée dans EcranPrincipal")
     // la variable avec l'état doit être avant toutes les fonctions qui partagent l'état
     // TODO placer un point d'arrêt sur la ligne suivante
     var compteur by remember{mutableIntStateOf(0)}
@@ -63,7 +66,9 @@ fun EcranPrincipal(
         Button(
             onClick = {
                 // dès que la valeur de la liste change, tout ce qui l'utilise est recomposé
+                println("Entrée dans onClick pour liste")
                 listeMemoire.add(listeMemoire.size * 2)
+                println("Sortie de onClick pour liste" + listeMemoire.joinToString(", "))
             }
         ) {
             Text("Ajout Liste")
@@ -73,16 +78,20 @@ fun EcranPrincipal(
         BoutonPourIncrementer(
             // TODO placer un point d'arrêt sur la ligne suivante
             quandOnCliqueSurIncrementer = {
+                println("Entrée dans onClick pour compteur")
                 compteur++
+                println("Sortie de onClick pour compteur " + compteur)
             }
         )
     }
+    println("Sortie de EcranPrincipal")
 }
 
 @Composable
 private fun BoutonPourIncrementer(
     quandOnCliqueSurIncrementer : () -> Unit
 ) {
+    println("Entrée dans BoutonPourIncrementer")
     Surface(
         color = Color.LightGray,
         onClick = quandOnCliqueSurIncrementer
@@ -98,12 +107,14 @@ private fun BoutonPourIncrementer(
             )
         }
     }
+    println("Sortie de BoutonPourIncrementer")
 }
 
 @Composable
 private fun AfficherCompteur(
     compteur : Int
 ) {
+    println("Entrée dans AfficherCompteur avec compteur = $compteur")
     Box(
         contentAlignment = Alignment.Center
     ) {
@@ -114,4 +125,5 @@ private fun AfficherCompteur(
             fontSize = 25.sp
         )
     }
+    println("Sortie de AfficherCompteur")
 }
