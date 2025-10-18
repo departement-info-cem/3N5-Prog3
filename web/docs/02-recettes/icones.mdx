@@ -30,13 +30,21 @@ Les icônes sont des images qui sont généralement utilisées pour représenter
 
 ## Ajouter des icônes
 
-Par défaut, Android offre une banque d'icônes que vous pouvez utiliser. Il faut cependant les ajouter manuellement à votre projet.
+Pour accéder à un ensemble d'icône maximal, veuillez ajouter la ligne suivante au fichier build.gradle.kts (:app) dans la section *dependencies* : 
+``` kotlin
+implementation("androidx.compose.material:material-icons-extended")
+```
 
-[![Vector asset 1](_icones/vector_asset1.png)](_icones/vector_asset1.png)
+Une fois que c'est fait, vous pouvez accéder à l'ensemble de cette bibliothèque et choisir l'icone qui vous semble la plus adéquate dans les circonstances.
 
-- Explorez les différentes options. 
-- La plus intéressante étant **"Clip Art"** qui vous permet de choisir parmi une grande variété d'icônes.
-- Nous vous recommandons de ne pas trop toucher au champ **"Name"** qui est généré pour vous.
-
-
-[![Vector asset 2](_icones/vector_asset2.png)](_icones/vector_asset2.png)
+Voici un exemple d'un bouton avec une icone : 
+``` kotlin
+IconButton(
+    onClick = { /* Effet voulu au moment d'appuyer sur le bouton */ }
+) {
+    Icon(
+        imageVector = Icons.Filled.Favorite,
+        contentDescription = "Statistiques"
+    )
+}
+```
