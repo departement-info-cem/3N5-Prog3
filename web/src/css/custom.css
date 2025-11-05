@@ -35,7 +35,7 @@
 }
 
 .remise-tp1::after {
-  content: "Remise TP1 (15%)";
+  content: "Remise TP1 (10%)";
   text-align: center;
   width: 100%;
   display: block;
@@ -44,7 +44,7 @@
 }
 
 .remise-tp2::after {
-  content: "Remise TP2 (15%)";
+  content: "Remise TP2 (10%)";
   text-align: center;
   width: 100%;
   display: block;
