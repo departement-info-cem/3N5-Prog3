@@ -10,15 +10,12 @@ Il existe 2 grandes approches pour organiser les fichiers / classes:
 1. par fonctionnalité
 2. par type d'objet
 
-Pour prendre un exemple, pour une application avec les classes suivantes:
-- ConnexionActivity
-- InscriptionActivity
-- ListeDesTachesActivity : donne la liste des tâches reliées à un compte
-- TacheActivity : donne les détails d'une tâche et la liste des modifications
-- TachesAdapter : adapteur de l'activité ListeDesTachesActivity
-- ModifAdapter : adapteur de l'activité TacheActivity
-- Tache : classe qui représente une tâche
-- Modif : classe qui représente une modification
+Pour prendre un exemple, pour une application kotlin avec les éléments suivants:
+- des fonctions composables
+- des classes de données
+- un service pour la logique applicative
+- etc.
+
 
 L'approche est souvent décidée avec l'ensemble de l'équipe de développement et fera partie
 des standards de développement qu'on doit respecter.
@@ -33,34 +30,29 @@ Pour un projet personnel, on peut choisir l'approche qui nous semble la plus nat
 
 - package com.monapp
   - com.monapp.connexion
-    - ConnexionActivity
+    - EcranConnexion avec toutes les fonctions composables liées à la connexion
   - com.monapp.inscription
-    - InscriptionActivity
+    - EcranInscription avec toutes les fonctions composables liées à l'inscription
+    - Utilisateur
   - com.monapp.taches
-    - ListeDesTachesActivity
-    - TachesAdapter
-    - Tache
+    - EcranTaches avec toutes les fonctions composables liées à la liste des tâches
+    - Tache la classe de données pour chaque item
   - com.monapp.detail
-    - TacheActivity
-    - ModifAdapter
-    - Modif
+    - EcranDetailTache
 </Column>
 <Column>
 
 ### Appproche par type d'objet
 
 - package com.monapp
-  - com.monapp.activity
-    - ConnexionActivity
-    - InscriptionActivity
-    - ListeDesTachesActivity
-    - TacheActivity
-  - com.monapp.adapter
-    - TachesAdapter
-    - ModifAdapter
-  - com.monapp.model
+  - com.monapp.ecrans
+    - EcranConnexion
+    - EcranInscription
+    - EcranTaches
+    - EcranDetailTache
+  - com.monapp.donnees
     - Tache
-    - Modif
+    - Utilisateur
 </Column>
 </Row>
 
