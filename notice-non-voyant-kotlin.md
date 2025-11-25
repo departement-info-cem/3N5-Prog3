@@ -22,6 +22,8 @@ application {
 
 
 # Manuel étudiant Kotlin pure en mode Intellij IDEA
-alt + 1        explorateur du projet (comme explorateur de solution)
+alt + 1                            explorateur du projet (comme explorateur de solution)
+CTRL + MAJ + F10                     executer le fichier courant
+File > Run > Edit configuration        permet d'éditer les foncifgurations et ajouter arguments en ligne de commandes
 
 
