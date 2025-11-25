@@ -1,6 +1,8 @@
 # Manuel étudiant Kotlin pure en mode CLI (powershell lignes de commande)
 Création du projet                 on passe par Intellij pour générer le projet
+
 ./gradlew build                    compile et sort les messages d'erreurs
+
 ./gradlew run                      roule l'application si le build.gradle  (ici demande à ton prof pour la config initiale du projet)
 - ajouter "application" dans la balise plugins du build.gradle.kts
 - ajouter une task en bas
@@ -14,6 +16,7 @@ tasks.named<JavaExec>("run") {
     mainClass.set("org.example.MainKt")
 }
 ```
+
 ./gradlew run --args='Alice test 123'    roule l'application en lui passant des arguments
 
 
