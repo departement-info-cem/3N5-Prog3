@@ -9,13 +9,23 @@
   - Gemini Live parle tout le temps
   - Il parle en même temps que Talk Back
   - Plus facile de demander à quelqu'un d'être ses yeux pour décrire l'interface
+- les impressions en braille des interfaces sont très bénéfiques. Permettent à l'étudiant de "voir" l'organisation spatiale de l'écran
+- il faut se familiariser avec la notice étudiant pour maitriser les différentes commandes raccourcis clavier etc
 
 # Notice pour le prof + étudiant
-
-- décider assez rapidement si on y va en CLI (powershell) ou avec Android Studio (IDE). L'ensemble des outils est très différent
+- décider assez rapidement si l'étudiant vient en cours (GROUPE) ou se présente pendant les dispos du prof (DISPOS)
+  - GROUPE :
+    - l'environnement peut être bruyant pour l'étudiant sachant que presque tout passe par les oreilles,
+    - le téléphone de l'étudiant en mode talk back fait pas mal de bruit (ou prévoir un casque)
+    - le prof doit être attentif pour voir quand l'étudiant a des questions ou passer régulièrement
+  - DISPOS :
+    - permet de limiter le bruit si dans le bureau du prof.
+    - Nécessite l'accord du département pour mettre les dispos du prof quand l'étudiant est dispo lui-même (ce qui est souvent du à leur parcours aménagé)
+- décider assez rapidement si on y va en ligne de commandes  (CLI) ou avec Android Studio (IDE). L'ensemble des outils est très différent
 - prévoir un temps (2-3 heures) pour procéder à l'installation avec l'étudiant (les étudiants aveugles travaillent sur leurs laptops)
   - obtenir un téléphone Android de prêt avant la session et leur laisser pour qu'ils se familiarisent
-  - installer plusieurs outils avec l'étudiant sur son poste
+  - passer le téléphone en mode développeur
+  - montrer comment fonctionne talk back à l'étudiant s'il ne l'a jamais utilisé
   - installation de npm nécessaire pour copilot cli
   - installation des outils command line de Android Studio (nécessaire pour logcat, adb etc.)
     - installer via le SDK Manager
@@ -28,7 +38,7 @@
 
 
 
-# utiliser gemini live pour se faire décrire une interface en mode Talk Back
+# utiliser gemini live pour se faire décrire une interface en mode Talk Back (non voyant)
 1. allumer téléphone si pas allumé (voir bouton avec prof)
 2. dévérouiller le téléphone (glisser vers le haut avec 2 doigts)
 3. trouver l'application **Assistant**
