@@ -1,3 +1,5 @@
+TODO split étudiant et prof
+
 # Manuel étudiant Kotlin pure en mode CLI (powershell lignes de commande)
 
 
@@ -5,7 +7,8 @@
 alt + 1        explorateur du projet (comme explorateur de solution)
 
 # Manuel étudiant Android en mode CLI (powershell lignes de commande)
-./gradlew assembleDebug                  
+./gradlew assembleDebug                  Permet de compiler une application et voir les erreurs  
+Alt + v puis t                           amène au menu des tool Windows
 - comment rouler les tests dans le terminal                    
 - comment consulter le rapport HTML de l’exécution des tests            
 - comment installer copilot CLI                                  
@@ -29,7 +32,7 @@ alt + 1        explorateur du projet (comme explorateur de solution)
 
 Maj + F10 partir le projet
 
-Alt + v puis t amène au menu des tool Windows
+
 
 
 Logcat
@@ -49,6 +52,12 @@ adb logcat System.out:V *:S > logcat_output.txt    permet de récupérer le logc
 ## cycle débogage Android Studio
 - 
 
+# Config de NVDA pour les caractères spéciaux (Merci à Pierre-Paul)
+1. dans le menu d'options (MAJ + N).
+2. Puis dans Préférences > Paramètres.
+3. Puis Parole > Niveau de ponctuations et symboles (la pluspart ou tous).
+4. Tu peux aussi aller ajuster exactement quel symboles sont dit et comment ils sont prononcé (J'ai essayer de changer "parenthèse gauche" pour que ce soit "paran G", mais sa portait plus a confusion.)
+
 # Notice pour le prof + étudiant
 
 1. décider assez rapidement si on y va en CLI (powershell) ou avec Android Studio
@@ -67,7 +76,7 @@ adb logcat System.out:V *:S > logcat_output.txt    permet de récupérer le logc
 
 
 
-## utiliser gemini live pour se faire décrire une interface en mode Talk Back
+# utiliser gemini live pour se faire décrire une interface en mode Talk Back
 1. allumer téléphone si pas allumé (voir bouton avec prof)
 2. dévérouiller le téléphone (glisser vers le haut avec 2 doigts)
 3. trouver l'application **Assistant**
@@ -80,5 +89,7 @@ adb logcat System.out:V *:S > logcat_output.txt    permet de récupérer le logc
 10. double tap
 11. tu devrais maintenant pouvoir demander à Gemini de décrire l'écran "Décris moi globalement ce qu'il y a à l'écran"
 
-TODO voir s'il n'y a pas moyen de partir gemini live en commande vocale
+
+# Leçons apprises:
+- les obstacles sont difficiles à prévoir sans rouler NVDA dans 
 
