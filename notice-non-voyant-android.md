@@ -1,31 +1,27 @@
+# Manuel étudiant Android en mode CLI (powershell lignes de commande)
+./gradlew assembleDebug                  Permet de compiler une application et voir les erreurs (e) et warning (w)
 
-# Manuel étudiant Android Studio
-alt + 1                
-explorateur du projet (comme explorateur de solution)
+- comment rouler les tests dans le terminal                    
+- comment consulter le rapport HTML de l’exécution des tests            
+- comment installer copilot CLI                                  
+
+adb logcat System.out:V *:S               comment voir logcat depuis le CLI seulement mes println
+
+adb logcat -b all -c                      effacer toutes les lignes précédentes dans logcat (ménage)
+
+- 
+# Manuel étudiant Android avec Android Studio
+alt + 1                                   explorateur du projet (comme explorateur de solution)  
+
+alt + 6                                  erreurs et warnings
+
+Maj + F10                                 partir le projet
+
+alt + v puis t                           amène au menu des tool Windows
+
 - comment lire une section de code puis plus grand puis plus grand dans Android Studio
 
 
-Une collecte de raccourcis et procédures pour coder dans 3N5
-
-alt + 1        explorateur du projet (comme explorateur de solution)
-
-
-**alt + 6** Problems toutes les erreurs de compilation si tu fais enter sur le problème il te mène sur la ligne
-
-Maj + F10 partir le projet
-
-
-
-
-Logcat
-
-Powershell "adb logcat System.out:V *:S" filtre tous les print println
-
-si on souhaite mettre dans un fichier 
-
-Pwershell "adb logcat -b all -c" efface logcat 
-
-adb logcat System.out:V *:S > logcat_output.txt    permet de récupérer le logcat dans un fichier pour naviguer ensuite dedans
 
 ## exécuter application Android depuis powershell
 
