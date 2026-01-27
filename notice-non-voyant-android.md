@@ -46,6 +46,8 @@ copilot
 
 # Manuel étudiant Android — Android Studio (IDE)
 
+Commencer par activer le support des lecteurs d'écran dans Android Studio
+
 Alt + 1 
 explorateur de projet (Project)
 
@@ -74,14 +76,16 @@ Débogage avec des println: Ajouter des println dans le code
 
 Ensuite exécuter le code et voir les traces dans la fenêtre Logcat (Alt + 6).
 
-# Configurer NVDA pour les caractères et symboles (merci à Pierre-Paul)
+# Configurer NVDA pour lire tous les caractères et symboles (merci à Pierre-Paul)
 
 Pour NVDA (Windows) :
 1. Ouvrir le menu NVDA (touche `NVDA` + `N`) ou via l'icône NVDA.
 2. Aller dans Préférences > Paramètres.
 3. Dans Parole > Niveau de ponctuation et symboles, choisir « La plupart » ou « Tous » selon vos besoins.
-4. Vous pouvez ajuster la façon dont chaque symbole est prononcé. Exemple : j'ai essayé de changer « parenthèse gauche » en « paran G », mais cela créait plus de confusion, donc garder des énoncés clairs est préférable.
 
-Conseils pratiques
-- Préférer des commandes isolées sur leur propre ligne pour que le lecteur d'écran lise correctement l'instruction.
-- Indiquer la plateforme quand une commande est spécifique (Windows vs macOS vs Linux).
+# Changer les énoncés pour () []
+
+1. Ouvrir NVDA : NVDA + N.
+2. Aller à préférence:  P, puis S (symbôles).
+3. Trouver le caractères
+4. par exemple pour ( indique pG
