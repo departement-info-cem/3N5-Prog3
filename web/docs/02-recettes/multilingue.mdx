@@ -1,0 +1,41 @@
+---
+hide_table_of_contents: true
+---
+
+# Multilingue et String
+
+Pour rendre une application Android multilingue, on va ajouter un niveau d'indirection dans notre code:
+- au lieu d'écrire `Text("Bonjour")`
+- on va écrire `Text(stringResource(R.string.hello))`
+- l'appareil va alors chercher la chaine pour l'id `R.string.hello` dans le fichier `strings.xml` qui correspond à la locale de l'appareil.
+
+Tu trouveras ici les étapes ainsi que le code de la demo de la recette [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeMultilingue).
+
+## Ajouter un langage supporté (fichiers et dossiers)
+
+- Il va exister plusieurs fichiers `strings.xml` dans le projet, un pour chaque langue supportée.
+- Le fichier `strings.xml` sans suffixe de langue est le fichier par défaut, utilisé si aucune traduction n'est trouvée pour la locale de l'appareil.
+- Pour ajouter un fichier de traduction, il faut créer un nouveau fichier `strings.xml` dans un dossier spécifique à la langue.
+- Le dossier values-fr serait pour une traduction en français, values-es pour l'espagnol, etc.
+- values-fr-rCA permet de spécifier une variante régionale, ici le français du Canada.
+
+## Gérer dans Android Studio avec le `Translations Editor`
+
+- en double-cliquant sur le fichier `strings.xml`, on ouvre l'éditeur de traduction.
+- il y a plusieurs options pour ajouter une string ou une locale
+
+L'editor ne fait que modifier les fichiers `strings.xml` depuis Android Studio.
+- https://developer.android.com/studio/write/translations-editor
+
+## Utiliser une string dans le code
+
+<GHCode
+    repo="3N5-Prog3"
+    filePath="code/ComposeMultilingue/app/src/main/java/ca/cem/composemultilingue/MainActivity.kt"
+    startLine="48"
+    endLine="53"
+    />
+
+
+
+

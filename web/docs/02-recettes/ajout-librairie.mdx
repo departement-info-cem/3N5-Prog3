@@ -1,0 +1,41 @@
+---
+hide_table_of_contents: true
+---
+
+# Librairie
+
+Si la librairie n'est pas sur les dépots mais sur un repo Github, regardez la recette [Librairie depuis Jitpack](/recettes/ajout-librairie-jitpack).
+
+## Etape 1 : Trouver la librairie
+
+Le plus simple est d'utiliser un site comme mavenrepository.com pour trouver la librairie que vous voulez ajouter.
+
+Dans un navigateur :
+- naviguer vers [mavenrepository.com](https://mvnrepository.com/)
+- taper le nom de la librairie dans la barre de recherche, par exemple `jsoup`
+- cliquer sur la librairie que l'on cherche
+- on arrive sur une liste des versions. Comment choisir une version :
+  - éviter une version avec une **vulnerability**
+  - prendre une version stable (pas une alpha, beta, RC, etc.)
+- cliquer sur le numero de la version désirée
+- on arrive sur une page avec plusieurs onglets en bas : **Maven**, **Gradle**, **Gradle (Short)**, etc.
+- dans notre cas, on va choisir **Gradle (Kotlin)** pour avoir le code à ajouter dans le fichier `build.gradle.kts`
+- si tu as besoin d'un autre format (Gradle ou Gradle Short), copie le code dans l'onglet correspondant
+- faire un CTRL+C pour copier la ligne qui commence par `implementation ...`
+
+## Etape 2 : Ajouter la librairie dans le fichier `build.gradle.kts` ou `build.gradle`
+
+- ouvrir le projet dans l'environnement de développement (IntelliJ, Android Studio, etc.).
+- ouvrir le fichier build.gradle.kts ou build.gradle
+- coller la ligne copiée à l'étape 1 dans la section `dependencies` du fichier `build.gradle.kts`
+- à ce stage, il faut que le projet recharge le build.gradle, ce qui va télécharger la librairie et rendre les classes disponibles
+- soit :
+  - trouver et cliquer sur l'icône d'un éléphant (*Load Gradle Changes*) (en haut à droite)
+  - ou utiliser le raccourci `Ctrl+Shift+O`
+
+## Etape 3 : Tester
+
+Dans un des fichiers Kotlin du projet, essayer de créer un objet d'une classe venant de la librairie :
+- par exemple pour jsoup, essayer d'ajouter `var doc : Document = Jsoup.connect("http://example.com/").get();`
+- l'IDE va proposer de faire les imports nécessaires
+- si le code compile, la librairie a été ajoutée avec succès

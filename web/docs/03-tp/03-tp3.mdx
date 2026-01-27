@@ -1,0 +1,265 @@
+---
+title: TP3
+description: Travail Pratique 3 - Appli Android
+hide_table_of_contents: true
+---
+
+# Travail 3 : Appli Android
+
+<Row>
+
+<Column>
+
+## But du travail
+
+- Relier avec une libraire de BD
+- Couche de service et tests unitaires
+- Ajouter un tiroir de navigation avec options de suppressions des sujets et des votes
+
+</Column>
+
+<Column>
+
+## Git et suivi du code
+
+Tu auras un lien GitHub Classroom pour le TP3. Tu pourras y **copier** ton TP2.
+
+&#8203;<Highlight color="tip">2 points</Highlight>
+Un minimum de 5 commits de tailles comparables (il n'y a pas un commit avec tout dedans et les autres vides)
+décrivant l'avancement du projet dans un français correct (passe Word).
+Ces points sont conditionnés à la remise d'au moins un commit par semaine de cours.
+
+</Column>
+
+</Row>
+
+## Librairie d'accès à la base de données
+
+Une librairie complète fournissant une base de données SQLite avec Room et ses méthodes est fournie sur **[Site de la librairie](https://jitpack.io/#departement-info-cem/3N5-TP3-Librairie-BD)**.
+- Tu peux te référer à cette **[recette JitPack](../02-recettes/ajout-librairie-jitpack.mdx)** pour voir comment l'importer.
+- Le documentation de la librairie est disponible **[ici](https://info.cegepmontpetit.ca/3N5-TP3-Librairie-BD/)**
+- Le [repo et le code source](https://github.com/departement-info-cem/3N5-TP3-Librairie-BD) pour les curieux
+
+Pour tester, tu peux exécuter le code suivant depuis ton projet :
+
+```kotlin
+val database : SujetVoteDataBase = UtilitaireBD.get(LocalContext.current)
+val dao : SujetVoteDAO = database.dao()
+val sujet = Sujet()
+sujet.contenu = "test"
+dao.ajouterSujet(sujet)
+println(dao.tousLesSujets())  // à voir dans le logcat
+```
+
+Une fois le code exécuté, tu peux regarder la BD dans ton émulateur : `View -> Tool Windows -> App Inspection -> Database Inspector` (puis double-clique sur la bd _Sujet_ par exemple pour l'inspecter).
+
+<Row>
+
+<Column>
+
+## Classe de service
+
+Pour la plupart des applications, il est recommandé de créer une classe de service pour y regrouper
+les règles de validation, tri, filtrage etc. Ce qu'on appelle parfois la logique applicative ou parfois
+la logique d'affaires.
+
+<Highlight color="tip">1 point</Highlight> Créer une classe de service en changeant Dupont par ton nom en t'inspirant du fichier suivant:
+
+```kotlin
+class DupontService(db: SujetVoteDataBase) {
+
+    private val database : SujetVoteDataBase = db
+    private val dao : SujetVoteDAO = database.dao()
+
+    fun ajouterSujet(contenu: String) : Long{
+        // validation du contenu
+        val trimme = contenu.trim()
+        if (trimme.length == 0){
+            throw TexteVideException()
+        }
+        if (trimme.length < 5){
+            throw TexteCourtException()
+        }
+        val existant : Optional<Sujet> = dao.sujetParContenu(trimme)
+        if (existant.isPresent){
+            throw DejaPresentException()
+        }
+        // Tout va bien, on peut ajouter le sujet dans la BD
+        val sujet = Sujet()
+        sujet.contenu = trimme
+        return dao.ajouterSujet(sujet) // retourne l'id du sujet ajouté
+    }
+
+    fun ajouterVote(vote: Vote){
+        // TODO à faire plus des tests JUnit
+        throw UnsupportedOperationException()
+    }
+
+    fun listeSujets(): List<Sujet>{
+        throw UnsupportedOperationException()
+    }
+
+    fun moyenneVotes(id: Long): Double{
+        throw UnsupportedOperationException()
+    }
+
+    fun distributionVotes(id: Long): Map<Int, Int>{
+        throw UnsupportedOperationException()
+    }
+
+    fun supprimerTousLesSujets(){
+        throw UnsupportedOperationException()
+    }
+
+    fun supprimerTousLesVotes(){
+        throw UnsupportedOperationException()
+    }
+
+    fun sujetParId(id: Long): Sujet? {
+        throw UnsupportedOperationException()
+    }
+}
+```
+
+Dans le reste du code, tu pourras l'utiliser en créant une instance du service:
+
+```kotlin
+val service : DupontService = DupontService(UtilitaireBD.get(LocalContext.current))
+service.ajouterSujet("Sujet 3")
+```
+
+Finalement voici un squelette de la classe de tests:
+
+```kotlin
+@RunWith(AndroidJUnit4::class) // tests à placer dans le dossier androidTest
+class TestsService {
+    
+    private lateinit var service: DupontService
+
+    @Before
+    fun setup() {
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        val db = UtilitaireBD.getForTests(appContext)
+        service = DupontService(db)
+    }
+
+    @Test
+    fun testAjoutOk() {
+        // creer un sujet avec un contenu valide
+        service.ajouterSujet("Ceci est un sujet de test")
+        // verifier que le sujet a bien été ajouté
+        val sujets = service.listeSujets()
+        assert(sujets.any { it.contenu == "Ceci est un sujet de test" })
+    }
+
+    @Test(expected = TexteVideException::class)
+    fun testAjoutSujetVide() {
+        // essayer d'ajouter un sujet vide
+        service.ajouterSujet("")
+    }
+
+    @Test(expected = TexteCourtException::class)
+    fun testAjoutSujetTropCourt() {
+        // essayer d'ajouter un sujet trop court
+        service.ajouterSujet("Test")
+    }
+
+    @Test(expected = DejaPresentException::class)
+    fun testAjoutSujetExistant() {
+        // ajouter un sujet
+        service.ajouterSujet("Ceci est un sujet de test")
+        // essayer de l'ajouter à nouveau
+        service.ajouterSujet("Ceci est un sujet de test")
+    }
+    
+    // TODO compléter les autres tests pour les méthodes restantes
+    
+}
+```
+
+
+</Column>
+
+</Row>
+
+<Row>
+<Column>
+
+## 1. Création d'un sujet
+
+Le code ainsi que les tests pour la création d'un sujet sont fournis. Vous devez intégrer la création d'un sujet dans l'interface graphique.
+
+- <Highlight color="tip">1 point</Highlight> Un sujet est créé dans l'écran de création en utilisant le contenu du champ texte.
+- <Highlight color="tip">1 point</Highlight> Un message indiquant la raison de l'erreur est affiché si la création échoue ("sujet vide", "sujet trop court", "sujet existant").
+
+</Column>
+
+<Column>
+
+## 2. Affichage de la liste des sujets
+
+- <Highlight color="info">1 point</Highlight> Au niveau service, vous devez vous assurez de renvoyer la liste triée par nombre de votes descendant.
+- <Highlight color="caution">1 point</Highlight> Vous devez écrire les tests pour votre méthode de service.
+- <Highlight color="tip">2 points</Highlight> Vous devez intégrer la liste dans l'écran d'accueil de l'application.
+
+</Column>
+
+</Row>
+
+<Row>
+
+<Column>
+
+## 3. Ajout d'un vote
+
+- <Highlight color="info">2 points</Highlight> Au niveau service, vous devez vous assurez qu'il n'y a pas de vote existant pour ce sujet et cette personne. Assurez-vous de lancer une exception significative si c'est le cas. Vous devez également vous assurer que le nom du votant fait au minimum 4 caractères imprimables (pas des espaces).
+- <Highlight color="caution">1 point</Highlight> Vous devez écrire les tests pour votre méthode de service.
+- <Highlight color="tip">1 point</Highlight> Vous devez intégrer l'ajout d'un vote dans l'écran correspondant de l'interface graphique. Si le vote est créé avec succès, l'application doit revenir à l'écran d'accueil.
+- <Highlight color="tip">1 point</Highlight> Vous devez fournir un message significatif en cas d'erreur (déjà voté ou nom trop court ou vide).
+
+</Column>
+
+<Column>
+
+## 4. Écran de résultats
+
+- <Highlight color="info">1 point</Highlight> Niveau service, vous devez programmer les différentes méthodes pour la moyenne et la distribution.
+- <Highlight color="caution">2 points</Highlight> Vous devez écrire les tests pour vos méthodes de service.
+- <Highlight color="tip">2 points</Highlight> Vous devez intégrer les appels dans l'écran de résultats.
+
+</Column>
+</Row>
+
+<Row>
+<Column>
+
+## 5. Tiroir de navigation
+
+Vous devez implémenter un tiroir de navigation qui contient les options suivantes :
+
+- <Highlight color="tip">1 point</Highlight> Navigation vers la page d'accueil "Accueil"
+- <Highlight color="tip">1 point</Highlight> Navigation vers la page d'ajout d'un sujet "Ajouter un sujet"
+- <Highlight color="tip">0,5 point</Highlight> Suppression de tous les votes "Suppr. les votes". On doit retourner à la liste des sujets si on y est pas déjà.
+- <Highlight color="tip">0,5 point</Highlight> Suppression de toutes les sujets "Suppr. les sujets". On doit retourner à la liste des sujets si on y est pas déjà.
+
+Autres éléments à considérer :
+
+- <Highlight color="tip">1 point</Highlight> Le tiroir de navigation doit être disponible dans toutes les activités
+- <Highlight color="caution">1 point</Highlight> Vous devez écrire les tests pour vos méthodes de service (suppression sujets et votes).
+- <Highlight color="tip">1 point</Highlight> L'interface doit se mettre à jour. L'ordre est mis à jour si on supprime les votes, la liste à l'écran est vidée si on supprime les sujets.
+
+</Column>
+
+<Column>
+
+## Fonctionnement global
+
+&#8203;<Highlight color="danger">5 points négatifs</Highlight> Fonctionnement correct et sans plantage. Ce pointage fonctionne en négatif. Si l'application fonctionne correctement en tout temps, vous conservez votre note. Dans le cas contraire, vous perdez des points avec un maximum de 5.
+
+- Plantage de l'application <Highlight color="danger">-1 point</Highlight>
+- Interface illisible <Highlight color="danger">-1 point</Highlight>
+- Information affichée incohérente <Highlight color="danger">-1 point</Highlight>
+- Autres cas...
+
+</Column>
+</Row>

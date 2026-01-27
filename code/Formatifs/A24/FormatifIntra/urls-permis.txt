@@ -1,0 +1,10 @@
+# IGNORER CE FICHIER, PAS UTILE POUR L'EXAMEN
+https://kotlinlang.org/docs
+https://jsoup.org/
+https://github.com/departement-info-cem/3N5-Prog3
+https://info.cegepmontpetit.ca/3N5-Prog3/
+http://repo.maven.apache.org/
+http://repo2.maven.org/maven2/
+https://mvnrepository.com/
+http://jcenter.bintray.com/
+http://download.gradle.com

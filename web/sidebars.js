@@ -5,548 +5,166 @@ const sidebars = {
   docs: [
     {
       type: "doc",
-      label: "1.1 - Rencontre",
-      id: "cours/rencontre1.1", // Doit matcher le nom du document qui est dans docs/01-cours/. Les chiffres au début (ex : 01-) sont ignorés.
-      customProps: { // Attention, il faut recompiler à chaque modification dans sidebar.js pour que les modifications s'appliquent.
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-09"}  // Date du cours pour le groupe 1010 du le Prof 1
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-09"},  // Date du cours pour le groupe 1020 du le Prof 2
-            {"1030": "2025-06-09"} // Date du cours pour le groupe 1030 du le Prof 2
-          ]
-        },
-        tooltip: "visible" // Valeurs possibles visible ou cache, valeur par défaut "visible"
-      }
+      label: "1.1 - Accueil 🏠",
+      id: "cours/1.1-accueil",
     },
     {
       type: "doc",
-      label: "1.2 - Rencontre",
-      id: "cours/rencontre1.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-09"} // Date du cours pour le groupe 1010 du le Prof 1
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-09"}, // Date du cours pour le groupe 1020 du le Prof 2
-            {"1030": "2025-06-09"} // Date du cours pour le groupe 1030 du le Prof 2
-          ]
-        },
-        tooltip: "cache"
-      }
+      label: "1.2 - Présentation TP1 🗣️",
+      id: "cours/1.1-accueil",
     },
     {
       type: "doc",
-      label: "2.1 - Rencontre",
-      id: "cours/rencontre2.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-11"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-09"},
-            {"1030": "2025-06-09"}
-          ]
-        },
-        avancementLabel: "TP1 - Créé",
-        avancement: 0.0
-      }
+      label: "2.1 - Impératif ✊",
+      id: "cours/2.1-imperatif",
     },
     {
       type: "doc",
-      label: "2.2 - Rencontre",
-      id: "cours/rencontre2.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-11"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-11"},
-            {"1030": "2025-06-11"}
-          ]
-        },
-        avancementLabel: "TP1",
-        avancement: 0.1
-      }
+      label: "2.2 - Impératif ✊",
+      id: "cours/2.1-imperatif",
     },
     {
       type: "doc",
-      label: "3.1 - Rencontre",
-      id: "cours/rencontre3.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-12"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-11"},
-            {"1030": "2025-06-11"}
-          ]
-        },
-        avancementLabel: "TP1",
-        avancement: 0.25
-      }
+      label: "3.1 - Librairie standard 📘",
+      id: "cours/3.1-std-lib",
     },
     {
       type: "doc",
-      label: "3.2 - Rencontre",
-      id: "cours/rencontre3.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-12"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-12"},
-            {"1030": "2025-06-12"}
-          ]
-        },
-        avancementLabel: "TP1",
-        avancement: 0.5
-      }
+      label: "3.2 - Librairies tierces 📖",
+      id: "cours/3.2-librairies-tierces",
     },
     {
       type: "doc",
-      label: "4.1 - Rencontre",
-      id: "cours/rencontre4.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-16"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-12"},
-            {"1030": "2025-06-12"}
-          ]
-        },
-        avancementLabel: "TP1",
-        avancement: 0.75
-      }
+      label: "4.1 - Structurer son code 🧱",
+      id: "cours/4.1-structure",
     },
     {
       type: "doc",
-      label: "4.2 - Rencontre",
-      id: "cours/rencontre4.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-16"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-16"},
-            {"1030": "2025-06-16"}
-          ]
-        },
-        avancementLabel: "TP1",
-        avancement: 1
-      }
+      label: "4.2 - Intégration 🔨",
+      id: "cours/4.2-integration-1",
+      className: "remise-tp1",
     },
     {
       type: "doc",
-      label: "5.1 - Rencontre",
-      id: "cours/rencontre5.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-18"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-18"},
-            {"1030": "2025-06-18"}
-          ]
-        },
-        avancementLabel: "TP2 - Créé",
-        avancement: 0.0
-      },
-      "className": "remise-tp1"
+      label: "5.1 - Formatif",
+      id: "cours/5.1-formatif-intra",
     },
     {
       type: "doc",
-      label: "5.2 - Rencontre",
-      id: "cours/rencontre5.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-18"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-18"},
-            {"1030": "2025-06-18"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.1
-      }
+      label: "5.2 - Examen Intra (30%)",
+      id: "cours/5.2-examen-intra",
+      className: "examen",
     },
     {
       type: "doc",
-      label: "6.1 - Rencontre",
-      id: "cours/rencontre6.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-19"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-19"},
-            {"1030": "2025-06-19"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.3
-      }
+      label: "6.1 - Intro Android 🤖",
+      id: "cours/6.1-intro-android",
     },
     {
       type: "doc",
-      label: "6.2 - Rencontre",
-      id: "cours/rencontre6.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-19"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-19"},
-            {"1030": "2025-06-19"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.4
-      }
+      label: "6.2 - Activités et Navigation 🧭",
+      id: "cours/6.2-activites",
     },
     {
       type: "doc",
-      label: "7.1 - Rencontre",
-      id: "cours/rencontre7.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-23"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-16"},
-            {"1030": "2025-06-16"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.4
-      }
+      label: "7.1 - Listes ☰",
+      id: "cours/7.1-listes",
     },
     {
       type: "doc",
-      label: "7.2 - Rencontre",
-      id: "cours/rencontre7.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-23"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-19"},
-            {"1030": "2025-06-19"}
-          ]
-        }
-      },
-      "className": "examen"
+      label: "7.2 - Listes ☰",
+      id: "cours/7.1-listes",
     },
     {
       type: "doc",
-      label: "8.1 - Rencontre",
-      id: "cours/rencontre8.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-25"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-23"},
-            {"1030": "2025-06-23"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.6
-      }
+      label: "8.1 - Listes ☰",
+      id: "cours/7.1-listes",
     },
     {
       type: "doc",
-      label: "8.2 - Rencontre",
-      id: "cours/rencontre8.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-25"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-23"},
-            {"1030": "2025-06-23"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.7
-      }
+      label: "8.2 - État i18n",
+      id: "cours/13.2-etat-multilingue",
     },
     {
       type: "doc",
-      label: "9.1 - Rencontre",
-      id: "cours/rencontre9.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-26"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-25"},
-            {"1030": "2025-06-25"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 0.9
-      }
+      label: "9.1 - Graphique 📈",
+      id: "cours/9.1-graphique",
     },
     {
       type: "doc",
-      label: "9.2 - Rencontre",
-      id: "cours/rencontre9.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-06-26"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-25"},
-            {"1030": "2025-06-25"}
-          ]
-        },
-        avancementLabel: "TP2",
-        avancement: 1
-      },
-      "className": "remise-tp2"
+      label: "9.2 - Intégration 🔨",
+      id: "cours/9.2-integration-2",
+      className: "remise-tp2",
     },
     {
       type: "doc",
-      label: "10.1 - Rencontre",
-      id: "cours/rencontre10.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-01"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-26"},
-            {"1030": "2025-06-26"}
-          ]
-        },
-        avancementLabel: "TP3 - Créé",
-        avancement: 0.0
-      }
+      label: "10.1 - Exceptions ⚠️",
+      id: "cours/10.1-pile-appels-exceptions",
     },
     {
       type: "doc",
-      label: "10.2 - Rencontre",
-      id: "cours/rencontre10.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-01"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-26"},
-            {"1030": "2025-06-26"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.1
-      }
+      label: "10.2 - Composables et syntaxe",
+      id: "cours/10.2-compose-syntaxe",
     },
     {
       type: "doc",
-      label: "11.1 - Rencontre",
-      id: "cours/rencontre11.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-02"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-06-26"},
-            {"1030": "2025-06-26"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.2
-      }
+      label: "11.1 - Structurer son code, service et packages",
+      id: "cours/10.2-structure-android",
     },
     {
       type: "doc",
-      label: "11.2 - Rencontre",
-      id: "cours/rencontre11.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-02"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-01"},
-            {"1030": "2025-07-01"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.3
-      }
+      label: "11.2 - Tests",
+      id: "cours/12.2-tests",
     },
     {
       type: "doc",
-      label: "12.1 - Rencontre",
-      id: "cours/rencontre12.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-03"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-01"},
-            {"1030": "2025-07-01"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.4
-      }
+      label: "12.1 - Tests",
+      id: "cours/12.2-tests",
     },
     {
       type: "doc",
-      label: "12.2 - Rencontre",
-      id: "cours/rencontre12.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-03"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-01"},
-            {"1030": "2025-07-01"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.5
-      }
+      label: "12.2 - Tiroirs de navigation",
+      id: "cours/11.1-tiroir",
     },
     {
       type: "doc",
-      label: "13.1 - Rencontre",
-      id: "cours/rencontre13.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-07"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-02"},
-            {"1030": "2025-07-02"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.6
-      }
+      label: "13.1 - Tirois de navigation",
+      id: "cours/11.1-tiroir",
     },
     {
       type: "doc",
-      label: "13.2 - Rencontre",
-      id: "cours/rencontre13.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-07"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-07"},
-            {"1030": "2025-07-07"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.7
-      }
+      label: "13.2 - Copilot et moi",
+      id: "cours/13.2-iag",
     },
     {
       type: "doc",
-      label: "14.1 - Rencontre",
-      id: "cours/rencontre14.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-10"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-04"},
-            {"1030": "2025-07-04"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 0.8
-      }
+      label: "14.1 - Intégration (supprimé si absence prof)",
+      id: "cours/14.1-integration-3",
     },
     {
       type: "doc",
-      label: "14.2 - Rencontre",
-      id: "cours/rencontre14.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-09"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-07"},
-            {"1030": "2025-07-07"}
-          ]
-        },
-        avancementLabel: "TP3",
-        avancement: 1
-      }
+      label: "14.2 - Intégration / correction TP3",
+      id: "cours/14.1-integration-3",
+      className: "remise-tp3",
     },
     {
       type: "doc",
-      label: "15.1 - Rencontre",
-      id: "cours/rencontre15.1",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-09"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-02"},
-            {"1030": "2025-07-02"}
-          ]
-        }
-      },
-      "className": "remise-tp3"
+      label: "15.1 - Formatif final",
+      id: "cours/15.1-formatif-final",
     },
     {
       type: "doc",
-      label: "15.2 - Rencontre",
-      id: "cours/rencontre15.2",
-      customProps: {
-        calendrier: {
-          "Prof 1": [
-            {"1010": "2025-07-10"}
-          ],
-          "Prof 2": [
-            {"1020": "2025-07-04"},
-            {"1030": "2025-07-04"}
-          ]
-        }
-      },
-      "className": "examen"
-    }
+      label: "15.2 - Examen Final (30%)",
+      id: "cours/15.2-examen-final",
+      className: "examen",
+    },
   ],
-  "tp": [
-    {
-      type: "autogenerated",
-      "dirName": "02-tp"
-    }
-  ]
+  tp: [
+    { type: "doc", label: "TP1 - KotCrawler", id: "tp/tp1" },
+    { type: "doc", label: "TP2 - Interface graphique Android", id: "tp/tp2" },
+    { type: "doc", label: "TP3 - Appli Android", id: "tp/tp3" },
+  ],
+  recettes: [{ type: "autogenerated", dirName: "02-recettes" }],
 };
 
 module.exports = sidebars;

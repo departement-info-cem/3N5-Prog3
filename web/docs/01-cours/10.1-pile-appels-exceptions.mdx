@@ -1,0 +1,171 @@
+---
+title: Pile d'appels et exceptions
+description: Pile d'appels et exceptions
+hide_table_of_contents: true
+---
+
+# Pile d'appels et exceptions ⚠️
+
+<Row>
+
+<Column>
+
+:::warning Avant la séance (2h)
+
+- Vous devez regarder les vidéos.
+- Vous devez lire la documentation sur les exceptions en Kotlin **[ici](https://kotlinlang.org/docs/exceptions.html)**
+
+<Video url="https://www.youtube.com/watch?v=7BrKDnNnuqU" />
+
+[Code après la vidéo](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/VideoExceptions)
+
+<Video url="https://youtu.be/M1WfpIARfQo" />
+
+[Code après la vidéo](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/VideoPile)
+
+:::
+
+</Column>
+
+<Column>
+
+:::info À faire pendant la séance
+
+- Présentation du **[troisième travail](../tp/tp3)**.
+- Compléter les exercices de la semaine.
+
+:::
+
+</Column>
+
+</Row>
+
+:::note Exercices
+
+### Exercice TrouveLaValeur
+
+Vous devez écrire une fonction appelée `trouveru` qui prend en paramètre :
+
+- un tableau de String (Array\<String\>): le tableau dans lequel on cherche
+- un String: l'élément qu'on cherche
+
+La méthode doit avoir le comportement suivant:
+
+- Si l'élément est dans le tableau, vous renvoyez l'index de la première cellule où il se trouve.
+- Si l'élément n'est pas dans le tableau, vous lancez une exception. Vous devez définir la classe d'exception dans une classe et choisir un nom d'exception significatif.
+
+Finalement vous devez démontrer le fonctionnement de votre code dans une fonction main avec :
+
+- Un appel normal (où on trouve l'élément).
+- Un appel exceptionnel (qui lance l'exception). Vous devez faire un try catch pour attraper l'exception. 
+
+### Exercice Bon ✔️ ou Non ❌
+
+Créez un fichier nommé `BonOuPas.md` pour noter vos réponses et les montrer à votre enseignant.
+
+Voici des situations. Dites si le code est bon, ou pas, et pourquoi.
+
+#### Exemple 1
+
+```kotlin
+fun uneFonction(){
+    try {
+        //du code…
+    } catch (e: Exception){
+        println("Erreur : $e")
+    } catch (a: ArrayIndexOutOfBoundsException){
+        println("Erreur : $a")
+    }
+}
+```
+
+#### Exemple 2
+
+```kotlin
+fun calculerPoidsSupernova() {
+	try {
+		//calculs compliqués...
+	} catch (e: NumberFormatException) {}
+}
+```
+
+### Exercice Attrape 🎣 ou Transmet 📡 ?
+
+Créez un fichier nommé `AttrapeOuTransmet.md` pour noter vos réponses et les montrer à votre enseignant.
+
+Voici des situations. Dites si on devrait attraper (**catch**) ou laisser la fonction parente gérer l'exception, et pourquoi.
+
+#### Exemple 1
+
+```kotlin
+fun main() {
+	try {
+		calcul()
+		lireFichier()
+	} catch (a: ArithmeticException) {
+		println("Problème dans les valeurs du calcul")
+	} catch (i: IllegalArgumentException) {
+		println("Problème dans les paramètres du programme")		
+	} catch (t: InterruptedException){
+		println("Problème avec le thread en cours")	
+	} catch (io: IOException){
+        println("Problème avec le fichier")
+    } 
+}
+
+fun lireFichier(){
+	// Code qui lit un fichier...
+    // highlight-next-line
+	// Question : Catch ou laisse l'erreur se propager?
+}
+```
+
+#### Exemple 2
+
+```kotlin
+fun uneFonction(){
+	etape1()
+	etape2()
+	etape3()
+	etape4()
+	etape5()
+}
+
+public void etape3(){
+	// Code qui génère une exception
+    // highlight-next-line
+	// Question : Catch ou laisse l'erreur se propager?
+}
+```
+
+### Exercice sans machine 👨‍🎤👨‍💼
+
+Créez un fichier nommé `SansMachine.md` pour noter vos réponses et les montrer à votre enseignant.
+
+Sans exécuter, selon toi est-ce que les 2 méthodes suivantes donnent le même résultat ou non?
+
+Crée toi un projet pour valider ta réponse si les méthodes sont pareilles ou non.
+
+```kotlin
+fun lireDesFichiersForTry() {
+    for (i in 1 until 10) {
+        try {
+            lireFichier("$i.txt")
+        } catch (e: FileNotFoundException) {
+            println("fichier n'existe pas")
+        }
+    }
+}
+
+fun lireDesFichiersTryFor() {
+    try {
+        for (i in 1 until 10) {
+            lireFichier("$i.txt")
+        }
+    } catch (e: FileNotFoundException) {
+        println("fichier n'existe pas")
+    }
+}	
+```
+
+:::

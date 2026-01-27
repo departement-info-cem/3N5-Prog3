@@ -71,15 +71,26 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "cours/rencontre1.1",
+            docId: "cours/1.1-accueil",
             position: "left",
-            label: "Cours",
+            label: "Cours 🧑🏻‍🏫",
+          },
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "recettes",
+            label: "Recettes 📖",
           },
           {
             type: "docSidebar",
             position: "left",
             sidebarId: "tp",
-            label: "Travaux Pratiques",
+            label: "Travaux Pratiques ✏️",
+          },
+          {
+            label: "Installator",
+            href: `https://github.com/departement-info-cem/scripts-mobile/releases/download/Script/ScriptSharp.exe`,
+            position: "right",
           },
         ],
       },
@@ -95,23 +106,30 @@ const config = {
               },
             ],
           },
+          {
+            items: [
+              {
+                label: "Département d'informatique",
+                href: `https://info.cegepmontpetit.ca/accueil`,
+              },
+            ],
+          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()}. ${
-          siteConfig.nom
-        }. CÉGEP Édouard-Montpetit.`,
+        copyright: `Copyright © ${new Date().getFullYear()}. ${siteConfig.nom
+          }. CÉGEP Édouard-Montpetit.`,
       },
       // Décommenter et remplir pour activer l'indexation des pages par le moteur de recherche local
-      // algolia: {
-      //   appId: '',
-      //   apiKey: '',
-      //   indexName: '',
-      //   contextualSearch: true,
-      //   searchPagePath: 'search',
-      // },
+      algolia: {
+        appId: "NWCBH5GSLJ",
+        apiKey: "a36b06548f2cb9185956ca339ad18aeb",
+        indexName: "info-cegepmontpetit",
+        contextualSearch: true,
+        searchPagePath: "search",
+      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ["csharp", "java", "dart"],
+        additionalLanguages: ["csharp", "java", "dart", "kotlin"],
       },
       metadata: [
         {

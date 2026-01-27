@@ -1,0 +1,250 @@
+---
+title: Liste et LazyColumn
+description: Affichage de listes
+hide_table_of_contents: true
+---
+
+# Listes et LazyColumn
+
+<Row>
+
+<Column>
+
+:::danger Avant la séance (2h)
+
+- Consulter et implémenter ces recettes :
+  - [Liste - String](../02-recettes/liste1.mdx)
+  - [Liste - Objet](../02-recettes/liste2.mdx)
+- Commencer les exercices. Arrêtez-vous quand vous aurez complété 2 heures.
+
+:::
+
+</Column>
+
+<Column>
+
+:::info Pendant la séance
+
+- Compléter les exercices de la semaine. 
+- Implémentez la liste dans votre travail pratique.
+
+:::
+
+</Column>
+
+</Row>
+
+:::note Exercices
+
+##### Avant de commencer 🤔
+
+Les exercices Albums Favoris sont itératifs : à chaque exercices, vous allez commencer à partir de la fin du précédent. Lorsque vous commencez un exercice, nous vous recommandons d'effectuer une copie du dernier projet pour garder une trace de votre avancement. Cela pourrait vous servir lors des examens ou des travaux pratiques!
+
+### Exercice Albums Favoris : Base
+
+<Row>
+
+<Column size="9" >
+
+Vous devez implémenter une liste simple, où chaque entrée de la liste est une `String` qui représente l'un de vos albums favoris. Chaque entrée de la liste a une hauteur de 150dp.
+
+</Column>
+<Column size="3" >
+
+[![Album Favoris : Base](_7.1-recycler/albums_favoris_base.png)](_7.1-recycler/albums_favoris_base.png)
+
+</Column>
+
+</Row>
+
+### Exercice Albums Favoris : Champs d'une classe
+
+<Row>
+
+<Column size="9" >
+
+Chaque entrée de la liste affiche les différents champs d'une classe `Album`.
+
+Voici la classe `Album` :
+
+```kotlin
+data class Album(
+    val id: Int,
+    val name: String,
+    val artistName: String,
+)
+```
+
+</Column>
+<Column size="3" >
+
+[![Albums favoris : Classe](_7.1-recycler/albums_favoris_classe.png)](_7.1-recycler/albums_favoris_classe.png)
+
+</Column>
+
+</Row>
+
+### Exercice Albums Favoris : Page de détails
+
+<Row>
+
+<Column size="9" >
+
+Lorsqu'on clique sur un élément de la liste, on doit ouvrir une activitée de détail liée à l'entrée cliquée. La page de détail doit afficher les mêmes champs qui sont affichés dans la liste.
+
+</Column>
+<Column size="3" >
+
+[![Albums favoris : Détails](_7.1-recycler/albums_favoris_details.png)](_7.1-recycler/albums_favoris_details.png)
+
+</Column>
+
+</Row>
+
+### Exercice Albums Favoris : Supprimer
+
+[Si tu as des questions sur l'état, consulte la recette dédiée.](../02-recettes/gestion-etat.md)
+
+<Row>
+
+<Column size="9" >
+
+Chaque élément de la liste possède un bouton "Supprimer" qui permet de supprimer l'entrée de la liste.
+
+</Column>
+<Column size="3" >
+
+[![Albums favoris : Supprimer](_7.1-recycler/albums_favoris_supprimer.png)](_7.1-recycler/albums_favoris_supprimer.png)
+
+</Column>
+</Row>
+
+### Exercice Bingo
+
+<Row>
+
+<Column size="9">
+
+Vous devez implanter une liste qui sera affichée sur les téléphones des participants d'un jeu de Bingo.
+
+Chaque élément de la liste doit avoir :
+
+- Le no de tirage (combien de boules ont été tirées, on commence à 1)
+- Le numéro tiré (aléatoire entre 1 et 75)
+- La lettre du mot BINGO correspondant au chiffre (B : 1 à 15, I : 16 à 30, N : 31 à 45, G : 46 à 60, O : 61 à 75)
+
+Pour les pros de l'algorithmie 💪 : faites en sorte que chaque boule n'apparaisse qu'une seule fois dans la liste.
+
+</Column>
+
+<Column size="3" >
+
+[![Bingo](_7.1-recycler/bingo.png)](_7.1-recycler/bingo.png)
+
+</Column>
+
+</Row>
+
+### Exercice OrdreAlpha
+
+[Si tu as des questions sur l'état, consulte la recette dédiée.](../02-recettes/gestion-etat.md)
+
+<Row>
+
+<Column size="6" >
+
+- Vous devez implanter un jeu où une liste de prénoms est classée dans un ordre aléatoire.
+- Chaque élément a 2 boutons qui permettent de changer l’ordre dans la liste.
+- Le joueur gagne dès que la liste est dans l’ordre alphabétique. Dans ce cas :
+  - On affiche un dialogue de félicitations
+  - On mélange la liste à nouveau.
+
+</Column>
+
+<Column size="6">
+
+[![Alpha](_7.1-recycler/ordre_alpha.png)](_7.1-recycler/ordre_alpha.png)
+
+</Column>
+
+</Row>
+
+### Exercice duplicata
+
+[Si tu as des questions sur l'état, consulte la recette dédiée.](../02-recettes/gestion-etat.md)
+
+<Row>
+
+<Column size="9" >
+
+- Une liste avec les nombres entiers de 1 à 10
+- Chaque fois qu'on appuie sur un item, il se dédouble.
+
+</Column>
+
+<Column size="3">
+
+[![Duplicata](_7.1-recycler/duplicata.png)](_7.1-recycler/duplicata.png)
+
+</Column>
+
+</Row>
+
+:::
+
+### (Optionnel 💪) Exercice Albums Favoris : Finition
+
+<Row>
+
+<Column size="6" >
+
+Pour chaque élément de la liste, et dans la page de détails, affichez l'image d'un album à partir d'une URL. Nous vous recommandons d'utiliser la librairie [Coil](https://coil-kt.github.io/coil/getting_started/) pour vous aider.
+
+Voici la classe `Album` mise à jour :
+
+```kotlin
+data class Album(
+    val id: Int,
+    val name: String,
+    val artistName: String,
+    val coverUrl: String,
+)
+```
+
+Ajoutez un séparateur entre chaque élément de la liste.
+
+</Column>
+<Column size="3" >
+
+[![Albums favoris : Supprimer](_7.1-recycler/albums_favoris_finition_item.png)](_7.1-recycler/albums_favoris_finition_item.png)
+
+</Column>
+<Column size="3" >
+
+[![Albums favoris : Supprimer](_7.1-recycler/albums_favoris_finition_details.png)](_7.1-recycler/albums_favoris_finition_details.png)
+
+</Column>
+</Row>
+
+### (Optionnel Avancé 💪) Exercice Albums Favoris : Supprimer en glissant
+
+<Row>
+
+<Column size="6" >
+
+Faites en sorte qu'on soit capable de supprimer un élément de la liste en le glissant vers la droite ou vers la gauche.
+
+</Column>
+<Column size="3" >
+
+[![Albums favoris : Glisser début](_7.1-recycler/albums_favoris_glisser_debut.png)](_7.1-recycler/albums_favoris_glisser_debut.png)
+
+</Column>
+<Column size="3" >
+
+[![Albums favoris : Glisser fin](_7.1-recycler/albums_favoris_glisser_fin.png)](_7.1-recycler/albums_favoris_glisser_fin.png)
+
+</Column>
+</Row>
+
+Toutes les images étaient déjà au bon format dans ce fichier, aucune modification supplémentaire nécessaire.

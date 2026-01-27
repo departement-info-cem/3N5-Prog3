@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ComposeMultilingue</string>
+    <string name="hello_world">Hello the world!</string>
+    <plurals name="you_have_messages">
+        <item quantity="one">%d new message</item>
+        <item quantity="other">%d new messages</item>
+    </plurals>
+</resources>

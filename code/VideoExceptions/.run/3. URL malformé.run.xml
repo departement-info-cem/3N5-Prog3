@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="3. URL malformé" type="JetRunConfigurationType">
+    <option name="MAIN_CLASS_NAME" value="trycatch.MainKt" />
+    <module name="VideoExceptions.main" />
+    <option name="PROGRAM_PARAMETERS" value="Pas une url" />
+    <shortenClasspath name="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

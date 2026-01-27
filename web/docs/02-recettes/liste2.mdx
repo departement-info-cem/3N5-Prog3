@@ -1,0 +1,77 @@
+---
+hide_table_of_contents: true
+---
+
+# Liste objets et navigation
+
+Le code de cette recette est disponible [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeListeNav).
+
+La liste que nous allons afficher est une liste de `Donnee` :
+
+<GHCode
+  repo="3N5-Prog3"
+  filePath="code/ComposeListeNav/app/src/main/java/ca/cem/composelistenav/Donnees.kt"
+  startLine="4"
+  endLine="7"
+/>
+
+<Tabs queryString="recette-liste-objets">
+  <TabItem value="base-nav" label="Base de navigation">
+    Pour le détail de la navigation, vous pouvez consulter la recette [Navigation](/recettes/activite-navigation).
+  </TabItem>
+  <TabItem value="liste" label="La liste">
+
+<GHCode
+        repo="3N5-Prog3"
+        filePath="code/ComposeListeNav/app/src/main/java/ca/cem/composelistenav/MainActivity.kt"
+        startLine="63"
+        endLine="90"
+      />
+
+    - on appelle `items`
+    - la variable truc désigne un objet de classe `Donnee`
+
+  </TabItem>
+  <TabItem value="BoitePourElement" label="BoitePourElement">
+  
+      Nous recommandons de mettre le code pour chaque élément de la liste dans une fonction à part:
+
+      <GHCode
+        repo="3N5-Prog3"
+        filePath="code/ComposeListeNav/app/src/main/java/ca/cem/composelistenav/MainActivity.kt"
+        startLine="92"
+        endLine="113"
+      />
+      
+  </TabItem>
+  <TabItem value="navigation" label="Navigation">
+
+    On navigue vers un autre écran en utilisant la fonction `navigate` de l'objet `NavController`.
+
+    <GHCode
+            repo="3N5-Prog3"
+            filePath="code/ComposeListeNav/app/src/main/java/ca/cem/composelistenav/MainActivity.kt"
+            startLine="108"
+            endLine="108"
+          />
+
+  </TabItem>
+  <TabItem value="detail" label="Détail">
+
+    On peut alors afficher les détails de l'élément sélectionné dans un nouvel écran.
+    <GHCode
+                repo="3N5-Prog3"
+                filePath="code/ComposeListeNav/app/src/main/java/ca/cem/composelistenav/MainActivity.kt"
+                startLine="115"
+                endLine="144"
+              />
+
+  </TabItem>
+  <TabItem value="explorer" label="Explorer le code">
+
+      Le code de cette recette est disponible [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeListeNav).
+
+      Prends le temps d'exécuter la démo en plaçant des points d'arrêt dans le code pour voir comment Compose gère la liste.
+
+    </TabItem>
+</Tabs>

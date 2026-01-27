@@ -1,0 +1,99 @@
+---
+hide_table_of_contents: true
+---
+
+# Tiroir de navigation
+
+
+Le code de cette recette est disponible [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeTiroir).
+
+<Row>
+
+<Column size="4" >
+
+[![Tiroir de navigation](_tiroir/tiroir.png)](_tiroir/tiroir.png)
+
+</Column>
+
+</Row>
+
+<Tabs queryString="recette-tiroir">
+  <TabItem value="navigation_dabord" label="Navigation d'abord">
+
+    On doit d'abord mettre en place la navigation tel que décrit dans la recette [Navigation avec JetPack Compose](/recettes/activite-navigation):
+    <ul>
+        <li>Ajouter la dépendance dans le fichier `build.gradle.kts`</li>
+        <li>Définir les routes dans le fichier `MainActivity.kt`</li>
+        <li>Utiliser les routes dans le `setContent` de l'activité</li>
+    </ul>
+
+  </TabItem>
+  <TabItem value="ModalNavigationDrawer" label="ModalNavigationDrawer">
+
+    La fonction composable `ModalNavigationDrawer` permet de créer un contenant:
+    <ul>
+        <li>intéragit avec un drawerState qui permet d'ouvrir / fermer le tiroir</li>
+        <li>prend un drawerContent qui sera l'objet graphique qui disparaît à gauche</li>
+        <li>on va passer le navController au tiroir pour permettre de naviguer sur les clicks</li>
+        <li>le contenu du `ModalNavigationDrawer` sera ce qui s'affiche à l'écran</li>
+    </ul>
+
+    <GHCode
+          repo="3N5-Prog3"
+          filePath="code/ComposeTiroir/app/src/main/java/ca/cem/composetiroir/MainActivity.kt"
+            startLine="117"
+            endLine="126"
+         />
+
+
+</TabItem>
+<TabItem value="hamburger" label="Hamburger">
+
+  Le hamburger est l'icône qui permet d'ouvrir le tiroir de navigation (trois barres horizontales, comme le pain, le steak et le pain d'un hamburger).
+  Il est généralement placé dans la barre d'action en haut de l'écran.
+  <ul>
+    <li>la convention veut qu'on mette le hamburger en haut à gauche dans le topbar</li>
+    <li>`IconButton` nous permet d'avoir un bouton avec l'icône de hamburger</li>
+    <li>drawerState permet d'ouvrir le tiroir avec `drawerState.open()`</li>
+  </ul>
+
+
+
+  <GHCode
+            repo="3N5-Prog3"
+            filePath="code/ComposeTiroir/app/src/main/java/ca/cem/composetiroir/MainActivity.kt"
+              startLine="128"
+              endLine="141"
+           />
+
+</TabItem>
+<TabItem value="tiroir" label="Le tiroir">
+
+  Le tiroir va être une fonction composable qu'on peut réutiliser dans plusieurs écrans.
+
+  La fonction va être ici ModalDrawerSheet avec des NavigationDrawerItem dedans:
+  <ul>
+    <li>prend en paramètre le navController pour déclencher les navigations</li>
+    <li>la fonction fermerTiroir permet d'intéragir avec le drawerState défini un niveau plus haut</li>
+    <li>ModalDrawerSheet : permet de créer un tiroir qui peut être ouvert et fermé</li>
+    <li>NavigationDrawerItem : permet de créer un item de menu dans le tiroir</li>
+  </ul>
+
+  <GHCode
+            repo="3N5-Prog3"
+            filePath="code/ComposeTiroir/app/src/main/java/ca/cem/composetiroir/MonTiroir.kt"
+              startLine="28"
+              endLine="70"
+           />
+
+</TabItem>
+<TabItem value="explorer" label="Explorer le code">
+
+        On t'encourage à explorer le code de l'application pour voir comment tous ces éléments intéragissent.
+
+        Ajoute des points d'arrêt dans le code pour voir comment la navigation fonctionne en temps réel.
+
+        Le code de cette recette est disponible [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeTiroir).
+
+      </TabItem>
+</Tabs>

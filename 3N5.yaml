@@ -1,0 +1,27 @@
+config:
+  blackAndWhite: true
+  withTickBox: true
+skills:
+  - name: kotlin hello
+    sequels:
+      - kotlin function
+      - kotlin variables types expression
+      - kotlin classes et objets
+      - kotlin collections
+      - kotlin librairies externes
+  - name: android layout
+    sequels:
+      - android linear layout
+      - android recyclerview
+  - name: android linear layout
+    sequels:
+      - android weight + 0dp
+      - android layout imbriqués
+  - name: android drawer
+  - name: android recyclerview
+    sequels:
+      - android recyclerView avec bouton
+  - name: android recyclerView avec bouton
+    sequels:
+      - recyclerView avec navigation
+  - name: Multilingue XML

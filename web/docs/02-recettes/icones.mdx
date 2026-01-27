@@ -1,0 +1,50 @@
+---
+hide_table_of_contents: true
+---
+
+# Icônes
+
+<Row>
+
+<Column>
+
+Il est possible d'utiliser des icônes un peu partout dans votre application Android. 
+Que ce soit pour les boutons, les menus, les notifications, etc. 
+Les icônes sont des images qui sont généralement utilisées pour représenter des actions ou des éléments de l'interface utilisateur.
+
+</Column>
+
+<Column size="1" >
+
+[![Icone 1](_icones/icones1.png)](_icones/icones1.png)
+
+</Column>
+
+<Column size="1" >
+
+[![Icone 2](_icones/icones2.png)](_icones/icones2.png)
+
+</Column>
+
+</Row>
+
+## Ajouter des icônes
+
+Pour accéder à un ensemble d'icône maximal, veuillez ajouter la ligne suivante au fichier build.gradle.kts (:app) dans la section *dependencies* : 
+``` kotlin
+implementation("androidx.compose.material:material-icons-extended")
+```
+
+Une fois que c'est fait, vous pouvez accéder à l'ensemble de cette bibliothèque et choisir l'icone qui vous semble la plus adéquate dans les circonstances.
+
+Voici un exemple d'un bouton avec une icone : 
+``` kotlin
+IconButton(
+    onClick = { /* Effet voulu au moment d'appuyer sur le bouton */ }
+) {
+    Icon(
+        imageVector = Icons.Filled.Favorite,
+        contentDescription = "Statistiques"
+    )
+}
+```

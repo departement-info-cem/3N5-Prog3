@@ -1,12 +1,17 @@
-# depinfo-gabarit
+# 3N5 programmation 3
 
-Modèle de base pour un cours du département d'informatique du CÉGEP Édouard-Montpetit. 
+Dans ce cours, nous allons changer de langage pour Kotlin:
+- nous allons t'accompagner dans l'apprentissage d'un nouveau langage (après C#)
+- nous allons utiliser Android dans la 2ème partie du cours pour faire l'interface graphique
 
-L'objectif est de générer un site web pour un cours le plus simplement possible. Les pages de contenu sont écrites en Markdown.
+## standards pour les vidéos et exemples Kotlin
+- kotlin
+- gradle comme système de build (permet d'avoir le même format de dépendances que pour Android)
+- on déclare les types pour les var et val
+- nom de package org.nomdefamille 
+- pour les exemples qc.monpays
 
 Ce gabarit est simplement le projet de départ du produit [Docusaurus](https://docusaurus.io/) développé par l'équipe de Facebook, avec quelques configurations prédéfinies pour le département d'informatique du CÉGEP Édouard Montpetit. Nous vous encourageons fortement à aller jeter un coup d'oeil aux références ci-bas pour en apprendre davantage sur les possibilités qu'offre Docusaurus.
-
-Voici une vidéo d'explication / démonstration de la plateforme : [vidéo](https://www.youtube.com/watch?v=fjfxCSLUgXY)
 
 ## Pour bien commencer
 
@@ -19,7 +24,18 @@ Voici une vidéo d'explication / démonstration de la plateforme : [vidéo](http
 7. Modifiez les documents Markdown qui sont dans la répertoire `docs` selon vos besoins.
 8. Profit
 
-## Installation
+## standards pour les vidéos et exemples en Android
+- kotlin
+- script de build en kotlin kts
+- LinearLayout comme outil de base pour la mise en page
+- nom de package org.nomdefamille
+- pour les exemples qc.monpays
+- toujours view binding et jamais findViewById
+
+## idées
+
+- faire des exercices où on utilise exclusivement le Layout Inspector pour déterminer une taille en dp sur un weight
+- faire un exercice avec un layout existant et on doit y ajouter un élément
 
 ### Prérequis
 
@@ -48,24 +64,21 @@ Démarrez le serveur local.
 $ npm start
 ``` 
 
-Cette commande démarre une serveur de développement local sur le port `3000` de votre machine personnelle et ouvre un navigateur avec l'adresse locale du site. Les changements effectués sur la documentation (`/docs`) sont automatiquement appliqués sur le site à la sauvegarde des fichiers. Les changements faits à la configuration (ex: `docusaurus.config.js`) nécessitent un redémarrage du projet.
+## mantras pour le cours de programmation 3
 
-## Déploiement
+"Toujours mettre des annotations de types sur tes val et tes var"
+
+"50 lignes par méthode maximum" --> GENERALISER
+
+"Il faut attraper l'exception quelque part non?" --> GENERALISER
+
+"Je mets un weight dans mon LinearLayout alors c'est 0dp"
 
 Tout le code poussé sur la branche `main` de ce dépôt est automatiquement déployée sur [https://info.cegepmontpetit.ca/nom-du-repo-github/](https://info.cegepmontpetit.ca/nom-du-repo-github/) à l'aide de Github Actions.
-
-## Mise à jour de votre site de cours
-
-Il est recommandé de mettre à jour votre site web de cours au moins une fois par année, c'est à dire d'aller chercher les derniers changements qui ont été ajoutés dans le gabarit. Pour ce faire, il est recommandé d'utiliser l'option de synchronisation entre fork de Github. Si vous êtes enseignant au département d'informatique au CÉGEP Édouard-Montpetit, Pierre-Olivier Brillant s'offre de s'occuper des mises à jour de vos site web, dans un délais de moins de 3 semaines après la demande.
 
 ## Avancé
 
 Des composantes supplémentaires ont été développées par Pierre-Olivier Brillant. Vous pouvez vous référer à la section [Wiki](https://github.com/departement-info-cem/depinfo-gabarit/wiki) de ce repository, ou vous adresser directement à lui pour en savoir plus.
-
-## Démonstrations
-
-- [Gabarit](https://info.cegepmontpetit.ca/depinfo-gabarit/)
-- [5N6](https://info.cegepmontpetit.ca/5N6-mobile-2/)
 
 ## Références
 

@@ -1,0 +1,61 @@
+---
+hide_table_of_contents: true
+---
+
+# Structurer en packages
+
+## Hiérarchie des fichiers
+
+Il existe 2 grandes approches pour organiser les fichiers / classes:
+1. par fonctionnalité
+2. par type d'objet
+
+Pour prendre un exemple, pour une application kotlin avec les éléments suivants:
+- des fonctions composables
+- des classes de données
+- un service pour la logique applicative
+- etc.
+
+
+L'approche est souvent décidée avec l'ensemble de l'équipe de développement et fera partie
+des standards de développement qu'on doit respecter.
+
+Pour un projet personnel, on peut choisir l'approche qui nous semble la plus naturelle.
+
+<Row>
+
+<Column>
+
+### Approche fonctionnalité
+
+- package com.monapp
+  - com.monapp.connexion
+    - EcranConnexion avec toutes les fonctions composables liées à la connexion
+  - com.monapp.inscription
+    - EcranInscription avec toutes les fonctions composables liées à l'inscription
+    - Utilisateur
+  - com.monapp.taches
+    - EcranTaches avec toutes les fonctions composables liées à la liste des tâches
+    - Tache la classe de données pour chaque item
+  - com.monapp.detail
+    - EcranDetailTache
+</Column>
+<Column>
+
+### Appproche par type d'objet
+
+- package com.monapp
+  - com.monapp.ecrans
+    - EcranConnexion
+    - EcranInscription
+    - EcranTaches
+    - EcranDetailTache
+  - com.monapp.donnees
+    - Tache
+    - Utilisateur
+</Column>
+</Row>
+
+### En pratique
+
+On peut simplement utiliser le refactoring d'Android Studio pour déplacer les fichiers.
