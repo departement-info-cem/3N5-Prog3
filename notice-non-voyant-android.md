@@ -59,6 +59,9 @@ Alt + V puis T : ouvre le menu des Tool Windows
 
 ## Lire une portion de code avec le lecteur d'écran
 
+CTRL + W élargit la selection de code logique
+CTRL + SHIFT + W diminue la selection de code logique
+
 Sélectionner la prochaine structure logique dans Android Studio avec Alt + ↑ (Option + flèche haut sur macOS), puis lire avec NVDA (NVDA + flèche bas).
 Réduire la sélection : Alt + ↓ (Option + flèche bas sur macOS).
 
