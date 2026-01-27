@@ -1,6 +1,5 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
 import { themes } from "prism-react-renderer";
 
 const siteConfig = require("./config");
@@ -15,7 +14,6 @@ const config = {
   url: "https://info.cegepmontpetit.ca/",
   baseUrl: `/${siteConfig.nomUrl}/`,
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
 
   organizationName: "departement-info-cem",
@@ -30,6 +28,9 @@ const config = {
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
   },
 
   themes: ["@docusaurus/theme-mermaid"],
@@ -50,6 +51,8 @@ const config = {
       }),
     ],
   ],
+
+  plugins: [require.resolve("./plugins/docs-metadata")],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -112,9 +115,8 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()}. ${
-          siteConfig.nom
-        }. CÉGEP Édouard-Montpetit.`,
+        copyright: `Copyright © ${new Date().getFullYear()}. ${siteConfig.nom
+          }. CÉGEP Édouard-Montpetit.`,
       },
       // Décommenter et remplir pour activer l'indexation des pages par le moteur de recherche local
       algolia: {
