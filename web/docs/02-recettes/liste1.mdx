@@ -8,8 +8,7 @@ Cette recette va indiquer comment afficher une liste avec Compose.
 
 Le code de cette recette est disponible [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeListe).
 
-<Tabs queryString="Liste-string">
-  <TabItem value="LazyColumn" label="LazyColumn">
+## LazyColumn
 
     Pour implanter une liste, on va utiliser le composable `LazyColumn`.
     <GHCode
@@ -19,8 +18,7 @@ Le code de cette recette est disponible [ici](https://github.com/departement-inf
                 endLine="32"
                 />
 
-  </TabItem>
-  <TabItem value="items" label="items">
+## items
     Une fois notre LazyColumn en place, la façon la plus simple de la remplir est d'utiliser la fonction `items`
     - items prend en paramètre une liste d'éléments à afficher.
     - on lui fournit une lambda pour transformer chaque élément en appel à un composable
@@ -34,8 +32,7 @@ Le code de cette recette est disponible [ici](https://github.com/departement-inf
             />
 
 
-  </TabItem>
-    <TabItem value="item" label="item">
+## item
       Dans certains cas, on pourrait ne pas directement avoir la collection à parcourir ou
       elle se trouve dans plusieurs collections.
       - on peut alors faire des appels indépendants à `item` pour ajouter des éléments à la liste.
@@ -49,8 +46,7 @@ Le code de cette recette est disponible [ici](https://github.com/departement-inf
           />
 
 
-    </TabItem>
-  <TabItem value="combi" label="Combinaisons">
+## Combinaisons
     On peut combiner des item items avec des objets très différents dans un même LazyColumn.
 
 
@@ -63,19 +59,15 @@ Le code de cette recette est disponible [ici](https://github.com/departement-inf
               />
 
 
-  </TabItem>
-  <TabItem value="lazy" label="Lazy?">
+## Lazy?
 
     En quoi cette Column est lazy ou paresseuse?
 
     On va l'explorer en plaçant un point d'arrêt dans la lambda de `items` et en faisant défiler la liste.
 
-  </TabItem>
-  <TabItem value="explorer" label="Explorer le code">
+## Explorer le code
 
     Le code de cette recette est disponible [ici](https://github.com/departement-info-cem/3N5-Prog3/tree/main/code/ComposeListe).
 
     Prends le temps d'exécuter la démo en plaçant des points d'arrêt dans le code pour voir comment Compose gère la liste.
 
-  </TabItem>
-</Tabs>
