@@ -11,13 +11,27 @@ Le code de cette recette est disponible [ici](https://github.com/departement-inf
 <Tabs queryString="recette-navigation-compose">
   <TabItem value="build.gradle.kts" label="build.gradle.kts">
 
-    Dans le fichier `build.gradle.kts` de votre module, vous devez ajouter la dépendance pour la navigation Compose.
+    Dans le fichier `build.gradle.kts` de votre module, vous devez ajouter la dépendance pour la navigation Compose : `implementation(libs.androidx.navigation.compose)`.
 
     <GHCode
           repo="3N5-Prog3"
           filePath="code/ComposeNavigation/app/build.gradle.kts"
             startLine="42"
-            endLine="60"
+            endLine="62"
+         />
+
+  </TabItem>
+  <TabItem value="libs.versions.toml" label="libs.versions.toml">
+
+    Dans le fichier `libs.versions.toml` de votre module, vous devez ajouter la version utilisée pour la navigation Compose : `navigationCompose = "2.10.2"` dans la section `[version]`.
+
+    Vous devez également ajouté la déclaration de la bibliothèque dans la section `[libraries]` : `androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }`
+
+    <GHCode
+          repo="3N5-Prog3"
+          filePath="code/ComposeNavigation/gradle/libs.versions.toml"
+            startLine="1"
+            endLine="30"
          />
 
   </TabItem>
