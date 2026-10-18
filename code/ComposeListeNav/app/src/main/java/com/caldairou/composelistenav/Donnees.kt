@@ -1,4 +1,4 @@
-package ca.cem.composelistenav
+package com.caldairou.composelistenav
 
 // creer une data class avec un id et un nom
 data class Donnee(

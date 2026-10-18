@@ -1,6 +1,4 @@
-@file:OptIn(ExperimentalMaterial3Api::class)
-
-package ca.cem.composelistenav
+package com.caldairou.composelistenav
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -26,7 +24,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import ca.cem.composelistenav.ui.theme.ComposeListeNavTheme
+import com.caldairou.composelistenav.ui.theme.ComposeListeNavTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,6 +58,7 @@ fun Navigation(
 }
 
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Liste(
     navController: NavHostController,
@@ -112,6 +111,7 @@ fun BoitePourElement(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Detail(
     navController: NavHostController,
