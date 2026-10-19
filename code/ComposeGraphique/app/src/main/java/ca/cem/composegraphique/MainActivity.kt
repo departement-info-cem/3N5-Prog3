@@ -1,6 +1,5 @@
 package ca.cem.composegraphique
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -8,15 +7,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import ca.cem.composegraphique.ui.theme.ComposeGraphiqueTheme
-import com.github.mikephil.charting.charts.PieChart
+import com.github.mikephil.charting.compose.PieChart
+import com.github.mikephil.charting.compose.setColors
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
@@ -40,53 +41,44 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun PieChartView() {
-    println("PieChartView - ENTRÉE")
-    AndroidView(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(400.dp),
-        factory = { context ->
-            println("PieChartView.factory - ENTRÉE")
-            PieChart(context).apply {
-                // Créer les entrées du graphique avec 3 sections
-                val entries = listOf(
-                    PieEntry(30f, "Section 1"),
-                    PieEntry(45f, "Section 2"),
-                    PieEntry(25f, "★★★★★")
-                )
-
-                // Créer le dataset
-                val dataSet = PieDataSet(entries, "Données").apply {
-                    colors = listOf(
-                        Color.rgb(255, 102, 102),  // Rouge
-                        Color.rgb(102, 178, 255),  // Bleu
-                        Color.rgb(102, 255, 102)   // Vert
-                    )
-                    valueTextSize = 16f
-                    valueTextColor = Color.WHITE
-                }
-
-                // Configurer les données
-                val pieData = PieData(dataSet)
-                data = pieData
-
-                // Personnalisation du graphique
-                description.isEnabled = false
-                isDrawHoleEnabled = true
-                setHoleColor(Color.WHITE)
-                holeRadius = 40f
-                transparentCircleRadius = 45f
-                setDrawEntryLabels(true)
-                setEntryLabelColor(Color.BLACK)
-                setEntryLabelTextSize(12f)
-
-                // Rafraîchir
-                invalidate()
-            }.also {
-                println("PieChartView.factory - SORTIE")
-            }
+fun PieChartView(modifier:Modifier = Modifier) {
+    val data = remember {
+        val set = PieDataSet(
+            listOf(
+                PieEntry(30f, "Section 1"),
+                PieEntry(45f, "Section 2"),
+                PieEntry(25f, "★★★★★"),
+            ),
+            "Données"
+        ).apply {
+            setColors(listOf(
+                Color(255, 102, 102),
+                Color(102, 178, 255),
+                Color(102, 255, 102),
+            ))
+            valueTextSize = 16f
+            valueTextColor = androidx.compose.ui.graphics.Color.White.toArgb()
         }
+        PieData(set)
+    }
+
+    val holeColor = MaterialTheme.colorScheme.surface.toArgb()
+
+    PieChart(
+        data = data,
+        modifier = modifier.fillMaxSize(), // Pour que la démo fonctionne. À ajuster selon le contexte dans votre TP.
+        contentDescription = "Répartition des avis sur le DEC technique",
+        setup = {
+            description.isEnabled = false
+            isDrawHoleEnabled = true
+            holeRadius = 40f
+            transparentCircleRadius = 45f
+            isDrawEntryLabelsEnabled = true
+            entryLabelColor = androidx.compose.ui.graphics.Color.Black.toArgb()
+            entryLabelTextSize = 12f
+        },
+        update = {
+            this.holeColor = holeColor
+        },
     )
-    println("PieChartView - SORTIE")
 }
