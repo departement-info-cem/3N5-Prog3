@@ -55,7 +55,9 @@ fun EcranPrincipal(
     println("Entrée dans EcranPrincipal")
     // la variable avec l'état doit être avant toutes les fonctions qui partagent l'état
     // TODO placer un point d'arrêt sur la ligne suivante
-    var compteur by remember{mutableIntStateOf(0)}
+    var compteur by remember{
+        mutableIntStateOf(0)
+    }
     // déclare une liste mutable d'entiers
     val listeMemoire: SnapshotStateList<Int> = remember { mutableStateListOf(1, 2, 3) }
     Column(
